@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    public CharacterController controller;
-    public float speed;
-    void Start()
-    {
+    [SerializeField] CharacterController controller;
+    [SerializeField] float speed;
 
-    }
 
-    // Update is called once per frame
+ 
+
+
+
     void FixedUpdate()
     {
         //Code Source: THIRD PERSON MOVEMENT in Unity
@@ -21,12 +21,7 @@ public class PlayerControl : MonoBehaviour
         Vector3 movement = new Vector3(horizontal, 0.0f, vertical).normalized;
         if (movement.magnitude >= 0)
         {
-
-  
-
-
             controller.Move(movement * speed * Time.deltaTime);
-
         }
     }
 }
