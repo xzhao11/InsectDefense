@@ -27,10 +27,8 @@ public class Bullet : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            //Debug.Log("hit");
             enemyMovement enemy = FindObjectOfType<enemyMovement>();
             enemy.health -= 1;
-            //Debug.Log("health is " + enemy.health);
             Destroy(gameObject);
 
         }
