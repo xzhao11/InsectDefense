@@ -9,6 +9,8 @@ public class waveScript : MonoBehaviour
     public float downTime = 60f;
     public GameObject enemy;
     private float timeLeft;
+    public GameObject nest;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +23,11 @@ public class waveScript : MonoBehaviour
     {
         if(timeLeft <= 0 && numEnemies < totalEnemies)
         {
-            Instantiate(enemy, new Vector3(-122.6f, -13.478f, 143.75f), Quaternion.identity);
+            var enemynow = (GameObject)Instantiate(enemy, new Vector3(-122.6f, -13.478f, 143.75f), Quaternion.identity);
+            enemynow.GetComponent<enemyMovement>().nest = nest.transform; 
+            enemynow.GetComponent<enemyMovement>().health = 20;
+            enemynow.GetComponent<enemyMovement>().player = player.transform;
+            enemynow.GetComponent<enemyPath>().eggs = nest.transform;
             timeLeft = downTime;
             numEnemies += 1;
         }

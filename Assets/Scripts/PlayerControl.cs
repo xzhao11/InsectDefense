@@ -21,7 +21,7 @@ public class PlayerControl : MonoBehaviour
         Vector3 movement = new Vector3(horizontal, 0.0f, vertical).normalized;
         if (movement.magnitude >= 0)
         {
-            controller.Move(movement * speed * Time.deltaTime);
+            controller.SimpleMove(movement * speed);
         }
     }
 }

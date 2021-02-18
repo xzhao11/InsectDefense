@@ -7,7 +7,7 @@ public class enemyMovement : MonoBehaviour
 
     public int health = 200;
     public Transform nest;
-    [SerializeField] Transform player;
+    public Transform player;
     //[SerializeField] TMP_Text health_msg;
     //[SerializeField] TMP_Text hit_msg;
     [SerializeField] float hitDistance = 30f;
