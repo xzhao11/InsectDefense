@@ -6,6 +6,7 @@ public class enemyMovement : MonoBehaviour
 {
 
     public int health = 200;
+    public Transform nest;
     [SerializeField] Transform player;
     //[SerializeField] TMP_Text health_msg;
     //[SerializeField] TMP_Text hit_msg;
@@ -24,6 +25,10 @@ public class enemyMovement : MonoBehaviour
             //Debug.Log("enemy down");
             //health_msg.text = "Enemy Down";
             Destroy(gameObject);
+            if(GetComponent<enemyPath>().gotEgg)
+            {
+                nest.GetComponent<nestScript>().numLarva += 1;
+            }
         }
 
     }

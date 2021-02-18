@@ -27,6 +27,7 @@ public class enemyPath : MonoBehaviour
         if(gotEgg == false && agent.remainingDistance <= agent.stoppingDistance)
         {
             gotEgg = true;
+            eggs.GetComponent<nestScript>().numLarva -= 1;
             agent.SetDestination(exit.position);
         }
         else if (gotEgg == false)
