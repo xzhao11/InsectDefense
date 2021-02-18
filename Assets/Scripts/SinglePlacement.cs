@@ -5,7 +5,8 @@ using UnityEngine;
 public class SinglePlacement : MonoBehaviour
 {
     public Color hoverColor;
-    public Vector3 posOffset;
+    public Vector3 standardposOffset;
+    public Vector3 EMPposOffset;
 
     private GameObject tower;
     private Renderer rendr;
@@ -37,7 +38,15 @@ public class SinglePlacement : MonoBehaviour
             return;
         }
         GameObject towerToBuild = buildManager.GetTowerToBuild();
-        tower = (GameObject)Instantiate(towerToBuild, transform.position+posOffset, transform.rotation);
+        if (towerToBuild == buildManager.standardTowerPrefab)
+        {
+            tower = (GameObject)Instantiate(towerToBuild, transform.position + standardposOffset, transform.rotation);
+        }
+        else if (towerToBuild == buildManager.EMPTowerPrefab)
+        {
+            tower = (GameObject)Instantiate(towerToBuild, transform.position + EMPposOffset, transform.rotation);
+        }
+
     }
     void Start()
     {

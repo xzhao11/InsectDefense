@@ -4,25 +4,25 @@ using UnityEngine;
 using TMPro;
 public class enemyMovement : MonoBehaviour
 {
-    [SerializeField] float _enemySpeed;
+
     public int health = 200;
     [SerializeField] Transform player;
-    [SerializeField] TMP_Text health_msg;
-    [SerializeField] TMP_Text hit_msg;
+    //[SerializeField] TMP_Text health_msg;
+    //[SerializeField] TMP_Text hit_msg;
     [SerializeField] float hitDistance = 30f;
 
     private void Start()
     {
-        hit_msg.gameObject.SetActive(false);
+        //hit_msg.gameObject.SetActive(false);
     }
     void Update()
     {
-        health_msg.text = "Health : " + health;
-        transform.position += new Vector3(_enemySpeed * Time.deltaTime, 0f, 0f);
+        //health_msg.text = "Health : " + health;
+
         if (health <= 0 && gameObject)
         {
             //Debug.Log("enemy down");
-            health_msg.text = "Enemy Down";
+            //health_msg.text = "Enemy Down";
             Destroy(gameObject);
         }
 
@@ -31,14 +31,14 @@ public class enemyMovement : MonoBehaviour
     {
         if((player.position-transform.position).magnitude <= hitDistance)
         {
-            //Debug.Log("I hit you"); 
+            Debug.Log("I hit you");
             health -= 5;
-            hit_msg.gameObject.SetActive(true);
+            //hit_msg.gameObject.SetActive(true);
         }
         
     }
     private void OnMouseUp()
     {
-        hit_msg.gameObject.SetActive(false);
+        //hit_msg.gameObject.SetActive(false);
     }
 }
