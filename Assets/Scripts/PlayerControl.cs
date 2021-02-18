@@ -16,8 +16,8 @@ public class PlayerControl : MonoBehaviour
     {
         //Code Source: THIRD PERSON MOVEMENT in Unity
         //https://www.youtube.com/watch?v=4HpC--2iowE&t=1002s
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        float horizontal = -Input.GetAxisRaw("Horizontal");
+        float vertical = -Input.GetAxisRaw("Vertical");
         Vector3 movement = new Vector3(horizontal, 0.0f, vertical).normalized;
         if (movement.magnitude >= 0)
         {
