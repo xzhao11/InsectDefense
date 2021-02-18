@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 public class enemyMovement : MonoBehaviour
 {
@@ -11,19 +12,28 @@ public class enemyMovement : MonoBehaviour
     //[SerializeField] TMP_Text hit_msg;
     [SerializeField] float hitDistance = 30f;
 
+    public Slider slider;
+
+    public float FillSpeed = 0.5f;
+    public float targetProgress = 0f;
+
+ 
     private void Start()
     {
+        slider = gameObject.GetComponent<Slider>();
         //hit_msg.gameObject.SetActive(false);
     }
+
     void Update()
     {
         //health_msg.text = "Health : " + health;
-
+    
         if (health <= 0 && gameObject)
         {
             //Debug.Log("enemy down");
             //health_msg.text = "Enemy Down";
             Destroy(gameObject);
+          
         }
 
     }
