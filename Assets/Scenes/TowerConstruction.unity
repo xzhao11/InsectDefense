@@ -947,7 +947,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thirdPerson: {fileID: 595457951}
   topDown: {fileID: 1237200985}
+  thirdPersonController: {fileID: 714497023}
   thirdActive: 0
+  switchKeyDown: 0
 --- !u!1 &688272898
 GameObject:
   m_ObjectHideFlags: 3
