@@ -12,7 +12,7 @@ public class tileMovement : MonoBehaviour
     private int numNodes;
     private int numPaths;
     private Vector3 dest;
-    private Vector2 startPosition;
+    private Vector3 startPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -27,40 +27,61 @@ public class tileMovement : MonoBehaviour
 
     void incrementPath()
     {
-        curr_path += 1;
         Timer = 0;
 
-        startPosition = dest;
+        Debug.Log("Path increment");
+
+        Debug.Log(path);
+        Debug.Log(path.transform.GetChild(curr_path));
+        Debug.Log(path.transform.GetChild(curr_path).GetChild(0));
+        Debug.Log(path.transform.GetChild(curr_path).GetChild(0).GetChild(curr_node));
+
+        startPosition = this.transform.position;
 
         numNodes = path.transform.GetChild(curr_path).GetChild(0).childCount;
-        curr_node = 0;
 
         dest = path.transform.GetChild(curr_path).GetChild(0).GetChild(curr_node).position;
+
+        Debug.Log("Start position is - " + startPosition + " and destination is - " + dest);
     }
 
     void incrementNode()
     {
-        curr_node += 1;
         Timer = 0;
 
-        startPosition = dest;
+        Debug.Log("Node increment");
+
+        Debug.Log(path);
+        Debug.Log(path.transform.GetChild(curr_path));
+        Debug.Log(path.transform.GetChild(curr_path).GetChild(0));
+        Debug.Log(path.transform.GetChild(curr_path).GetChild(0).GetChild(curr_node));
+
+        startPosition = this.transform.position;
 
         dest = path.transform.GetChild(curr_path).GetChild(0).GetChild(curr_node).position;
+
+        Debug.Log("Start position is - " + startPosition + " and destination is - " + dest);
     }
 
     // Update is called once per frame
     void Update()
     {
         Timer += Time.deltaTime * moveSpeed;
+
         if(this.transform.position != dest)
         {
             this.transform.position = Vector3.Lerp(startPosition, dest, Timer);
         }
         else
         {
-            if(curr_node + 1 >= numNodes)
+            curr_node += 1;
+
+            if(curr_node >= numNodes)
             {
-                if(curr_path + 1 >= numPaths)
+                curr_path += 1;
+                curr_node = 1;
+
+                if(curr_path >= numPaths)
                 {
                     Destroy(gameObject);
                 }
