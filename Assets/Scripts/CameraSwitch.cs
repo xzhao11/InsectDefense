@@ -14,6 +14,9 @@ public class CameraSwitch : MonoBehaviour
         thirdPerson.enabled = true;
         topDown.enabled = false;
         thirdActive = true;
+        GetComponent<PlayerThirdPersonControl>().enabled = true;
+        GetComponent<PlayerControl>().enabled = false;
+
     }
 
     // Update is called once per frame
@@ -26,12 +29,16 @@ public class CameraSwitch : MonoBehaviour
                 thirdPerson.enabled = false;
                 topDown.enabled = true;
                 thirdActive = false;
+                GetComponent<PlayerThirdPersonControl>().enabled = false;
+                GetComponent<PlayerControl>().enabled = true;
             }
             else
             {
                 thirdPerson.enabled = true;
                 topDown.enabled = false;
                 thirdActive = true;
+                GetComponent<PlayerThirdPersonControl>().enabled = true;
+                GetComponent<PlayerControl>().enabled = false;
             }
         }
     }
