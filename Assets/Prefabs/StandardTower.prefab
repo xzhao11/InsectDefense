@@ -19196,7 +19196,7 @@ GameObject:
   - component: {fileID: 1002779069055688428}
   m_Layer: 10
   m_Name: StandardTower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19210,7 +19210,7 @@ Transform:
   m_GameObject: {fileID: 1003859026273434390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -44.029995, y: 3, z: 60.3}
-  m_LocalScale: {x: 7.5, y: 7.5, z: 7.5}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children:
   - {fileID: 1007454938907098554}
   - {fileID: 1007296226371223260}

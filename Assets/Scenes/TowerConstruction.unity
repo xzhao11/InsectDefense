@@ -298,7 +298,7 @@ PrefabInstance:
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
       propertyPath: EMPposOffset.y
-      value: 9
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
@@ -492,7 +492,7 @@ PrefabInstance:
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
       propertyPath: EMPposOffset.y
-      value: 9
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
@@ -607,7 +607,7 @@ PrefabInstance:
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
       propertyPath: EMPposOffset.y
-      value: 9
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
@@ -1901,7 +1901,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173365512}
-  m_LocalRotation: {x: 0.052387115, y: 0.000000017138296, z: -8.9906044e-10, w: 0.9986269}
+  m_LocalRotation: {x: 0.052387092, y: -0.000000017405906, z: 9.1309876e-10, w: 0.9986269}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2126,7 +2126,7 @@ PrefabInstance:
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
       propertyPath: EMPposOffset.y
-      value: 9
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
@@ -2791,7 +2791,7 @@ PrefabInstance:
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
       propertyPath: EMPposOffset.y
-      value: 9
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
@@ -3151,7 +3151,7 @@ PrefabInstance:
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
       propertyPath: EMPposOffset.y
-      value: 9
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}

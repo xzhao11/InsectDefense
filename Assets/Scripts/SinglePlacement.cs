@@ -12,6 +12,7 @@ public class SinglePlacement : MonoBehaviour
     private Renderer rendr;
     private Color startColor;
     BuildManager buildManager;
+    private SinglePlacement selectedPlacement;
     private void OnMouseEnter()
     {
         if (buildManager.GetTowerToBuild() == null)
@@ -34,7 +35,8 @@ public class SinglePlacement : MonoBehaviour
         }
         if (tower != null)
         {
-            tower.GetComponent<tower>().showMenu();
+            //tower.GetComponent<tower>().showMenu();
+            SetPlacement();
             return;
         }
         GameObject towerToBuild = buildManager.GetTowerToBuild();
@@ -47,6 +49,30 @@ public class SinglePlacement : MonoBehaviour
             tower = (GameObject)Instantiate(towerToBuild, transform.position + EMPposOffset, transform.rotation);
         }
 
+    }
+
+    public void SetPlacement()
+    {
+        Debug.Log("Setting placement" + this);
+        if (selectedPlacement == this && tower.GetComponent<tower>().menu.activeSelf)
+        {
+            DeselectPlacement();
+            return;
+        }
+        selectedPlacement = this;
+        
+        var towers = GameObject.FindGameObjectsWithTag("Tower");
+        foreach (GameObject thetower in towers)
+        {
+            thetower.GetComponent<tower>().hideMenu();
+        }
+        tower.GetComponent<tower>().showMenu();
+    }
+
+    public void DeselectPlacement()
+    {
+        selectedPlacement = null;
+        tower.GetComponent<tower>().hideMenu();
     }
     void Start()
     {
