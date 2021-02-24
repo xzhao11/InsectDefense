@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
-
+using UnityEngine.UI;
 public class tower : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -10,7 +9,9 @@ public class tower : MonoBehaviour
     [Header("Attibutes")]
     public float range = 30f;
     [SerializeField] float _shootDelay = 0.2f;
-    
+    public float health = 60.0f;
+    public float startHealth = 60.0f;
+    private bool isBroken;
     [Header("Unity Setup")]
     
     public string enemyTag = "Enemy";
@@ -20,11 +21,14 @@ public class tower : MonoBehaviour
 
     [SerializeField] Transform _bulletPrefab;
     [SerializeField] Transform _shootPoint;
-    
+
+    [SerializeField] Image healthBar;
 
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        startHealth = health;
+        isBroken = false;
     }
 
     void FixedUpdate()
@@ -33,13 +37,19 @@ public class tower : MonoBehaviour
         {
             Vector3 direction = target.position - _shootPoint.position;
             Gunfiring(direction);
+            health -= Time.deltaTime;
+            healthBar.fillAmount = health / startHealth;
+        }
+        if (health <= 0)
+        {
+            isBroken = true;
         }
 
     }
 
     private void Gunfiring(Vector3 direction)
     {
-        if (!direction.Equals(Vector3.zero) && CanShoot())
+        if (!direction.Equals(Vector3.zero) && CanShoot() &&!isBroken)
         {
             //Debug.Log("shooting");
             Transform bulletTransform = Instantiate(_bulletPrefab, _shootPoint.position, _shootPoint.rotation);
