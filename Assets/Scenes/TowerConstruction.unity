@@ -280,7 +280,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140766576}
-  m_LocalRotation: {x: 0.016077446, y: 0.000000017204155, z: -2.7663458e-10, w: 0.9998708}
+  m_LocalRotation: {x: 0.016077446, y: -0.000000017204158, z: 2.7663463e-10, w: 0.9998708}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -295,6 +295,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 567221779}
     m_Modifications:
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
+      propertyPath: EMPposOffset.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
+      propertyPath: standardposOffset.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3521946303366922776, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
       propertyPath: m_Name
@@ -479,6 +489,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 567221779}
     m_Modifications:
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
+      propertyPath: EMPposOffset.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
+      propertyPath: standardposOffset.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3521946303366922776, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
       propertyPath: m_Name
@@ -584,6 +604,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 567221779}
     m_Modifications:
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
+      propertyPath: EMPposOffset.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
+      propertyPath: standardposOffset.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3521946303366922776, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
       propertyPath: m_Name
@@ -1306,7 +1336,7 @@ Transform:
   - {fileID: 982382674}
   - {fileID: 140766578}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &714497026
 Rigidbody:
@@ -1951,7 +1981,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
 --- !u!1 &1240099758
 GameObject:
@@ -2093,6 +2123,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 567221779}
     m_Modifications:
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
+      propertyPath: EMPposOffset.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
+      propertyPath: standardposOffset.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3521946303366922776, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
       propertyPath: m_Name
@@ -2464,7 +2504,7 @@ PrefabInstance:
     - target: {fileID: 5339376120522125888, guid: 39bd2efb133b99a458b65ddb09b5766f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: purchaseStandardTower
+      value: purchaseEMPTower
       objectReference: {fileID: 0}
     - target: {fileID: 5339376120522125888, guid: 39bd2efb133b99a458b65ddb09b5766f,
         type: 3}
@@ -2748,6 +2788,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 567221779}
     m_Modifications:
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
+      propertyPath: EMPposOffset.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
+      propertyPath: standardposOffset.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3521946303366922776, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
       propertyPath: m_Name
@@ -3045,7 +3095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standardTowerPrefab: {fileID: 1003859026273434390, guid: 795afbb273a10c940bfc09169c1c69fd,
     type: 3}
-  EMPTowerPrefab: {fileID: 4171105669728106190, guid: 0860f81eb46b3104191e2d63205173cd,
+  EMPTowerPrefab: {fileID: 277063854274422675, guid: a9b8181bdd2fddb43944961a746f5758,
     type: 3}
 --- !u!4 &1861297431
 Transform:
@@ -3098,6 +3148,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 567221779}
     m_Modifications:
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
+      propertyPath: EMPposOffset.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
+      propertyPath: standardposOffset.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3521946303366922776, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
       propertyPath: m_Name
