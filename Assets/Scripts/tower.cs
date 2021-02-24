@@ -23,12 +23,13 @@ public class tower : MonoBehaviour
     [SerializeField] Transform _shootPoint;
 
     [SerializeField] Image healthBar;
-
+    [SerializeField] GameObject menu;
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
         startHealth = health;
         isBroken = false;
+        menu.SetActive(false);
     }
 
     void FixedUpdate()
@@ -101,6 +102,11 @@ public class tower : MonoBehaviour
         }
         
 
+    }
+
+    public void showMenu()
+    {
+        menu.SetActive(true);
     }
 
     private void OnDrawGizmosSelected()

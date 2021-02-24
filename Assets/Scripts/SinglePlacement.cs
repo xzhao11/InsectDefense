@@ -34,7 +34,7 @@ public class SinglePlacement : MonoBehaviour
         }
         if (tower != null)
         {
-            Debug.Log("there is tower on this placement");
+            tower.GetComponent<tower>().showMenu();
             return;
         }
         GameObject towerToBuild = buildManager.GetTowerToBuild();

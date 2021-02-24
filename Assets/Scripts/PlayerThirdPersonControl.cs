@@ -23,7 +23,7 @@ public class PlayerThirdPersonControl : MonoBehaviour
         //isThirdPerson = GetComponent<CheckCamera>().isThirdPerson;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         //Code Source: THIRD PERSON MOVEMENT in Unity
         //https://www.youtube.com/watch?v=4HpC--2iowE&t=1002s
