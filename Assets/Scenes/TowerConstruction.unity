@@ -1182,6 +1182,7 @@ GameObject:
   - component: {fileID: 714497025}
   - component: {fileID: 714497024}
   - component: {fileID: 714497026}
+  - component: {fileID: 714497027}
   m_Layer: 0
   m_Name: third person camera
   m_TagString: Untagged
@@ -1323,6 +1324,18 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &714497027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714497023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb272785a15ef0d4488fbeb799c767dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &755614625
 GameObject:
   m_ObjectHideFlags: 3
@@ -1858,7 +1871,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173365512}
-  m_LocalRotation: {x: 0.052387085, y: -0.000000017271837, z: 9.0606533e-10, w: 0.9986269}
+  m_LocalRotation: {x: 0.052387115, y: 0.000000017138296, z: -8.9906044e-10, w: 0.9986269}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
