@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerThirdPersonControl : MonoBehaviour
 {
     public CharacterController controller;
     //Animator animator;
-
+    
 
     [SerializeField] float speed = 5f;
     public float turnSmoothTime = 0.1f;
