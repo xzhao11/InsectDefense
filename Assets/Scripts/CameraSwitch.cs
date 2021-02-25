@@ -65,18 +65,9 @@ public class CameraSwitch : MonoBehaviour
                 thirdPersonController.SetActive(true);
                 topDown.enabled = false;
                 thirdActive = true;
-                float horizontal = -Input.GetAxisRaw("Horizontal");
-                float vertical = -Input.GetAxisRaw("Vertical");
-                if (horizontal == 0 && vertical == 0)
-                {
-                    GetComponent<PlayerThirdPersonControl>().enabled = true;
-                    GetComponent<PlayerControl>().enabled = false;
-                    switchKeyDown = false;
-                }
-                else
-                {
-                    switchKeyDown = true;
-                }
+                GetComponent<PlayerThirdPersonControl>().enabled = true;
+                GetComponent<PlayerControl>().enabled = false;
+                switchKeyDown = false;
 
                 //GetComponent<PlayerThirdPersonControl>().enabled = true;
                 //GetComponent<PlayerControl>().enabled = false;
