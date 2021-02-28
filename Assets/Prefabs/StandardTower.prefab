@@ -19333,11 +19333,11 @@ MonoBehaviour:
   enemyTag: Enemy
   rotateSpeed: 10
   partToRotate: {fileID: 1007616536205005848}
-  UI: {fileID: 444328940687815335}
   _bulletPrefab: {fileID: 817166880577045539, guid: 5e06ecbfc936ff74d90d7f15ff6ed019,
     type: 3}
   _shootPoint: {fileID: 1001276880782941430}
-  healthBar: {fileID: 7386536516643966594}
+  healthBar3D: {fileID: 7386536516643966594}
+  healthBar2D: {fileID: 2583074871983189601}
   UI3D: {fileID: 9101236294867043619}
   UI2D: {fileID: 4522583223125814942}
   menu3D: {fileID: 5723533216693358513}
@@ -34413,7 +34413,8 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 8217663101051835852, guid: 4d0f613f99596c34ea4632b65163d015,
+    type: 3}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -34421,7 +34422,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1058913133
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &4738168590230661067
@@ -35706,7 +35707,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1058913133
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &2382623897635952788

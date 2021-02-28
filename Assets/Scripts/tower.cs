@@ -18,12 +18,12 @@ public class tower : MonoBehaviour
     public float rotateSpeed = 10f;
     [SerializeField] Transform partToRotate;
     private float _nextShootTime;
-    [SerializeField] Transform UI;
 
     [SerializeField] Transform _bulletPrefab;
     [SerializeField] Transform _shootPoint;
 
-    [SerializeField] Image healthBar;
+    [SerializeField] Image healthBar3D;
+    [SerializeField] Image healthBar2D;
     public GameObject UI3D;
     public GameObject UI2D;
     public GameObject menu3D;
@@ -50,7 +50,8 @@ public class tower : MonoBehaviour
             Vector3 direction = target.position - _shootPoint.position;
             Gunfiring(direction);
             health -= Time.deltaTime;
-            healthBar.fillAmount = health / startHealth;
+            healthBar3D.fillAmount = health / startHealth;
+            healthBar2D.fillAmount = health / startHealth;
         }
         if (health <= 0)
         {
