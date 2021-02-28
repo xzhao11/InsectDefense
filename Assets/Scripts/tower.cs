@@ -18,18 +18,29 @@ public class tower : MonoBehaviour
     public float rotateSpeed = 10f;
     [SerializeField] Transform partToRotate;
     private float _nextShootTime;
+    [SerializeField] Transform UI;
 
     [SerializeField] Transform _bulletPrefab;
     [SerializeField] Transform _shootPoint;
 
     [SerializeField] Image healthBar;
+    public GameObject UI3D;
+    public GameObject UI2D;
+    public GameObject menu3D;
+    public GameObject menu2D;
+    public bool isTopDown;
     public GameObject menu;
+
+
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
         startHealth = health;
         isBroken = false;
-        menu.SetActive(false);
+        menu = menu3D;
+        menu3D.SetActive(false);
+        menu2D.SetActive(false);
+        UI2D.SetActive(false);
     }
 
     void FixedUpdate()
@@ -45,6 +56,9 @@ public class tower : MonoBehaviour
         {
             isBroken = true;
         }
+
+
+
 
     }
 
@@ -109,14 +123,55 @@ public class tower : MonoBehaviour
         menu.SetActive(true);
     }
 
+
     public void hideMenu()
     {
         menu.SetActive(false);
+    }
+
+    public void switchTopDown()
+    {
+        if (menu.activeSelf)
+        {
+            menu2D.SetActive(true);
+        }
+        menu = menu2D;
+        menu3D.SetActive(false);
+        UI2D.SetActive(true);
+        UI3D.SetActive(false);
+    }
+    public void switchThirdPerson()
+    {
+        
+        if (menu.activeSelf)
+        {
+            menu3D.SetActive(true);
+        }
+        menu = menu3D;
+        menu2D.SetActive(false);
+        UI2D.SetActive(false);
+        UI3D.SetActive(true);
     }
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
+    }
+
+    public void repair()
+    {
+        health = startHealth;
+        isBroken = false;
+    }
+
+    public void sell()
+    {
+        Destroy(gameObject);
+    }
+
+    public void upgrade()
+    {
+        Debug.Log("upgrade");
     }
 }

@@ -29,10 +29,10 @@ public class SinglePlacement : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (buildManager.GetTowerToBuild() == null)
-        {
-            return;
-        }
+        //if (buildManager.GetTowerToBuild() == null)
+        //{
+        //    return;
+        //}
         if (tower != null)
         {
             //tower.GetComponent<tower>().showMenu();

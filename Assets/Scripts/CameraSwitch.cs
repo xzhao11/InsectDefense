@@ -36,7 +36,8 @@ public class CameraSwitch : MonoBehaviour
                 switchKeyDown = false;
             }
         }
-        if(Input.GetKeyDown(KeyCode.LeftShift))
+        var towers = GameObject.FindGameObjectsWithTag("Tower");
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             switchKeyDown = false;
             if (thirdActive) 
@@ -58,6 +59,15 @@ public class CameraSwitch : MonoBehaviour
                     switchKeyDown = true;
                 }
 
+                //FindObjectOfType<tower>().isTopDown = true;
+                
+                foreach (GameObject thetower in towers)
+                {
+                    thetower.GetComponent<tower>().switchTopDown();
+                }
+
+
+
             }
             else
             {
@@ -69,6 +79,11 @@ public class CameraSwitch : MonoBehaviour
                 GetComponent<PlayerControl>().enabled = false;
                 switchKeyDown = false;
 
+                foreach (GameObject thetower in towers)
+                {
+                    thetower.GetComponent<tower>().switchThirdPerson();
+                }
+                //FindObjectOfType<tower>().isTopDown = false;
                 //GetComponent<PlayerThirdPersonControl>().enabled = true;
                 //GetComponent<PlayerControl>().enabled = false;
             }
