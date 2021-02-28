@@ -29,12 +29,12 @@ public class tileMovement : MonoBehaviour
     {
         Timer = 0;
 
-        Debug.Log("Path increment");
+        //Debug.Log("Path increment");
 
-        Debug.Log(path);
-        Debug.Log(path.transform.GetChild(curr_path));
-        Debug.Log(path.transform.GetChild(curr_path).GetChild(0));
-        Debug.Log(path.transform.GetChild(curr_path).GetChild(0).GetChild(curr_node));
+        //Debug.Log(path);
+        //Debug.Log(path.transform.GetChild(curr_path));
+        //Debug.Log(path.transform.GetChild(curr_path).GetChild(0));
+        //Debug.Log(path.transform.GetChild(curr_path).GetChild(0).GetChild(curr_node));
 
         startPosition = this.transform.position;
 
@@ -42,25 +42,25 @@ public class tileMovement : MonoBehaviour
 
         dest = path.transform.GetChild(curr_path).GetChild(0).GetChild(curr_node).position;
 
-        Debug.Log("Start position is - " + startPosition + " and destination is - " + dest);
+        //Debug.Log("Start position is - " + startPosition + " and destination is - " + dest);
     }
 
     void incrementNode()
     {
         Timer = 0;
 
-        Debug.Log("Node increment");
+        //Debug.Log("Node increment");
 
-        Debug.Log(path);
-        Debug.Log(path.transform.GetChild(curr_path));
-        Debug.Log(path.transform.GetChild(curr_path).GetChild(0));
-        Debug.Log(path.transform.GetChild(curr_path).GetChild(0).GetChild(curr_node));
+        //Debug.Log(path);
+        //Debug.Log(path.transform.GetChild(curr_path));
+        //Debug.Log(path.transform.GetChild(curr_path).GetChild(0));
+        //Debug.Log(path.transform.GetChild(curr_path).GetChild(0).GetChild(curr_node));
 
         startPosition = this.transform.position;
 
         dest = path.transform.GetChild(curr_path).GetChild(0).GetChild(curr_node).position;
 
-        Debug.Log("Start position is - " + startPosition + " and destination is - " + dest);
+        //Debug.Log("Start position is - " + startPosition + " and destination is - " + dest);
     }
 
     // Update is called once per frame

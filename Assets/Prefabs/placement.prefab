@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3521946303366922776}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -44.8, y: 1, z: 60.8}
-  m_LocalScale: {x: 20, y: 3, z: 20}
+  m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -107,4 +107,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.1981132, g: 0.19344072, b: 0.19344072, a: 0}
-  posOffset: {x: 0, y: 2, z: 0}
+  standardposOffset: {x: 0, y: 0, z: 0}
+  EMPposOffset: {x: 0, y: 0, z: 0}

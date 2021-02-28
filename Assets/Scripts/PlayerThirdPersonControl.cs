@@ -12,10 +12,12 @@ public class PlayerThirdPersonControl : MonoBehaviour
     [SerializeField] float speed = 5f;
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
-
+    private float gravity;
+    [SerializeField] float groundY = 3;
 
     public Transform cam;
     public Vector3 moveDir;
+    
 
     //AudioSource step;
     void Start()
@@ -29,6 +31,17 @@ public class PlayerThirdPersonControl : MonoBehaviour
         //https://www.youtube.com/watch?v=4HpC--2iowE&t=1002s
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
+        gravity -= (float)9.81 * Time.deltaTime;
+        if (transform.position.y == groundY)
+        {
+            gravity = 0.0f;
+        }
+        else
+        {
+            Vector3 down = new Vector3(0, gravity, 0);
+            controller.Move(down);
+        }
+        
         Vector3 movement = new Vector3(horizontal, 0.0f, vertical).normalized;
         if (movement.magnitude >= 0.1f)
         {
