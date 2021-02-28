@@ -2,34 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-public class enemyMovement : MonoBehaviour
+public class enemy : MonoBehaviour
 {
 
     public int health = 200;
     public Transform nest;
     public Transform player;
-    //[SerializeField] TMP_Text health_msg;
-    //[SerializeField] TMP_Text hit_msg;
     [SerializeField] float hitDistance = 30f;
 
     private void Start()
     {
-        //hit_msg.gameObject.SetActive(false);
     }
     void Update()
     {
-        //health_msg.text = "Health : " + health;
 
         if (health <= 0 && gameObject)
         {
             //Debug.Log("enemy down");
             //health_msg.text = "Enemy Down";
             Destroy(gameObject);
-            if(GetComponent<enemyPath>().gotEgg)
-            {
-                nest.GetComponent<nestScript>().numLarva += 1;
-            }
+
         }
+        //if ((nest.position - transform.position).magnitude <= 0.1)
+        //{
+        //    nest.GetComponent<nestScript>().numLarva -= 1;
+        //}
 
     }
     private void OnMouseDown()
@@ -38,12 +35,10 @@ public class enemyMovement : MonoBehaviour
         {
             Debug.Log("I hit you");
             health -= 5;
-            //hit_msg.gameObject.SetActive(true);
         }
         
     }
     private void OnMouseUp()
     {
-        //hit_msg.gameObject.SetActive(false);
     }
 }

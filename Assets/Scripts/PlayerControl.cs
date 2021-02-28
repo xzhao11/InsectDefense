@@ -19,11 +19,11 @@ public class PlayerControl : MonoBehaviour
         float horizontal = -Input.GetAxisRaw("Horizontal");
         float vertical = -Input.GetAxisRaw("Vertical");
         Vector3 movement = new Vector3(horizontal, 0.0f, vertical).normalized;
-        Quaternion targetRotation = Quaternion.LookRotation(movement);
+        
         if (movement.magnitude > 0)
         {
             var delta = -transform.position;
-            
+            Quaternion targetRotation = Quaternion.LookRotation(movement);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * smooth);
             controller.Move(movement.normalized * speed * Time.deltaTime);
             vcam.m_XAxis.Value = Quaternion.Lerp(Quaternion.Euler(0, vcam.m_XAxis.Value, 0), targetRotation, Time.deltaTime * smooth).eulerAngles.y;

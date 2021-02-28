@@ -7,11 +7,12 @@ public class tileWaveScript : MonoBehaviour
     public GameObject enemy;
     public GameObject path;
     public int totalEnemies = 100;
-    private int remaining;
+    public int remaining;
     public float downTime = 1200f;
     private float timeToSpawn = 0f;
     private Vector3 spawn;
-
+    public Transform nest;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,11 @@ public class tileWaveScript : MonoBehaviour
         {
             var curr_enemy = (GameObject)Instantiate(enemy, spawn, Quaternion.identity);
             curr_enemy.SetActive(true);
+            curr_enemy.GetComponent<tileMovement>().path = path;
+            curr_enemy.GetComponent<tileMovement>().nest = nest;
+            //curr_enemy.GetComponent<enemy>().nest = nest.transform;
+            curr_enemy.GetComponent<enemy>().health = 20;
+            curr_enemy.GetComponent<enemy>().player = player.transform;
             remaining -= 1;
             timeToSpawn = downTime;
         }

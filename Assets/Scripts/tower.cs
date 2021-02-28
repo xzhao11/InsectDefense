@@ -22,14 +22,25 @@ public class tower : MonoBehaviour
     [SerializeField] Transform _bulletPrefab;
     [SerializeField] Transform _shootPoint;
 
-    [SerializeField] Image healthBar;
-    [SerializeField] GameObject menu;
+    [SerializeField] Image healthBar3D;
+    [SerializeField] Image healthBar2D;
+    public GameObject UI3D;
+    public GameObject UI2D;
+    public GameObject menu3D;
+    public GameObject menu2D;
+    public bool isTopDown;
+    public GameObject menu;
+
+
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
         startHealth = health;
         isBroken = false;
-        menu.SetActive(false);
+        menu = menu3D;
+        menu3D.SetActive(false);
+        menu2D.SetActive(false);
+        UI2D.SetActive(false);
     }
 
     void FixedUpdate()
@@ -39,12 +50,16 @@ public class tower : MonoBehaviour
             Vector3 direction = target.position - _shootPoint.position;
             Gunfiring(direction);
             health -= Time.deltaTime;
-            healthBar.fillAmount = health / startHealth;
+            healthBar3D.fillAmount = health / startHealth;
+            healthBar2D.fillAmount = health / startHealth;
         }
         if (health <= 0)
         {
             isBroken = true;
         }
+
+
+
 
     }
 
@@ -96,7 +111,7 @@ public class tower : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * rotateSpeed).eulerAngles;
-        if (partToRotate)
+        if (partToRotate && !isBroken)
         {
             partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
         }
@@ -109,9 +124,55 @@ public class tower : MonoBehaviour
         menu.SetActive(true);
     }
 
+
+    public void hideMenu()
+    {
+        menu.SetActive(false);
+    }
+
+    public void switchTopDown()
+    {
+        if (menu.activeSelf)
+        {
+            menu2D.SetActive(true);
+        }
+        menu = menu2D;
+        menu3D.SetActive(false);
+        UI2D.SetActive(true);
+        UI3D.SetActive(false);
+    }
+    public void switchThirdPerson()
+    {
+        
+        if (menu.activeSelf)
+        {
+            menu3D.SetActive(true);
+        }
+        menu = menu3D;
+        menu2D.SetActive(false);
+        UI2D.SetActive(false);
+        UI3D.SetActive(true);
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
+    }
+
+    public void repair()
+    {
+        health = startHealth;
+        isBroken = false;
+    }
+
+    public void sell()
+    {
+        Destroy(gameObject);
+    }
+
+    public void upgrade()
+    {
+        Debug.Log("upgrade");
     }
 }

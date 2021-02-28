@@ -23,26 +23,26 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject, bulletLifeInSeconds);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Enemy"))
-        {
-            enemyMovement enemy = FindObjectOfType<enemyMovement>();
-            enemy.health -= 1;
-            Destroy(gameObject);
-
-        }
-
-    }
-
-    //private void OnCollisionEnter(Collision collision)
+    //private void OnTriggerEnter(Collider other)
     //{
-    //    GameObject other = collision.gameObject;
     //    if (other.CompareTag("Enemy"))
     //    {
     //        enemyMovement enemy = FindObjectOfType<enemyMovement>();
     //        enemy.health -= 1;
     //        Destroy(gameObject);
+
     //    }
+
     //}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        GameObject other = collision.gameObject;
+        if (other.CompareTag("Enemy"))
+        {
+            //enemyMovement enemy = FindObjectOfType<enemyMovement>();
+            //enemy.health -= 1;
+            Destroy(gameObject);
+        }
+    }
 }
