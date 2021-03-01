@@ -4733,7 +4733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba05b9a153c142949a53ad894e1a8edc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 1326578920}
+  enemy: {fileID: 1141286327377354173, guid: 411956c6735729c42a28e0cb9fd40eb6, type: 3}
   path: {fileID: 1000225209}
   totalEnemies: 20
   remaining: 0
@@ -6712,7 +6712,7 @@ Transform:
   m_Children:
   - {fileID: 721457702}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &944881376
 PrefabInstance:
@@ -9748,7 +9748,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291746785}
-  m_LocalRotation: {x: 0.03694406, y: -0.0000000021493296, z: 7.9459196e-11, w: 0.99931735}
+  m_LocalRotation: {x: 0.03694406, y: 0.0000000021493296, z: -7.9459196e-11, w: 0.99931735}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -10209,12 +10209,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323750470}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1326578920 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7122654101855521591, guid: 91d4749f098c66442b36767a17342765,
-    type: 3}
-  m_PrefabInstance: {fileID: 161936150}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1328420911
 GameObject:
   m_ObjectHideFlags: 3
@@ -16981,11 +16975,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 933091484}
-    - target: {fileID: 1141286327377354170, guid: 411956c6735729c42a28e0cb9fd40eb6,
-        type: 3}
-      propertyPath: nest
-      value: 
-      objectReference: {fileID: 1908146432}
     - target: {fileID: 1141286327377354170, guid: 411956c6735729c42a28e0cb9fd40eb6,
         type: 3}
       propertyPath: path
