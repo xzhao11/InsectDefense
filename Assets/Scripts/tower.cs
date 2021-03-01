@@ -58,7 +58,14 @@ public class tower : MonoBehaviour
             isBroken = true;
         }
 
-
+        if (!FindObjectOfType<CameraSwitch>().thirdActive)
+        {
+            switchTopDown();
+        }
+        else
+        {
+            switchThirdPerson();
+        }
 
 
     }
@@ -163,11 +170,13 @@ public class tower : MonoBehaviour
     public void repair()
     {
         health = startHealth;
+        Debug.Log("repair");
         isBroken = false;
     }
 
     public void sell()
     {
+        Debug.Log("sell");
         Destroy(gameObject);
     }
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class SinglePlacement : MonoBehaviour
 {
@@ -36,6 +37,11 @@ public class SinglePlacement : MonoBehaviour
         if (tower != null)
         {
             //tower.GetComponent<tower>().showMenu();
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                Debug.Log("Touched the UI");
+                return;
+            }
             SetPlacement();
             return;
         }

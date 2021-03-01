@@ -61,10 +61,10 @@ public class CameraSwitch : MonoBehaviour
 
                 //FindObjectOfType<tower>().isTopDown = true;
                 
-                foreach (GameObject thetower in towers)
-                {
-                    thetower.GetComponent<tower>().switchTopDown();
-                }
+                //foreach (GameObject thetower in towers)
+                //{
+                //    thetower.GetComponent<tower>().switchTopDown();
+                //}
 
 
 
@@ -79,10 +79,10 @@ public class CameraSwitch : MonoBehaviour
                 GetComponent<PlayerControl>().enabled = false;
                 switchKeyDown = false;
 
-                foreach (GameObject thetower in towers)
-                {
-                    thetower.GetComponent<tower>().switchThirdPerson();
-                }
+                //foreach (GameObject thetower in towers)
+                //{
+                //    thetower.GetComponent<tower>().switchThirdPerson();
+                //}
                 //FindObjectOfType<tower>().isTopDown = false;
                 //GetComponent<PlayerThirdPersonControl>().enabled = true;
                 //GetComponent<PlayerControl>().enabled = false;
