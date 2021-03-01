@@ -618,7 +618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 0}
-  moveSpeed: 0
+  moveSpeed: 1
   nest: {fileID: 6758554362590558153, guid: a4c697f34d321f847946d234f9f03385, type: 3}
 --- !u!114 &6899145243960983118
 MonoBehaviour:
