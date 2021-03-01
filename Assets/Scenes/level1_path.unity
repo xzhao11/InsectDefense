@@ -6635,6 +6635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 933091479}
   speed: 30
+  groundY: 3
   turnSmoothTime: 0.1
   vcam: {fileID: 378137549}
 --- !u!136 &933091481
@@ -8794,7 +8795,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169709579}
-  m_LocalRotation: {x: 0.0006195292, y: -3.2505235e-10, z: 2.0137947e-13, w: 0.9999998}
+  m_LocalRotation: {x: 0.00061952794, y: 8.920793e-10, z: -5.526682e-13, w: 0.9999998}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -11167,6 +11168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
   speed: 30
+  groundY: 3
   turnSmoothTime: 0.1
   vcam: {fileID: 378137549}
 --- !u!64 &1442309739
