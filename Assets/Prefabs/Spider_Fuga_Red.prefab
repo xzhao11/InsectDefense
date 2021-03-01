@@ -537,11 +537,11 @@ GameObject:
   - component: {fileID: 6899145243960983118}
   m_Layer: 0
   m_Name: Spider_Fuga_Red
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7122654101855557399
 Transform:
   m_ObjectHideFlags: 0
@@ -618,7 +618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 0}
-  moveSpeed: 1
+  moveSpeed: 0
   nest: {fileID: 6758554362590558153, guid: a4c697f34d321f847946d234f9f03385, type: 3}
 --- !u!114 &6899145243960983118
 MonoBehaviour:
