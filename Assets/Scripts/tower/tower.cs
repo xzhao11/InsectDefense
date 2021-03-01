@@ -33,6 +33,7 @@ public class tower : MonoBehaviour
     public GameObject menu;
 
     public GameObject placement;
+    public Transform player;
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
@@ -67,6 +68,7 @@ public class tower : MonoBehaviour
         {
             switchThirdPerson();
         }
+
 
 
     }
@@ -127,7 +129,7 @@ public class tower : MonoBehaviour
 
     }
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
         Debug.Log("clicked tower");
         if (EventSystem.current.IsPointerOverGameObject())
@@ -172,6 +174,8 @@ public class tower : MonoBehaviour
         menu2D.SetActive(false);
         UI2D.SetActive(false);
         UI3D.SetActive(true);
+        //menu.transform.LookAt(player);
+        menu.transform.rotation = Quaternion.LookRotation(transform.position - player.position);
     }
 
     private void OnDrawGizmosSelected()

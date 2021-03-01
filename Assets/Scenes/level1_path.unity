@@ -3143,6 +3143,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 933091484}
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
       propertyPath: topcam
       value: 
       objectReference: {fileID: 109386913}
@@ -3744,6 +3749,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 981637158}
     m_Modifications:
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 933091484}
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
       propertyPath: topcam
@@ -5041,6 +5051,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 933091484}
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
       propertyPath: topcam
       value: 
       objectReference: {fileID: 109386913}
@@ -5124,6 +5139,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 981637158}
     m_Modifications:
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 933091484}
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
       propertyPath: topcam
@@ -5487,6 +5507,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 933091484}
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
       propertyPath: topcam
       value: 
       objectReference: {fileID: 109386913}
@@ -5663,6 +5688,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 981637158}
     m_Modifications:
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 933091484}
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
       propertyPath: topcam
@@ -7511,6 +7541,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 933091484}
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
       propertyPath: topcam
       value: 
       objectReference: {fileID: 109386913}
@@ -8241,6 +8276,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 933091484}
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
       propertyPath: topcam
       value: 
       objectReference: {fileID: 109386913}
@@ -8611,6 +8651,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 933091484}
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
       propertyPath: topcam
       value: 
       objectReference: {fileID: 109386913}
@@ -8930,7 +8975,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169709579}
-  m_LocalRotation: {x: 0.00061953004, y: -1.4362093e-10, z: 8.8977504e-14, w: 0.9999998}
+  m_LocalRotation: {x: 0.0006195265, y: -2.8725436e-10, z: 1.7796173e-13, w: 0.9999998}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -10697,6 +10742,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 981637158}
     m_Modifications:
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 933091484}
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
       propertyPath: topcam
@@ -12701,6 +12751,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 933091484}
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
       propertyPath: topcam
       value: 
       objectReference: {fileID: 109386913}
@@ -14246,6 +14301,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 981637158}
     m_Modifications:
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 933091484}
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
       propertyPath: topcam
@@ -16196,6 +16256,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 933091484}
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
       propertyPath: topcam
       value: 
       objectReference: {fileID: 109386913}
@@ -16285,6 +16350,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 981637158}
     m_Modifications:
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 933091484}
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
       propertyPath: topcam
@@ -16767,6 +16837,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 933091484}
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
       propertyPath: topcam
       value: 
       objectReference: {fileID: 109386913}
@@ -16850,6 +16925,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 981637158}
     m_Modifications:
+    - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 933091484}
     - target: {fileID: 3521946303366922759, guid: 3d25ba654c308084bab54fbec3135f78,
         type: 3}
       propertyPath: topcam

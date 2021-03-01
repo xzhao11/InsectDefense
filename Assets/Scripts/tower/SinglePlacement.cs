@@ -15,6 +15,7 @@ public class SinglePlacement : MonoBehaviour
     BuildManager buildManager;
     private SinglePlacement selectedPlacement;
     public Camera topcam;
+    public Transform player;
     private void OnMouseEnter()
     {
         if (buildManager.GetTowerToBuild() == null)
@@ -52,12 +53,14 @@ public class SinglePlacement : MonoBehaviour
             tower = (GameObject)Instantiate(towerToBuild, transform.position + standardposOffset, transform.rotation);
             tower.GetComponent<tower>().menu2D.GetComponent<Canvas>().worldCamera = topcam;
             tower.GetComponent<tower>().placement = this.gameObject;
+            tower.GetComponent<tower>().player = player;
         }
         else if (towerToBuild == buildManager.EMPTowerPrefab)
         {
             tower = (GameObject)Instantiate(towerToBuild, transform.position + EMPposOffset, transform.rotation);
             tower.GetComponent<tower>().menu2D.GetComponent<Canvas>().worldCamera = topcam;
             tower.GetComponent<tower>().placement = this.gameObject;
+            tower.GetComponent<tower>().player = player;
         }
         
 

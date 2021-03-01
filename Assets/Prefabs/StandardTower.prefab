@@ -19345,6 +19345,7 @@ MonoBehaviour:
   isTopDown: 0
   menu: {fileID: 5723533216693358513}
   placement: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &1004077563622625120
 GameObject:
   m_ObjectHideFlags: 0
@@ -19356,6 +19357,7 @@ GameObject:
   - component: {fileID: 1007616536205005848}
   - component: {fileID: 981580897889682754}
   - component: {fileID: 989026888658357344}
+  - component: {fileID: 7656603594334498701}
   - component: {fileID: 3826575857455947765}
   m_Layer: 10
   m_Name: Turret_MachineGun_L01
@@ -19428,6 +19430,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &7656603594334498701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004077563622625120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e29b7716f5857584fa3cf7f513de88b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!64 &3826575857455947765
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19453,6 +19467,7 @@ GameObject:
   - component: {fileID: 1001168818244954726}
   - component: {fileID: 981143326689093166}
   - component: {fileID: 989078617573012276}
+  - component: {fileID: 2179740212378224246}
   - component: {fileID: 6406811196430924840}
   m_Layer: 10
   m_Name: Base_MachineGun_L01
@@ -19523,6 +19538,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &2179740212378224246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004083452363601490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e29b7716f5857584fa3cf7f513de88b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!64 &6406811196430924840
 MeshCollider:
   m_ObjectHideFlags: 0
