@@ -39,7 +39,7 @@ public class SinglePlacement : MonoBehaviour
             //tower.GetComponent<tower>().showMenu();
             if (EventSystem.current.IsPointerOverGameObject())
             {
-                Debug.Log("Touched the UI");
+                //Debug.Log("Touched the UI");
                 return;
             }
             SetPlacement();

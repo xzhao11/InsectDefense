@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 public class enemy : MonoBehaviour
 {
 
-    public int health = 200;
+    public float health = 30f;
+    public float startHealth;
     public Transform nest;
     public Transform player;
     [SerializeField] float hitDistance = 30f;
+    [SerializeField] Image healthBar;
 
     private void Start()
     {
+        startHealth = health;
     }
     void Update()
     {
@@ -40,5 +44,10 @@ public class enemy : MonoBehaviour
     }
     private void OnMouseUp()
     {
+    }
+
+    void FixedUpdate()
+    {
+        healthBar.fillAmount = health / startHealth;
     }
 }
