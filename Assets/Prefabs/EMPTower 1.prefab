@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 276332203578272927}
   - component: {fileID: 165719512542689825}
   - component: {fileID: 3143735850860692617}
+  - component: {fileID: 3059067857477604541}
   m_Layer: 10
   m_Name: EMPTower 1
   m_TagString: Tower
@@ -164,6 +165,21 @@ MonoBehaviour:
   menu2D: {fileID: 2127494527905207813}
   isTopDown: 0
   menu: {fileID: 0}
+  placement: {fileID: 0}
+--- !u!64 &3059067857477604541
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277063854274422675}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: b665f727f980d441bb9aefcd169f872f, type: 3}
 --- !u!1 &278691073207340539
 GameObject:
   m_ObjectHideFlags: 0
@@ -1531,7 +1547,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5129300877204120101}
-  m_LocalRotation: {x: -0.17364825, y: -0, z: -0, w: 0.9848078}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.093206085}
   m_LocalScale: {x: 1, y: 0.7616206, z: 1}
   m_Children:
@@ -1760,7 +1776,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5959985430034633268}
-  m_LocalRotation: {x: -0.17364825, y: -0, z: -0, w: 0.9848078}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.093206085}
   m_LocalScale: {x: 1, y: 0.7616206, z: 1}
   m_Children:
@@ -2224,7 +2240,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7579922849101679244}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.081, y: 0.168, z: 0.307}
+  m_LocalPosition: {x: -0.081, y: 0.45, z: 0.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 275947572888515853}

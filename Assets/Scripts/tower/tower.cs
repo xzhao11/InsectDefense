@@ -1,6 +1,7 @@
 ﻿
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 public class tower : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -31,7 +32,7 @@ public class tower : MonoBehaviour
     public bool isTopDown;
     public GameObject menu;
 
-
+    public GameObject placement;
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
@@ -126,7 +127,18 @@ public class tower : MonoBehaviour
 
     }
 
-    public void showMenu()
+    private void OnMouseDown()
+    {
+        Debug.Log("clicked tower");
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            //Debug.Log("Touched the UI");
+            return;
+        }
+        placement.GetComponent<SinglePlacement>().SetPlacement();
+    }
+
+        public void showMenu()
     {
         menu.SetActive(true);
     }

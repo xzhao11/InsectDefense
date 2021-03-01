@@ -51,11 +51,13 @@ public class SinglePlacement : MonoBehaviour
         {
             tower = (GameObject)Instantiate(towerToBuild, transform.position + standardposOffset, transform.rotation);
             tower.GetComponent<tower>().menu2D.GetComponent<Canvas>().worldCamera = topcam;
+            tower.GetComponent<tower>().placement = this.gameObject;
         }
         else if (towerToBuild == buildManager.EMPTowerPrefab)
         {
             tower = (GameObject)Instantiate(towerToBuild, transform.position + EMPposOffset, transform.rotation);
             tower.GetComponent<tower>().menu2D.GetComponent<Canvas>().worldCamera = topcam;
+            tower.GetComponent<tower>().placement = this.gameObject;
         }
         
 
