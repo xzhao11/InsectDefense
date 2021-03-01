@@ -125,5 +125,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 0}
-  moveSpeed: 1
+  moveSpeed: 5
   nest: {fileID: 0}
