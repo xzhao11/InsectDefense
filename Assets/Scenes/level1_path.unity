@@ -3054,7 +3054,7 @@ RectTransform:
   m_GameObject: {fileID: 343200422}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 0.77968997, y: 0.77968997, z: 0.77968997}
   m_Children:
   - {fileID: 958450138}
   m_Father: {fileID: 1009791606}
@@ -3062,7 +3062,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -334, y: -161}
+  m_AnchoredPosition: {x: -54.5, y: -79.5}
   m_SizeDelta: {x: 33.39441, y: 47.569763}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &343200424
@@ -3192,8 +3192,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -46, y: -22}
-  m_SizeDelta: {x: 505, y: 250}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 288.19052, y: 147.518}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &346194174
 MonoBehaviour:
@@ -3274,7 +3274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.43137255}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.54901963}
   m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -7172,14 +7172,14 @@ RectTransform:
   m_GameObject: {fileID: 790687658}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 346194173}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -69, y: 37}
+  m_AnchoredPosition: {x: 0, y: 27.2}
   m_SizeDelta: {x: 24.309998, y: 25.409996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &790687660
@@ -8401,8 +8401,8 @@ MonoBehaviour:
   thirdPerson: {fileID: 1574826283}
   topDown: {fileID: 109386913}
   thirdPersonController: {fileID: 378137546}
-  thirdActive: 1
-  switchKeyDown: 1
+  thirdActive: 0
+  switchKeyDown: 0
 --- !u!114 &933091478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11204,7 +11204,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169709579}
-  m_LocalRotation: {x: 0.0006195295, y: -1.5722311e-10, z: 9.740438e-14, w: 0.9999998}
+  m_LocalRotation: {x: 0.00061952847, y: 7.621185e-10, z: -4.721542e-13, w: 0.9999998}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -15896,7 +15896,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -650, y: 305}
+  m_AnchoredPosition: {x: -650, y: 400}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1698804058
