@@ -36,7 +36,7 @@ public class PlayerControl : MonoBehaviour
             var delta = -transform.position;
             Quaternion targetRotation = Quaternion.LookRotation(movement);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * smooth);
-            controller.Move(movement.normalized * speed * Time.deltaTime);
+            controller.Move(movement.normalized * speed * (Time.deltaTime * (1 / Time.timeScale)));
             vcam.m_XAxis.Value = Quaternion.Lerp(Quaternion.Euler(0, vcam.m_XAxis.Value, 0), targetRotation, Time.deltaTime * smooth).eulerAngles.y;
 
         }

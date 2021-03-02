@@ -29,7 +29,19 @@ public class PauseMenu : MonoBehaviour
 
     public void speedUp()
     {
-        Time.timeScale = 2;
+        if (Time.timeScale == 1)
+        {
+            Time.timeScale = 3;
+        }
+        else if (Time.timeScale == 3)
+        {
+            Time.timeScale = 5;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+
     }
 
     public void restartComfirmOpen()

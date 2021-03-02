@@ -52,7 +52,7 @@ public class PlayerThirdPersonControl : MonoBehaviour
 
             moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 
-            controller.Move(moveDir.normalized * speed * Time.deltaTime);
+            controller.Move(moveDir.normalized * speed * (Time.deltaTime * (1 / Time.timeScale)));
 
         }
     }
