@@ -17,8 +17,9 @@ public class tower : MonoBehaviour
     public int repairCost = 1;
     public int upgradeCost = 10;
     public int sellCost = -5;
-    public int standardCost = 20;
-    public int EMPCost = 25;
+    public int buildCost = 20;
+
+    public AudioSource shootingSound;
     [Header("Unity Setup")]
     public GameObject nest;
     public string enemyTag = "Enemy";
@@ -63,6 +64,11 @@ public class tower : MonoBehaviour
             healthBar3D.fillAmount = health / startHealth;
             healthBar2D.fillAmount = health / startHealth;
         }
+        else
+        {
+            shootingSound.Stop();
+        }
+
         if (health <= 0)
         {
             isBroken = true;
@@ -93,7 +99,15 @@ public class tower : MonoBehaviour
             {
                 shootEffects.Play();
             }
-            
+            if (!shootingSound.isPlaying)
+            {
+                shootingSound.Play(0);
+            }
+
+        }
+        else
+        {
+            shootingSound.Stop();
         }
     }
 
@@ -218,13 +232,9 @@ public class tower : MonoBehaviour
         nest.GetComponent<nestScript>().numLarva -= upgradeCost;
     }
 
-    public void buildStandard()
-    {
-        nest.GetComponent<nestScript>().numLarva -= standardCost;
-    }
 
-    public void buildEMP()
+    public void build()
     {
-        nest.GetComponent<nestScript>().numLarva -= EMPCost;
+        nest.GetComponent<nestScript>().numLarva -= buildCost;
     }
 }

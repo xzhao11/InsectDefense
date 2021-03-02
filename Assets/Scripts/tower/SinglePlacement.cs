@@ -66,22 +66,16 @@ public class SinglePlacement : MonoBehaviour
             tower.GetComponent<tower>().placement = this.gameObject;
             tower.GetComponent<tower>().player = player;
             tower.GetComponent<tower>().nest = nest;
+            tower.GetComponent<tower>().build();
         }
-        if (towerToBuild == buildManager.standardTowerPrefab)
-        {
-            tower.GetComponent<tower>().buildStandard();
-        }
-        else if (towerToBuild == buildManager.EMPTowerPrefab)
-        {
-            tower.GetComponent<tower>().buildEMP();
-        }
+
 
 
     }
 
     public void SetPlacement()
     {
-        Debug.Log("Setting placement" + this);
+        //Debug.Log("Setting placement" + this);
         if (selectedPlacement == this && tower.GetComponent<tower>().menu.activeSelf)
         {
             DeselectPlacement();
