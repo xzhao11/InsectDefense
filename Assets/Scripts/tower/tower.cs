@@ -13,6 +13,7 @@ public class tower : MonoBehaviour
     public float health = 60.0f;
     public float startHealth = 60.0f;
     private bool isBroken;
+    [SerializeField] ParticleSystem shootEffects;
     [Header("Unity Setup")]
     
     public string enemyTag = "Enemy";
@@ -81,6 +82,11 @@ public class tower : MonoBehaviour
             Transform bulletTransform = Instantiate(_bulletPrefab, _shootPoint.position, _shootPoint.rotation);
             bulletTransform.GetComponent<Bullet>().Setup(direction);
             _nextShootTime = Time.time + _shootDelay;
+            if (shootEffects)
+            {
+                shootEffects.Play();
+            }
+            
         }
     }
 

@@ -19330,6 +19330,7 @@ MonoBehaviour:
   _shootDelay: 0.2
   health: 5
   startHealth: 5
+  shootEffects: {fileID: 1092131838151894162}
   enemyTag: Enemy
   rotateSpeed: 10
   partToRotate: {fileID: 1007616536205005848}
