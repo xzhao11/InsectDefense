@@ -24,7 +24,7 @@ public class tileWaveScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(timeToSpawn <= 0 && remaining != 0 && Time.timeScale == 1)
+        if(timeToSpawn <= 0 && remaining != 0 && Time.timeScale >0)
         {
             var curr_enemy = (GameObject)Instantiate(enemy, spawn, Quaternion.identity);
             curr_enemy.SetActive(true);

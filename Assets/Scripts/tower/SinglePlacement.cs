@@ -16,6 +16,9 @@ public class SinglePlacement : MonoBehaviour
     private SinglePlacement selectedPlacement;
     public Camera topcam;
     public Transform player;
+    public GameObject nest;
+
+    public ParticleSystem buildEffect;
     private void OnMouseEnter()
     {
         if (buildManager.GetTowerToBuild() == null)
@@ -51,18 +54,28 @@ public class SinglePlacement : MonoBehaviour
         if (towerToBuild == buildManager.standardTowerPrefab)
         {
             tower = (GameObject)Instantiate(towerToBuild, transform.position + standardposOffset, transform.rotation);
-            tower.GetComponent<tower>().menu2D.GetComponent<Canvas>().worldCamera = topcam;
-            tower.GetComponent<tower>().placement = this.gameObject;
-            tower.GetComponent<tower>().player = player;
         }
         else if (towerToBuild == buildManager.EMPTowerPrefab)
         {
             tower = (GameObject)Instantiate(towerToBuild, transform.position + EMPposOffset, transform.rotation);
+        }
+        if (towerToBuild)
+        {
+            Instantiate(buildEffect, transform.position+new Vector3(0, 3, 0), Quaternion.identity);
             tower.GetComponent<tower>().menu2D.GetComponent<Canvas>().worldCamera = topcam;
             tower.GetComponent<tower>().placement = this.gameObject;
             tower.GetComponent<tower>().player = player;
+            tower.GetComponent<tower>().nest = nest;
         }
-        
+        if (towerToBuild == buildManager.standardTowerPrefab)
+        {
+            tower.GetComponent<tower>().buildStandard();
+        }
+        else if (towerToBuild == buildManager.EMPTowerPrefab)
+        {
+            tower.GetComponent<tower>().buildEMP();
+        }
+
 
     }
 

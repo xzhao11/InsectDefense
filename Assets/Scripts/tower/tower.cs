@@ -14,8 +14,13 @@ public class tower : MonoBehaviour
     public float startHealth = 60.0f;
     private bool isBroken;
     [SerializeField] ParticleSystem shootEffects;
+    public int repairCost = 1;
+    public int upgradeCost = 10;
+    public int sellCost = -5;
+    public int standardCost = 20;
+    public int EMPCost = 25;
     [Header("Unity Setup")]
-    
+    public GameObject nest;
     public string enemyTag = "Enemy";
     public float rotateSpeed = 10f;
     [SerializeField] Transform partToRotate;
@@ -35,6 +40,8 @@ public class tower : MonoBehaviour
 
     public GameObject placement;
     public Transform player;
+    
+
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
@@ -181,7 +188,7 @@ public class tower : MonoBehaviour
         UI2D.SetActive(false);
         UI3D.SetActive(true);
         //menu.transform.LookAt(player);
-        menu.transform.rotation = Quaternion.LookRotation(transform.position - player.position);
+        UI3D.transform.rotation = Quaternion.LookRotation(transform.position - player.position);
     }
 
     private void OnDrawGizmosSelected()
@@ -195,16 +202,29 @@ public class tower : MonoBehaviour
         health = startHealth;
         Debug.Log("repair");
         isBroken = false;
+        nest.GetComponent<nestScript>().numLarva -= repairCost;
     }
 
     public void sell()
     {
         Debug.Log("sell");
         Destroy(gameObject);
+        nest.GetComponent<nestScript>().numLarva -= sellCost;
     }
 
     public void upgrade()
     {
         Debug.Log("upgrade");
+        nest.GetComponent<nestScript>().numLarva -= upgradeCost;
+    }
+
+    public void buildStandard()
+    {
+        nest.GetComponent<nestScript>().numLarva -= standardCost;
+    }
+
+    public void buildEMP()
+    {
+        nest.GetComponent<nestScript>().numLarva -= EMPCost;
     }
 }

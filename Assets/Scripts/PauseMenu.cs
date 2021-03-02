@@ -27,6 +27,11 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void speedUp()
+    {
+        Time.timeScale = 2;
+    }
+
     public void restartComfirmOpen()
     {
         restartConfirm.gameObject.SetActive(true);

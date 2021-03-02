@@ -88,7 +88,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 276332203578272927}
-  - component: {fileID: 165719512542689825}
   - component: {fileID: 3143735850860692617}
   - component: {fileID: 3059067857477604541}
   m_Layer: 10
@@ -117,23 +116,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &165719512542689825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 277063854274422675}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5d8e55681884ffb9fb6ed0b6f18f0bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerGhostPrefab: {fileID: 114247118342310820, guid: 7b178c9d97ec54b49b7599e7f7560475,
-    type: 3}
-  buildEffectPrefab: {fileID: 1395313577031670, guid: c559c1920b5d04e6d83aa4464fba5c68,
-    type: 3}
-  levelData: {fileID: 11400000, guid: 83fc8568a9c3c4a62852b59b45e58d93, type: 2}
 --- !u!114 &3143735850860692617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,6 +133,7 @@ MonoBehaviour:
   _shootDelay: 0.1
   health: 10
   startHealth: 10
+  shootEffects: {fileID: 0}
   enemyTag: Enemy
   rotateSpeed: 10
   partToRotate: {fileID: 273365511079811081}
@@ -166,6 +149,7 @@ MonoBehaviour:
   isTopDown: 0
   menu: {fileID: 0}
   placement: {fileID: 0}
+  player: {fileID: 0}
 --- !u!64 &3059067857477604541
 MeshCollider:
   m_ObjectHideFlags: 0

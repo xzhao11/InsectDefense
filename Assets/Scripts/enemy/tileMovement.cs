@@ -13,7 +13,7 @@ public class tileMovement : MonoBehaviour
     private int numPaths;
     private Vector3 dest;
     private Vector3 startPosition;
-
+    public AudioClip nestEnterSound;
     public Transform nest;
 
     // Start is called before the first frame update
@@ -85,8 +85,10 @@ public class tileMovement : MonoBehaviour
 
                 if(curr_path >= numPaths)
                 {
+                    AudioSource.PlayClipAtPoint(nestEnterSound, this.transform.position, 3);
                     Destroy(gameObject);
                     nest.GetComponent<nestScript>().numLarva -= 1;
+                    
                 }
                 else
                 {
