@@ -44,6 +44,7 @@ public class CameraSwitch : MonoBehaviour
             {
                 thirdPerson.enabled = false;
                 thirdPersonController.SetActive(false);
+                GetComponent<PlayerAttack>().enabled = false;
                 topDown.enabled = true;
                 thirdActive = false;
                 float horizontal = -Input.GetAxisRaw("Horizontal");
@@ -73,6 +74,7 @@ public class CameraSwitch : MonoBehaviour
             {
                 thirdPerson.enabled = true;
                 thirdPersonController.SetActive(true);
+                GetComponent<PlayerAttack>().enabled = false;
                 topDown.enabled = false;
                 thirdActive = true;
                 GetComponent<PlayerThirdPersonControl>().enabled = true;
