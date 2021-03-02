@@ -26,11 +26,7 @@ public class displayWaveProgress : MonoBehaviour
         float remaining = this.GetComponent<tileWaveScript>().remaining;
         float total = this.GetComponent<tileWaveScript>().totalEnemies;
         float prog = (total - remaining) / total;
-       // output.text = "WAVE PROGRESS";
-        if(prog == total)
-        {
-            output.text = "WAVE COMPLETE";
-        }
+        output.text = "Wave Progress";
         progressBar.fillAmount = prog;
     }
 }
