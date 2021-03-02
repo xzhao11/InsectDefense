@@ -7,6 +7,7 @@ public class PlayerAttack : MonoBehaviour
     public Camera cam;
     public Weapon myWeapon;
     public LayerMask mask;
+    public GameObject pivot;
 
     public Transform head;
 
@@ -23,11 +24,20 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
         attackTimer += Time.deltaTime;
+        if(attackTimer <= 0.2f)
+        {
+            pivot.transform.Rotate(360*Time.deltaTime, 0f, 0f, Space.Self);
+        }
+        else if(attackTimer <= 0.4f)
+        {
+            pivot.transform.Rotate(-360 * Time.deltaTime, 0f, 0f, Space.Self);
+        }
         if(Input.GetMouseButtonUp(0) && attackTimer >= myWeapon.attackCoolDown)
         {
             ray = DoAttack();
+            attackTimer = 0f;
         }
-        Debug.DrawRay(ray.origin, ray.direction * 100, Color.yellow);
+        Debug.DrawRay(ray.origin, ray.direction * myWeapon.attackRange, Color.yellow);
     }
 
     private Ray DoAttack()
@@ -36,18 +46,20 @@ public class PlayerAttack : MonoBehaviour
         Vector3 dire = cam.transform.forward;
         dire.y = 0.0f;
         Ray ray = new Ray(orig, dire);*/
-        Ray rayCam = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Vector3 orig = rayCam.origin;
+        //Ray rayCam = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Vector3 orig = head.position;
         orig.y = 1.5f;
         //Vector3 orig = head.position + Vector3.Normalize(head.forward) * 0.5f;
         //orig.y = 1.0f;
-        Vector3 dir = rayCam.direction;
+        //Vector3 dir = transform.position - cam.transform.position;
+        Vector3 dir = head.forward;
         dir.y = 0.0f;
-        orig += rayCam.direction * 2.0f;
+        //dir = Vector3.Normalize(dir);
+        //orig += dir * 0.5f;
         Ray ray = new Ray(orig, dir);
 
         RaycastHit hit;
-        if(Physics.Raycast(ray, out hit, myWeapon.attackRange + 20f, mask))
+        if(Physics.Raycast(ray, out hit, myWeapon.attackRange, mask))
         {
             print("Hit something!");
             if(hit.collider.tag == "Enemy")
@@ -55,7 +67,6 @@ public class PlayerAttack : MonoBehaviour
                 print("Hit Enemy!");
                 enemy en = hit.collider.GetComponent<enemy>();
                 en.TakeDamage(myWeapon.attackDamage);
-                attackTimer = 0f;
             }
         }
         return ray;
