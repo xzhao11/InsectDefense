@@ -10,7 +10,7 @@ public class enemy : MonoBehaviour
     public float startHealth;
     public Transform nest;
     public Transform player;
-    [SerializeField] float hitDistance = 30f;
+    //[SerializeField] float hitDistance = 30f;
     [SerializeField] Image healthBar;
 
     private void Start()
@@ -33,7 +33,7 @@ public class enemy : MonoBehaviour
         //}
 
     }
-    private void OnMouseDown()
+    /*private void OnMouseDown()
     {
         if((player.position-transform.position).magnitude <= hitDistance)
         {
@@ -44,6 +44,10 @@ public class enemy : MonoBehaviour
     }
     private void OnMouseUp()
     {
+    }*/
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
     }
 
     void FixedUpdate()
