@@ -26,7 +26,6 @@ public class PlayerAttack : MonoBehaviour
         if(Input.GetMouseButtonUp(0) && attackTimer >= myWeapon.attackCoolDown)
         {
             ray = DoAttack();
-            attackTimer = 0f;
         }
         Debug.DrawRay(ray.origin, ray.direction * 100, Color.yellow);
     }
@@ -56,6 +55,7 @@ public class PlayerAttack : MonoBehaviour
                 print("Hit Enemy!");
                 enemy en = hit.collider.GetComponent<enemy>();
                 en.TakeDamage(myWeapon.attackDamage);
+                attackTimer = 0f;
             }
         }
         return ray;
