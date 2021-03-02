@@ -38,16 +38,17 @@ public class PlayerAttack : MonoBehaviour
         dire.y = 0.0f;
         Ray ray = new Ray(orig, dire);*/
         Ray rayCam = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Vector3 orig = rayCam.origin + rayCam.direction;
+        Vector3 orig = rayCam.origin;
         orig.y = 1.5f;
         //Vector3 orig = head.position + Vector3.Normalize(head.forward) * 0.5f;
         //orig.y = 1.0f;
         Vector3 dir = rayCam.direction;
         dir.y = 0.0f;
+        orig += rayCam.direction * 2.0f;
         Ray ray = new Ray(orig, dir);
 
         RaycastHit hit;
-        if(Physics.Raycast(ray, out hit, myWeapon.attackRange, mask))
+        if(Physics.Raycast(ray, out hit, myWeapon.attackRange + 20f, mask))
         {
             print("Hit something!");
             if(hit.collider.tag == "Enemy")

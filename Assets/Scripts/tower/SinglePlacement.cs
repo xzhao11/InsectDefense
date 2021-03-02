@@ -61,7 +61,7 @@ public class SinglePlacement : MonoBehaviour
         }
         if (towerToBuild)
         {
-            Instantiate(buildEffect, transform.position+new Vector3(0, 3, 0), Quaternion.identity);
+            //Instantiate(buildEffect, transform.position+new Vector3(0, 3, 0), Quaternion.identity);
             tower.GetComponent<tower>().menu2D.GetComponent<Canvas>().worldCamera = topcam;
             tower.GetComponent<tower>().placement = this.gameObject;
             tower.GetComponent<tower>().player = player;
