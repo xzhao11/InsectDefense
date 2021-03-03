@@ -5962,7 +5962,8 @@ MonoBehaviour:
   - {fileID: 7122654101855521591, guid: 91d4749f098c66442b36767a17342765, type: 3}
   - {fileID: 8187015543198388644, guid: aea6cde2b2211e54eb87c9867779081a, type: 3}
   - {fileID: 7978624207812556279, guid: 8981b19ec644c6840bb02d7fa89d40df, type: 3}
-  path: {fileID: 1000225209}
+  paths:
+  - {fileID: 1000225209}
   totalEnemies: 20
   remaining: 0
   downTime: 1200
@@ -11269,7 +11270,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169709579}
-  m_LocalRotation: {x: 0.00061952695, y: 2.445364e-11, z: -1.5149696e-14, w: 0.9999998}
+  m_LocalRotation: {x: 0.0006195268, y: -1.2380476e-10, z: 7.670039e-14, w: 0.9999998}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -12227,7 +12228,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291746785}
-  m_LocalRotation: {x: 0.03694406, y: -0.0000000021493296, z: 7.9459196e-11, w: 0.99931735}
+  m_LocalRotation: {x: 0.03694406, y: 0.0000000021493296, z: -7.9459196e-11, w: 0.99931735}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
