@@ -16,6 +16,8 @@ public class tileWaveScript : MonoBehaviour
     public GameObject player;
     private int num = 0;
     private int whichPath = 0;
+    public int numWaves = 1;
+    public int finishedWaves = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +36,18 @@ public class tileWaveScript : MonoBehaviour
 
         remaining = totalEnemies;
         toSpawn = totalEnemies;
+    }
+
+    public void newWave()
+    {
+        if (finishedWaves != numWaves)
+        {
+            finishedWaves++;
+            remaining = totalEnemies;
+            toSpawn = totalEnemies;
+            num = 0;
+            whichPath = 0;
+        }
     }
 
     // Update is called once per frame
@@ -58,7 +72,7 @@ public class tileWaveScript : MonoBehaviour
             num++;
             whichPath++;
         }
-        else
+        else if(toSpawn != 0)
         {
             timeToSpawn -= 1;
         }
