@@ -710,7 +710,7 @@ GameObject:
   - component: {fileID: 6899145243960983118}
   m_Layer: 0
   m_Name: Spider_Fuga_Red
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -792,7 +792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 0}
-  moveSpeed: 1
+  moveSpeed: 0.5
   nestEnterSound: {fileID: 0}
   nest: {fileID: 6758554362590558153, guid: a4c697f34d321f847946d234f9f03385, type: 3}
 --- !u!114 &6899145243960983118
@@ -807,7 +807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0f64f239fa2f149a766eeac8f31393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 200
+  health: 20
   startHealth: 0
   nest: {fileID: 6758554362590558153, guid: a4c697f34d321f847946d234f9f03385, type: 3}
   player: {fileID: 4364707810039193107, guid: a8665db9d53b2ec42a0bc5f19663e01d, type: 3}

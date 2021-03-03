@@ -18,6 +18,7 @@ public class tower : MonoBehaviour
     public int upgradeCost = 10;
     public int sellCost = -5;
     public int buildCost = 20;
+    public int damage = 2;
 
     public AudioSource shootingSound;
     [Header("Unity Setup")]
@@ -93,7 +94,7 @@ public class tower : MonoBehaviour
         {
             //Debug.Log("shooting");
             Transform bulletTransform = Instantiate(_bulletPrefab, _shootPoint.position, _shootPoint.rotation);
-            bulletTransform.GetComponent<Bullet>().Setup(direction);
+            bulletTransform.GetComponent<Bullet>().Setup(direction, damage);
             _nextShootTime = Time.time + _shootDelay;
             if (shootEffects)
             {

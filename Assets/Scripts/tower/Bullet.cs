@@ -10,16 +10,18 @@ public class Bullet : MonoBehaviour
     float bulletLifeInSeconds = 4f;
     Vector3 _shootDir;
     Rigidbody _rgbd;
+    int bullet_damage;
 
     void Awake()
     {
         _rgbd = GetComponent<Rigidbody>();
     }
 
-    public void Setup(Vector3 shootDir)
+    public void Setup(Vector3 shootDir, int damage)
     {
         _shootDir = shootDir;
         _rgbd.velocity = _shootDir * _bulletSpeed;
+        bullet_damage = damage;
         Destroy(gameObject, bulletLifeInSeconds);
     }
 
@@ -42,7 +44,7 @@ public class Bullet : MonoBehaviour
         {
 
             enemy enemy = other.GetComponent<enemy>();
-            enemy.health -= 1;
+            enemy.health -= bullet_damage;
             Destroy(gameObject);
         }
     }
