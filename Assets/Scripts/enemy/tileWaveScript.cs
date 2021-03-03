@@ -49,7 +49,8 @@ public class tileWaveScript : MonoBehaviour
             //curr_enemy.GetComponent<enemy>().nest = nest.transform;
             curr_enemy.GetComponent<enemy>().health = 20;
             curr_enemy.GetComponent<enemy>().player = player.transform;
-            remaining -= 1;
+            curr_enemy.GetComponent<enemy>().wave = GameObject.FindGameObjectsWithTag("Wave")[0];
+
             timeToSpawn = downTime;
             num++;
             whichPath++;
@@ -58,5 +59,10 @@ public class tileWaveScript : MonoBehaviour
         {
             timeToSpawn -= 1;
         }
+    }
+
+    public void decrementRemaining()
+    {
+        remaining -= 1;
     }
 }
