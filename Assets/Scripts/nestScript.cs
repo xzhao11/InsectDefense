@@ -5,6 +5,8 @@ using TMPro;
 public class nestScript : MonoBehaviour
 {
     public int numLarva;
+    public float twinChance = 0.25f;
+    public float tripletChance = 0.1f;
     [SerializeField] TMP_Text num_msg;
 
     // Start is called before the first frame update
@@ -26,6 +28,6 @@ public class nestScript : MonoBehaviour
 
     public void repopulate()
     {
-        numLarva += (int)(numLarva * 0.25) + (int)(numLarva * 0.1);
+        numLarva += (int)(numLarva * twinChance) + (int)(numLarva * tripletChance);
     }
 }
