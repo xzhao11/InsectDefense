@@ -8,6 +8,7 @@ public class tileWaveScript : MonoBehaviour
     public GameObject[] paths;
     public int totalEnemies = 100;
     public int remaining;
+    public int toSpawn;
     public float downTime = 1200f;
     private float timeToSpawn = 0f;
     private Vector3[] spawns;
@@ -32,12 +33,13 @@ public class tileWaveScript : MonoBehaviour
         }
 
         remaining = totalEnemies;
+        toSpawn = totalEnemies;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(timeToSpawn <= 0 && remaining != 0 && Time.timeScale >0)
+        if(timeToSpawn <= 0 && toSpawn != 0 && Time.timeScale >0)
         {
             num = num % enemies.Length;
             whichPath = whichPath % paths.Length;
@@ -52,6 +54,7 @@ public class tileWaveScript : MonoBehaviour
             curr_enemy.GetComponent<enemy>().wave = GameObject.FindGameObjectsWithTag("Wave")[0];
 
             timeToSpawn = downTime;
+            toSpawn -= 1;
             num++;
             whichPath++;
         }

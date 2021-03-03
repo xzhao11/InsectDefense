@@ -9,6 +9,7 @@ public class waveComplete : MonoBehaviour
 {
     public TMP_Text output;
     static float isTrue = 0;
+    public GameObject nest;
 
     // Start is called before the first frame update
     void Start()
@@ -32,8 +33,10 @@ public class waveComplete : MonoBehaviour
         if (remaining == 0 && isTrue == 0)
         {
             //output.text = "WAVE COMPLETE";
-            Invoke(output.text = "WAVE COMPLETE, GET READY FOR THE NEXT ONE!", 3);
+            output.text = "WAVE COMPLETE, GET READY FOR THE NEXT ONE!";
+            //Invoke(output.text = "WAVE COMPLETE, GET READY FOR THE NEXT ONE!", 3);
             isTrue = 1;
+            nest.GetComponent<nestScript>().repopulate();
         }
         /*else
         {

@@ -23,4 +23,9 @@ public class nestScript : MonoBehaviour
     {
         numLarva -= 1;
     }
+
+    public void repopulate()
+    {
+        numLarva += (int)(numLarva * 0.25) + (int)(numLarva * 0.1);
+    }
 }
