@@ -484,7 +484,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &47844146
 PrefabInstance:
@@ -1308,7 +1308,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!4 &110080681 stripped
 Transform:
@@ -1316,6 +1316,124 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1829568105}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &110821738
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 153662, guid: 28306de25e99d0b4ea74323de2dfed81, type: 3}
+      propertyPath: m_Name
+      value: Glowing Rock Purple 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 439522, guid: 28306de25e99d0b4ea74323de2dfed81, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 439522, guid: 28306de25e99d0b4ea74323de2dfed81, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 439522, guid: 28306de25e99d0b4ea74323de2dfed81, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.946082
+      objectReference: {fileID: 0}
+    - target: {fileID: 439522, guid: 28306de25e99d0b4ea74323de2dfed81, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 439522, guid: 28306de25e99d0b4ea74323de2dfed81, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20.896225
+      objectReference: {fileID: 0}
+    - target: {fileID: 439522, guid: 28306de25e99d0b4ea74323de2dfed81, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 439522, guid: 28306de25e99d0b4ea74323de2dfed81, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439522, guid: 28306de25e99d0b4ea74323de2dfed81, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439522, guid: 28306de25e99d0b4ea74323de2dfed81, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439522, guid: 28306de25e99d0b4ea74323de2dfed81, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439522, guid: 28306de25e99d0b4ea74323de2dfed81, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439522, guid: 28306de25e99d0b4ea74323de2dfed81, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 28306de25e99d0b4ea74323de2dfed81, type: 3}
+--- !u!1001 &116178807
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 173250, guid: ff57ae67aab153a4e99d0d7830cbaa13, type: 3}
+      propertyPath: m_Name
+      value: Glowing Rock Green 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 449500, guid: ff57ae67aab153a4e99d0d7830cbaa13, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 449500, guid: ff57ae67aab153a4e99d0d7830cbaa13, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 59
+      objectReference: {fileID: 0}
+    - target: {fileID: 449500, guid: ff57ae67aab153a4e99d0d7830cbaa13, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.08807188
+      objectReference: {fileID: 0}
+    - target: {fileID: 449500, guid: ff57ae67aab153a4e99d0d7830cbaa13, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -18.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 449500, guid: ff57ae67aab153a4e99d0d7830cbaa13, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 449500, guid: ff57ae67aab153a4e99d0d7830cbaa13, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449500, guid: ff57ae67aab153a4e99d0d7830cbaa13, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449500, guid: ff57ae67aab153a4e99d0d7830cbaa13, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449500, guid: ff57ae67aab153a4e99d0d7830cbaa13, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449500, guid: ff57ae67aab153a4e99d0d7830cbaa13, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449500, guid: ff57ae67aab153a4e99d0d7830cbaa13, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ff57ae67aab153a4e99d0d7830cbaa13, type: 3}
 --- !u!4 &129083058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5259643345227476394, guid: ba4549de2ccb4ac4b9d5e8449f93572b,
@@ -1716,7 +1834,7 @@ PrefabInstance:
     - target: {fileID: 7122654101855557399, guid: 91d4749f098c66442b36767a17342765,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7122654101855557399, guid: 91d4749f098c66442b36767a17342765,
         type: 3}
@@ -2981,7 +3099,7 @@ Transform:
   - {fileID: 663192931}
   - {fileID: 1524607224}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &254794528
 PrefabInstance:
@@ -5392,7 +5510,7 @@ Transform:
   - {fileID: 1710566315}
   - {fileID: 1169709581}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &378445678 stripped
 Transform:
@@ -5862,7 +5980,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &437572954
 PrefabInstance:
@@ -6403,6 +6521,63 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1916769757}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &474261088
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 128104, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_Name
+      value: Glowing Rock Purple 3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 474262, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 474262, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -53.80917
+      objectReference: {fileID: 0}
+    - target: {fileID: 474262, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.08807188
+      objectReference: {fileID: 0}
+    - target: {fileID: 474262, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 474262, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 474262, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474262, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474262, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474262, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474262, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474262, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
 --- !u!1001 &480747442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7283,6 +7458,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99dd7f9a1c2c7734cb1a040c9005e864, type: 3}
+--- !u!1001 &628800034
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 101422, guid: 58839838b580d2e4da0036b493ac76eb, type: 3}
+      propertyPath: m_Name
+      value: Glowing Rock Green 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 476450, guid: 58839838b580d2e4da0036b493ac76eb, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 476450, guid: 58839838b580d2e4da0036b493ac76eb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 27.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 476450, guid: 58839838b580d2e4da0036b493ac76eb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.08807182
+      objectReference: {fileID: 0}
+    - target: {fileID: 476450, guid: 58839838b580d2e4da0036b493ac76eb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -80.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 476450, guid: 58839838b580d2e4da0036b493ac76eb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 476450, guid: 58839838b580d2e4da0036b493ac76eb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 476450, guid: 58839838b580d2e4da0036b493ac76eb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 476450, guid: 58839838b580d2e4da0036b493ac76eb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 476450, guid: 58839838b580d2e4da0036b493ac76eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 476450, guid: 58839838b580d2e4da0036b493ac76eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 476450, guid: 58839838b580d2e4da0036b493ac76eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 58839838b580d2e4da0036b493ac76eb, type: 3}
 --- !u!1 &632379013
 GameObject:
   m_ObjectHideFlags: 0
@@ -7822,6 +8054,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13ca8a7d51b715a4582fd610ff4aa616, type: 3}
+--- !u!1001 &661268516
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 186026, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_Name
+      value: Glowing Rock Green 6 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -52.173138
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.08807188
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -44.86527
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
 --- !u!1 &663192930
 GameObject:
   m_ObjectHideFlags: 0
@@ -8233,7 +8522,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &688379196
 MonoBehaviour:
@@ -9299,6 +9588,63 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1677265817}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &740946989
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 186026, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_Name
+      value: Glowing Rock Green 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.7499385
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.08807188
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -106.72719
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
 --- !u!1 &749996835
 GameObject:
   m_ObjectHideFlags: 0
@@ -9671,6 +10017,63 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 780076317}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &781586301
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 183710, guid: 4306497ffea2b6345b0769a3a402346a, type: 3}
+      propertyPath: m_Name
+      value: Glowing Rock Purple 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 445206, guid: 4306497ffea2b6345b0769a3a402346a, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445206, guid: 4306497ffea2b6345b0769a3a402346a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 27.940014
+      objectReference: {fileID: 0}
+    - target: {fileID: 445206, guid: 4306497ffea2b6345b0769a3a402346a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.08807182
+      objectReference: {fileID: 0}
+    - target: {fileID: 445206, guid: 4306497ffea2b6345b0769a3a402346a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -91.140144
+      objectReference: {fileID: 0}
+    - target: {fileID: 445206, guid: 4306497ffea2b6345b0769a3a402346a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445206, guid: 4306497ffea2b6345b0769a3a402346a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445206, guid: 4306497ffea2b6345b0769a3a402346a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445206, guid: 4306497ffea2b6345b0769a3a402346a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445206, guid: 4306497ffea2b6345b0769a3a402346a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445206, guid: 4306497ffea2b6345b0769a3a402346a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445206, guid: 4306497ffea2b6345b0769a3a402346a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4306497ffea2b6345b0769a3a402346a, type: 3}
 --- !u!1 &790687658
 GameObject:
   m_ObjectHideFlags: 0
@@ -10388,7 +10791,7 @@ RectTransform:
   - {fileID: 1820103503}
   - {fileID: 792838036}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -10755,6 +11158,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871188343}
   m_CullTransparentMesh: 0
+--- !u!1001 &877798672
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 128944, guid: a233330d3364a5944bbb4055ddfea91e, type: 3}
+      propertyPath: m_Name
+      value: Glowing Rock Purple 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 446632, guid: a233330d3364a5944bbb4055ddfea91e, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 446632, guid: a233330d3364a5944bbb4055ddfea91e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.312945
+      objectReference: {fileID: 0}
+    - target: {fileID: 446632, guid: a233330d3364a5944bbb4055ddfea91e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.08807188
+      objectReference: {fileID: 0}
+    - target: {fileID: 446632, guid: a233330d3364a5944bbb4055ddfea91e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -70.85745
+      objectReference: {fileID: 0}
+    - target: {fileID: 446632, guid: a233330d3364a5944bbb4055ddfea91e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 446632, guid: a233330d3364a5944bbb4055ddfea91e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 446632, guid: a233330d3364a5944bbb4055ddfea91e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 446632, guid: a233330d3364a5944bbb4055ddfea91e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 446632, guid: a233330d3364a5944bbb4055ddfea91e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 446632, guid: a233330d3364a5944bbb4055ddfea91e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 446632, guid: a233330d3364a5944bbb4055ddfea91e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a233330d3364a5944bbb4055ddfea91e, type: 3}
 --- !u!1 &880793453
 GameObject:
   m_ObjectHideFlags: 0
@@ -11663,7 +12123,7 @@ Transform:
   - {fileID: 721457702}
   - {fileID: 380903591}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &933091485
 AudioListener:
@@ -11690,7 +12150,7 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 65281
-  pivot: {fileID: 380903590}
+  character: {fileID: 0}
   head: {fileID: 721457702}
 --- !u!1001 &944093411
 PrefabInstance:
@@ -12158,6 +12618,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba4549de2ccb4ac4b9d5e8449f93572b, type: 3}
+--- !u!1001 &955544008
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 128104, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_Name
+      value: Glowing Rock Purple 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 474262, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 474262, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -40.638535
+      objectReference: {fileID: 0}
+    - target: {fileID: 474262, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.08807188
+      objectReference: {fileID: 0}
+    - target: {fileID: 474262, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -91.220566
+      objectReference: {fileID: 0}
+    - target: {fileID: 474262, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 474262, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474262, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474262, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474262, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474262, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474262, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f5dbd4a6011643445a0dffd4dfc74d40, type: 3}
 --- !u!1 &958450137
 GameObject:
   m_ObjectHideFlags: 0
@@ -12717,6 +13234,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 987203505}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &988018884
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 133374, guid: e7fbb6b690eb3f94fa6d1e031be4249b, type: 3}
+      propertyPath: m_Name
+      value: Glowing Rock Purple 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 478024, guid: e7fbb6b690eb3f94fa6d1e031be4249b, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 478024, guid: e7fbb6b690eb3f94fa6d1e031be4249b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 48.92886
+      objectReference: {fileID: 0}
+    - target: {fileID: 478024, guid: e7fbb6b690eb3f94fa6d1e031be4249b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.08807188
+      objectReference: {fileID: 0}
+    - target: {fileID: 478024, guid: e7fbb6b690eb3f94fa6d1e031be4249b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -49.27574
+      objectReference: {fileID: 0}
+    - target: {fileID: 478024, guid: e7fbb6b690eb3f94fa6d1e031be4249b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 478024, guid: e7fbb6b690eb3f94fa6d1e031be4249b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478024, guid: e7fbb6b690eb3f94fa6d1e031be4249b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478024, guid: e7fbb6b690eb3f94fa6d1e031be4249b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478024, guid: e7fbb6b690eb3f94fa6d1e031be4249b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478024, guid: e7fbb6b690eb3f94fa6d1e031be4249b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478024, guid: e7fbb6b690eb3f94fa6d1e031be4249b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e7fbb6b690eb3f94fa6d1e031be4249b, type: 3}
 --- !u!1 &993002616
 GameObject:
   m_ObjectHideFlags: 0
@@ -13492,7 +14066,7 @@ Transform:
   - {fileID: 551262048}
   - {fileID: 1908146432}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1062211670
 PrefabInstance:
@@ -14975,7 +15549,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169709579}
-  m_LocalRotation: {x: 0.0006195293, y: 2.9146827e-10, z: -1.8057318e-13, w: 0.9999998}
+  m_LocalRotation: {x: 0.0006195282, y: -9.1940466e-10, z: 5.6959727e-13, w: 0.9999998}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -16247,7 +16821,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291746785}
-  m_LocalRotation: {x: 0.03694406, y: -0.0000000021493296, z: 7.9459196e-11, w: 0.99931735}
+  m_LocalRotation: {x: 0.03694406, y: 0.0000000021493296, z: -7.9459196e-11, w: 0.99931735}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -18219,7 +18793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4215789226532830, guid: 7f931d4b5c97d194d8726ddf5acdd440, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4215789226532830, guid: 7f931d4b5c97d194d8726ddf5acdd440, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20176,12 +20750,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1574826281}
-  m_LocalRotation: {x: 0.018760873, y: -0.00000003440671, z: 6.4561345e-10, w: 0.999824}
+  m_LocalRotation: {x: 0.018760873, y: 0.00000003440671, z: -6.4561345e-10, w: 0.999824}
   m_LocalPosition: {x: 9.9, y: 2.6, z: -43.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 36.038002, y: 0, z: 0}
 --- !u!114 &1574826285
 MonoBehaviour:
@@ -22072,7 +22646,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1710566313}
-  m_LocalRotation: {x: 0.018760879, y: -0.000000017203353, z: 3.2280686e-10, w: 0.999824}
+  m_LocalRotation: {x: 0.018760879, y: 0.000000017203353, z: -3.2280686e-10, w: 0.999824}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -25102,7 +25676,7 @@ RectTransform:
   - {fileID: 1009791606}
   - {fileID: 754605080}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -25903,6 +26477,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba4549de2ccb4ac4b9d5e8449f93572b, type: 3}
+--- !u!1001 &1978687807
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 186026, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_Name
+      value: Glowing Rock Green 6 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 75.18527
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.08807182
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -91.24101
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461524, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 00f616f2f2def324eb1781a03e697b80, type: 3}
 --- !u!1001 &1980401014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26666,7 +27297,7 @@ Transform:
   - {fileID: 987203506}
   - {fileID: 994280319}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2048306158 stripped
 Transform:
@@ -27639,7 +28270,7 @@ PrefabInstance:
     - target: {fileID: 1141286327377354166, guid: 411956c6735729c42a28e0cb9fd40eb6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1141286327377354166, guid: 411956c6735729c42a28e0cb9fd40eb6,
         type: 3}
