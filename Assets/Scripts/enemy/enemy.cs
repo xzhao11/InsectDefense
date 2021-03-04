@@ -10,6 +10,7 @@ public class enemy : MonoBehaviour
     public float startHealth;
     public Transform nest;
     public Transform player;
+    public GameObject wave;
     //[SerializeField] float hitDistance = 30f;
     [SerializeField] Image healthBar;
 
@@ -24,6 +25,7 @@ public class enemy : MonoBehaviour
         {
             //Debug.Log("enemy down");
             //health_msg.text = "Enemy Down";
+            wave.GetComponent<tileWaveScript>().decrementRemaining();
             Destroy(gameObject);
 
         }
