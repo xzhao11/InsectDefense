@@ -32,7 +32,7 @@ public class waveComplete : MonoBehaviour
         if (remaining == 0 && isTrue == 0)
         {
             //output.text = "WAVE COMPLETE";
-            Invoke(output.text = "WAVE COMPLETE, GET READY FOR THE NEXT ONE!", 3);
+            Invoke(output.text = "WAVE COMPLETE, GET READY FOR THE NEXT ONE!", 10);
             isTrue = 1;
         }
         /*else

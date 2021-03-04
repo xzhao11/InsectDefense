@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;   
 
 public class tileWaveScript : MonoBehaviour
 {
@@ -13,19 +14,27 @@ public class tileWaveScript : MonoBehaviour
     private Vector3 spawn;
     public Transform nest;
     public GameObject player;
+    public Button waveStart;
+
     // Start is called before the first frame update
     void Start()
+    {
+        Button btn = waveStart.GetComponent<Button>();
+        btn.onClick.AddListener(TaskOnClick);   
+        
+    }
+    void TaskOnClick()
     {
         enemy.SetActive(false);
         spawn = path.transform.GetChild(0).GetChild(0).position;
         remaining = totalEnemies;
     }
-
     // Update is called once per frame
     void Update()
     {
         if(timeToSpawn <= 0 && remaining != 0 && Time.timeScale >0)
         {
+
             var curr_enemy = (GameObject)Instantiate(enemy, spawn, Quaternion.identity);
             curr_enemy.SetActive(true);
             curr_enemy.GetComponent<tileMovement>().path = path;
