@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class tileWaveScript : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class tileWaveScript : MonoBehaviour
     public int numWaves = 1;
     public int finishedWaves = 0;
 
+    public Button startWaveButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +39,7 @@ public class tileWaveScript : MonoBehaviour
 
         remaining = totalEnemies;
         toSpawn = totalEnemies;
+        timeToSpawn = Mathf.Infinity;
     }
 
     public void newWave()
@@ -76,6 +80,12 @@ public class tileWaveScript : MonoBehaviour
         {
             timeToSpawn -= 1;
         }
+    }
+
+    public void startWave()
+    {
+        timeToSpawn = 0;
+        startWaveButton.gameObject.SetActive(false);
     }
 
     public void decrementRemaining()
