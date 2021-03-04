@@ -76,7 +76,7 @@ public class SinglePlacement : MonoBehaviour
     public void SetPlacement()
     {
         //Debug.Log("Setting placement" + this);
-        if (selectedPlacement == this && tower.GetComponent<tower>().menu.activeSelf)
+        if (selectedPlacement == this && tower.GetComponent<tower>().menu2D.activeSelf)
         {
             DeselectPlacement();
             return;

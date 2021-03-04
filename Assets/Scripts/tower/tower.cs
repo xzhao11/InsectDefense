@@ -35,10 +35,10 @@ public class tower : MonoBehaviour
     [SerializeField] Image healthBar2D;
     public GameObject UI3D;
     public GameObject UI2D;
-    public GameObject menu3D;
+    //public GameObject menu3D;
     public GameObject menu2D;
     public bool isTopDown;
-    public GameObject menu;
+    //public GameObject menu;
 
     public GameObject placement;
     public Transform player;
@@ -49,7 +49,7 @@ public class tower : MonoBehaviour
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
         startHealth = health;
         isBroken = false;
-        menu = menu2D;
+        //menu = menu2D;
         //menu3D.SetActive(false);
         menu2D.SetActive(false);
         UI2D.SetActive(false);
@@ -79,10 +79,10 @@ public class tower : MonoBehaviour
         {
             switchTopDown();
         }
-        //else
-        //{
-        //    switchThirdPerson();
-        //}
+        else
+        {
+            switchThirdPerson();
+        }
 
 
 
@@ -170,41 +170,34 @@ public class tower : MonoBehaviour
 
         public void showMenu()
     {
-        menu.SetActive(true);
+        menu2D.SetActive(true);
     }
 
 
     public void hideMenu()
     {
-        menu.SetActive(false);
+        menu2D.SetActive(false);
     }
 
     public void switchTopDown()
     {
-        if (menu.activeSelf)
+        if (menu2D.activeSelf)
         {
             menu2D.SetActive(true);
         }
-        menu = menu2D;
         //menu3D.SetActive(false);
         UI2D.SetActive(true);
-        //UI3D.SetActive(false);
+        UI3D.SetActive(false);
 
     }
-    //public void switchThirdPerson()
-    //{
+    public void switchThirdPerson()
+    {
         
-    //    if (menu.activeSelf)
-    //    {
-    //        menu3D.SetActive(true);
-    //    }
-    //    menu = menu3D;
-    //    menu2D.SetActive(false);
-    //    UI2D.SetActive(false);
-    //    UI3D.SetActive(true);
-    //    //menu.transform.LookAt(player);
-    //    UI3D.transform.rotation = Quaternion.LookRotation(transform.position - player.position);
-    //}
+        menu2D.SetActive(false);
+        UI2D.SetActive(false);
+        UI3D.SetActive(true);
+        UI3D.transform.rotation = Quaternion.LookRotation(transform.position - player.position);
+    }
 
     private void OnDrawGizmosSelected()
     {
