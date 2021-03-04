@@ -7,7 +7,8 @@ public class PlayerAttack : MonoBehaviour
     public Camera cam;
     public Weapon myWeapon;
     public LayerMask mask;
-    public GameObject pivot;
+    public Animator character;
+    //public GameObject pivot;
 
     public Transform head;
 
@@ -17,20 +18,24 @@ public class PlayerAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ray = DoAttack();
+        //ray = DoAttack();
     }
 
     // Update is called once per frame
     void Update()
     {
         attackTimer += Time.deltaTime;
-        if(attackTimer <= 0.2f)
+        /*if(attackTimer <= 0.2f)
         {
             pivot.transform.Rotate(360*Time.deltaTime, 0f, 0f, Space.Self);
         }
         else if(attackTimer <= 0.4f)
         {
             pivot.transform.Rotate(-360 * Time.deltaTime, 0f, 0f, Space.Self);
+        }*/
+        if(character.GetBool("isAttacking") && attackTimer > 1.0f)
+        {
+            character.SetBool("isAttacking", false);
         }
         if(Input.GetMouseButtonUp(0) && attackTimer >= myWeapon.attackCoolDown)
         {
@@ -69,6 +74,7 @@ public class PlayerAttack : MonoBehaviour
                 en.TakeDamage(myWeapon.attackDamage);
             }
         }
+        character.SetBool("isAttacking", true);
         return ray;
     }
 }
