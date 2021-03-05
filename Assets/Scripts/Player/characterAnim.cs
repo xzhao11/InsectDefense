@@ -5,6 +5,7 @@ using UnityEngine;
 public class characterAnim : MonoBehaviour
 {
     Animator anim;
+    [SerializeField] Weapon weapon;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,13 +15,15 @@ public class characterAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0)
+        if(!anim.GetBool("isRunning") && (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0))
         {
             anim.SetBool("isRunning", true);
+            //weapon.transform.Rotate(0,0,-60, Space.Self);
         }
-        else
+        else if(anim.GetBool("isRunning") && Input.GetAxisRaw("Vertical") == 0 && Input.GetAxisRaw("Horizontal") == 0)
         {
             anim.SetBool("isRunning", false);
+            //weapon.transform.Rotate(0, 0, 60, Space.Self);
         }
 
     }
