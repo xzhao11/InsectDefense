@@ -140,6 +140,7 @@ MonoBehaviour:
   sellCost: -5
   buildCost: 25
   damage: 2
+  towerType: 1
   shootingSound: {fileID: 1292224283057106549}
   nest: {fileID: 0}
   enemyTag: Enemy

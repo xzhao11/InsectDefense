@@ -20,6 +20,7 @@ public class tower : MonoBehaviour
     public int buildCost = 20;
     public int damage = 2;
     int numUpgrades = 0;
+    public int towerType = 0;
 
     public AudioSource shootingSound;
     [Header("Unity Setup")]
@@ -159,6 +160,11 @@ public class tower : MonoBehaviour
         damage = (int)(2 * Mathf.Exp((float)(0.15 * numUpgrades)));
     }
 
+    private void updateShootDelay()
+    {
+        _shootDelay = (float)(0.2 * 1/Mathf.Exp((float)(0.5 * numUpgrades)));
+    }
+
     void UpdateTarget()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
@@ -279,6 +285,15 @@ public class tower : MonoBehaviour
         }
         Debug.Log(colors[curColor]);
 
+
+        if (towerType == 0)
+        {
+            updateDamage();
+        }
+        else if(towerType == 1)
+        {
+            updateShootDelay();
+        }
     }
 
 
