@@ -29,8 +29,8 @@ public class waveComplete : MonoBehaviour
     {
         
         float remaining = this.GetComponent<tileWaveScript>().remaining;
-        float total = this.GetComponent<tileWaveScript>().totalEnemies;
-        int num = this.GetComponent<tileWaveScript>().numWaves;
+        float total = this.GetComponent<tileWaveScript>().getTotalEnemies();
+        int num = this.GetComponent<tileWaveScript>().getNumWaves();
         int waves = this.GetComponent<tileWaveScript>().finishedWaves;
         float prog = (total - remaining) / total;
         // output.text = "WAVE PROGRESS";
