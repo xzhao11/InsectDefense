@@ -156,17 +156,31 @@ public class tower : MonoBehaviour
     private void updateUpgradeCost()
     {
         numUpgrades += 1;
-        upgradeCost = (int)(10 * Mathf.Exp((float)(0.25 * numUpgrades)));
+        upgradeCost = (int)(10 * Mathf.Exp(0.25f * numUpgrades));
     }
 
     private void updateDamage()
     {
-        damage = (int)(2 * Mathf.Exp((float)(0.15 * numUpgrades)));
+        damage = (int)(2 * Mathf.Exp(0.15f * numUpgrades));
     }
 
     private void updateShootDelay()
     {
-        _shootDelay = (float)(0.2 * 1/Mathf.Exp((float)(0.5 * numUpgrades)));
+        _shootDelay = 0.2f * 1/Mathf.Exp(0.5f * numUpgrades);
+    }
+
+    private void updateTowerHealth()
+    {
+        if (towerType == 0)
+        {
+            health = 25f * Mathf.Exp(0.15f * numUpgrades);
+        }
+        else
+        {
+            health = 40f * Mathf.Exp(0.15f * numUpgrades);
+        }
+        
+        startHealth = health;
     }
 
     void UpdateTarget()
@@ -299,6 +313,8 @@ public class tower : MonoBehaviour
             updateShootDelay();
         }
         level++;
+
+        updateTowerHealth();
     }
 
 

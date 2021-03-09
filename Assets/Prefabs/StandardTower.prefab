@@ -19232,8 +19232,8 @@ MonoBehaviour:
   target: {fileID: 0}
   range: 58.87
   _shootDelay: 0.2
-  health: 5
-  startHealth: 5
+  health: 25
+  startHealth: 25
   shootEffects: {fileID: 1092131838151894162}
   repairCost: 1
   upgradeCost: 10
