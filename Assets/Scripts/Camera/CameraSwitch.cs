@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraSwitch : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class CameraSwitch : MonoBehaviour
     public GameObject thirdPersonController;
     public bool thirdActive;
     public bool switchKeyDown = false;
-    
+    public GameObject towerMenu1;
+    public GameObject towerMenu2;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,8 @@ public class CameraSwitch : MonoBehaviour
         thirdActive = true;
         GetComponent<PlayerThirdPersonControl>().enabled = true;
         GetComponent<PlayerControl>().enabled = false;
+        towerMenu1.SetActive(false);
+        towerMenu2.SetActive(false);
 
     }
 
@@ -60,9 +64,11 @@ public class CameraSwitch : MonoBehaviour
                 {
                     switchKeyDown = true;
                 }
+                towerMenu1.SetActive(true);
+                towerMenu2.SetActive(true);
 
                 //FindObjectOfType<tower>().isTopDown = true;
-                
+
                 //foreach (GameObject thetower in towers)
                 //{
                 //    thetower.GetComponent<tower>().switchTopDown();
@@ -81,7 +87,8 @@ public class CameraSwitch : MonoBehaviour
                 GetComponent<PlayerThirdPersonControl>().enabled = true;
                 GetComponent<PlayerControl>().enabled = false;
                 switchKeyDown = false;
-
+                towerMenu1.SetActive(false);
+                towerMenu2.SetActive(false);
                 //foreach (GameObject thetower in towers)
                 //{
                 //    thetower.GetComponent<tower>().switchThirdPerson();
