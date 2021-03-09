@@ -37,12 +37,16 @@ public class tower : MonoBehaviour
     public GameObject UI2D;
     //public GameObject menu3D;
     public GameObject menu2D;
+    private Transform repairButton;
+    private Transform upgradeButton;
+    private Transform sellButton;
     public bool isTopDown;
     //public GameObject menu;
 
     public GameObject placement;
     public Transform player;
     
+
 
     void Start()
     {
@@ -53,6 +57,12 @@ public class tower : MonoBehaviour
         //menu3D.SetActive(false);
         menu2D.SetActive(false);
         UI2D.SetActive(false);
+
+        Transform buttons = menu2D.transform.GetChild(0);
+        repairButton = buttons.GetChild(0);
+        upgradeButton = buttons.GetChild(1);
+        sellButton = buttons.GetChild(2);
+
     }
 
     void FixedUpdate()
@@ -83,7 +93,9 @@ public class tower : MonoBehaviour
         {
             switchThirdPerson();
         }
-
+        repairButton.GetComponentInChildren<Text>().text = "Repair\n" + repairCost;
+        upgradeButton.GetComponentInChildren<Text>().text = "Upgrade\n" + upgradeCost;
+        sellButton.GetComponentInChildren<Text>().text = "Sell\n" + sellCost;
 
 
     }
