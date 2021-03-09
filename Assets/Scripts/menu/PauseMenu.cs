@@ -58,7 +58,7 @@ public class PauseMenu : MonoBehaviour
 
     public void restartComfirmed()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
     }
     public void mainMenuComfirmed()
