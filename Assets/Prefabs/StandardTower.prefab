@@ -19256,6 +19256,7 @@ MonoBehaviour:
   isTopDown: 0
   placement: {fileID: 0}
   player: {fileID: 0}
+  partToChangeColor: {fileID: 1004077563622625120}
 --- !u!82 &8477320420620422034
 AudioSource:
   m_ObjectHideFlags: 0
