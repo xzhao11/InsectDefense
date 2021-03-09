@@ -19189,6 +19189,7 @@ GameObject:
   - component: {fileID: 1007574288167765090}
   - component: {fileID: 1002779069055688428}
   - component: {fileID: 8477320420620422034}
+  - component: {fileID: 500868712354572141}
   m_Layer: 10
   m_Name: StandardTower
   m_TagString: Tower
@@ -19255,6 +19256,7 @@ MonoBehaviour:
   isTopDown: 0
   placement: {fileID: 0}
   player: {fileID: 0}
+  partToChangeColor: {fileID: 1004077563622625120}
 --- !u!82 &8477320420620422034
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19351,6 +19353,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &500868712354572141
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003859026273434390}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2577999, y: 1.5684135, z: 1.3182809}
+  m_Center: {x: 0.0053545637, y: 0.6755797, z: 0.05004736}
 --- !u!1 &1004077563622625120
 GameObject:
   m_ObjectHideFlags: 0

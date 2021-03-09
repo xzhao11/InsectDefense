@@ -19,6 +19,8 @@ public class tower : MonoBehaviour
     public int sellCost = -5;
     public int buildCost = 20;
     public int damage = 2;
+    int numUpgrades = 0;
+    public int towerType = 0;
 
     public AudioSource shootingSound;
     [Header("Unity Setup")]
@@ -37,12 +39,23 @@ public class tower : MonoBehaviour
     public GameObject UI2D;
     //public GameObject menu3D;
     public GameObject menu2D;
+    private Transform repairButton;
+    private Transform upgradeButton;
+    private Transform sellButton;
     public bool isTopDown;
     //public GameObject menu;
 
     public GameObject placement;
     public Transform player;
     
+
+
+
+    public GameObject partToChangeColor;
+    private Color[] colors = new Color[7];
+    private int curColor;
+    Renderer colorRenderer;
+
 
     void Start()
     {
@@ -53,6 +66,23 @@ public class tower : MonoBehaviour
         //menu3D.SetActive(false);
         menu2D.SetActive(false);
         UI2D.SetActive(false);
+
+        Transform buttons = menu2D.transform.GetChild(0);
+        repairButton = buttons.GetChild(0);
+        upgradeButton = buttons.GetChild(1);
+        sellButton = buttons.GetChild(2);
+
+        colors[0] = new Color(255f / 255f, 255f / 255f, 255f / 255f, 1);
+        colors[1] = new Color(141f / 255f, 238f / 255f, 255f / 255f, 0.5f);
+        colors[2] = new Color(141f / 255f, 255f / 255f, 155f / 255f, 0.5f);
+        colors[3] = new Color(255f / 255f, 238f / 255f, 141f / 255f, 0.5f);
+        colors[4] = new Color(255f / 255f, 153f / 255f, 141f / 255f, 0.5f);
+        colors[5] = new Color(255f / 255f, 141f / 255f, 227f / 255f, 0.5f);
+        colors[6] = new Color(180f / 255f, 241f / 255f, 255f / 255f, 0.5f);
+        colorRenderer = partToChangeColor.GetComponent<Renderer>();
+        curColor = 0;
+        colorRenderer.material.SetColor("_Color", colors[0]);
+
     }
 
     void FixedUpdate()
@@ -83,8 +113,10 @@ public class tower : MonoBehaviour
         {
             switchThirdPerson();
         }
-
-
+        repairButton.GetComponentInChildren<Text>().text = "Repair\n" + repairCost;
+        upgradeButton.GetComponentInChildren<Text>().text = "Upgrade\n" + upgradeCost;
+        sellButton.GetComponentInChildren<Text>().text = "Sell\n" + sellCost;
+        colorRenderer.material.SetColor("_Color", colors[curColor]);
 
     }
 
@@ -115,6 +147,22 @@ public class tower : MonoBehaviour
     private bool CanShoot()
     {
         return Time.time > _nextShootTime;
+    }
+
+    private void updateUpgradeCost()
+    {
+        numUpgrades += 1;
+        upgradeCost = (int)(10 * Mathf.Exp((float)(0.25 * numUpgrades)));
+    }
+
+    private void updateDamage()
+    {
+        damage = (int)(2 * Mathf.Exp((float)(0.15 * numUpgrades)));
+    }
+
+    private void updateShootDelay()
+    {
+        _shootDelay = (float)(0.2 * 1/Mathf.Exp((float)(0.5 * numUpgrades)));
     }
 
     void UpdateTarget()
@@ -159,7 +207,7 @@ public class tower : MonoBehaviour
 
     public void OnMouseDown()
     {
-        Debug.Log("clicked tower");
+        //Debug.Log("clicked tower");
         if (EventSystem.current.IsPointerOverGameObject())
         {
             //Debug.Log("Touched the UI");
@@ -224,6 +272,28 @@ public class tower : MonoBehaviour
     {
         Debug.Log("upgrade");
         nest.GetComponent<nestScript>().numLarva -= upgradeCost;
+
+        updateUpgradeCost();
+        updateDamage();
+        if (curColor == colors.Length - 1)
+        {
+            curColor = 0;
+        }
+        else
+        {
+            curColor++;
+        }
+        Debug.Log(colors[curColor]);
+
+
+        if (towerType == 0)
+        {
+            updateDamage();
+        }
+        else if(towerType == 1)
+        {
+            updateShootDelay();
+        }
     }
 
 

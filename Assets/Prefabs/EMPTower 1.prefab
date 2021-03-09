@@ -140,6 +140,7 @@ MonoBehaviour:
   sellCost: -5
   buildCost: 25
   damage: 2
+  towerType: 1
   shootingSound: {fileID: 1292224283057106549}
   nest: {fileID: 0}
   enemyTag: Enemy
@@ -156,6 +157,7 @@ MonoBehaviour:
   isTopDown: 0
   placement: {fileID: 0}
   player: {fileID: 0}
+  partToChangeColor: {fileID: 278889956721487719}
 --- !u!64 &3059067857477604541
 MeshCollider:
   m_ObjectHideFlags: 0

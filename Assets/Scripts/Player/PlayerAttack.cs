@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.EventSystems;
 public class PlayerAttack : MonoBehaviour
 {
     public Camera cam;
@@ -39,6 +39,11 @@ public class PlayerAttack : MonoBehaviour
         }
         if(Input.GetMouseButtonUp(0) && attackTimer >= myWeapon.attackCoolDown)
         {
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                //Debug.Log("Touched the UI");
+                return;
+            }
             ray = DoAttack();
             attackTimer = 0f;
         }
@@ -72,6 +77,12 @@ public class PlayerAttack : MonoBehaviour
                 print("Hit Enemy!");
                 enemy en = hit.collider.GetComponent<enemy>();
                 en.TakeDamage(myWeapon.attackDamage);
+            }
+            if (hit.collider.tag == "Tower")
+            {
+                print("Hit Tower!");
+                tower to= hit.collider.GetComponent<tower>();
+                to.repair();
             }
         }
         character.SetBool("isAttacking", true);
