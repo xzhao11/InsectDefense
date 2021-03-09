@@ -42,6 +42,8 @@ public class tower : MonoBehaviour
     private Transform repairButton;
     private Transform upgradeButton;
     private Transform sellButton;
+    private GameObject levelUI;
+    private int level;
     public bool isTopDown;
     //public GameObject menu;
 
@@ -71,7 +73,9 @@ public class tower : MonoBehaviour
         repairButton = buttons.GetChild(0);
         upgradeButton = buttons.GetChild(1);
         sellButton = buttons.GetChild(2);
-
+        levelUI = menu2D.transform.GetChild(1).gameObject;
+        level = 1;
+        
         colors[0] = new Color(255f / 255f, 255f / 255f, 255f / 255f, 1);
         colors[1] = new Color(141f / 255f, 238f / 255f, 255f / 255f, 0.5f);
         colors[2] = new Color(141f / 255f, 255f / 255f, 155f / 255f, 0.5f);
@@ -117,7 +121,7 @@ public class tower : MonoBehaviour
         upgradeButton.GetComponentInChildren<Text>().text = "Upgrade\n" + upgradeCost;
         sellButton.GetComponentInChildren<Text>().text = "Sell\n" + sellCost;
         colorRenderer.material.SetColor("_Color", colors[curColor]);
-
+        levelUI.GetComponentInChildren<Text>().text = "Level " + level;
     }
 
     private void Gunfiring(Vector3 direction)
@@ -294,6 +298,7 @@ public class tower : MonoBehaviour
         {
             updateShootDelay();
         }
+        level++;
     }
 
 
