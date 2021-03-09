@@ -19,6 +19,7 @@ public class tower : MonoBehaviour
     public int sellCost = -5;
     public int buildCost = 20;
     public int damage = 2;
+    int numUpgrades = 0;
 
     public AudioSource shootingSound;
     [Header("Unity Setup")]
@@ -115,6 +116,17 @@ public class tower : MonoBehaviour
     private bool CanShoot()
     {
         return Time.time > _nextShootTime;
+    }
+
+    private void updateUpgradeCost()
+    {
+        numUpgrades += 1;
+        upgradeCost = (int)(10 * Mathf.Exp((float)(0.25 * numUpgrades)));
+    }
+
+    private void updateDamage()
+    {
+        damage = (int)(2 * Mathf.Exp((float)(0.15 * numUpgrades)));
     }
 
     void UpdateTarget()
@@ -224,6 +236,8 @@ public class tower : MonoBehaviour
     {
         Debug.Log("upgrade");
         nest.GetComponent<nestScript>().numLarva -= upgradeCost;
+        updateUpgradeCost();
+        updateDamage();
     }
 
 
