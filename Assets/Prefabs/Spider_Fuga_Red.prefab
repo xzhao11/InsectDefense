@@ -793,7 +793,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path: {fileID: 0}
   moveSpeed: 0.5
-  nestEnterSound: {fileID: 0}
+  nestEnterSound: {fileID: 8300000, guid: 599f5b1a96b0b478a8f61210e4a9aa48, type: 3}
   nest: {fileID: 6758554362590558153, guid: a4c697f34d321f847946d234f9f03385, type: 3}
 --- !u!114 &6899145243960983118
 MonoBehaviour:
@@ -811,6 +811,7 @@ MonoBehaviour:
   startHealth: 0
   nest: {fileID: 6758554362590558153, guid: a4c697f34d321f847946d234f9f03385, type: 3}
   player: {fileID: 4364707810039193107, guid: a8665db9d53b2ec42a0bc5f19663e01d, type: 3}
+  wave: {fileID: 0}
   healthBar: {fileID: 2661647511224765805}
 --- !u!1 &7122654101855521597
 GameObject:

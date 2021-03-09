@@ -159,7 +159,7 @@ public class tower : MonoBehaviour
 
     public void OnMouseDown()
     {
-        Debug.Log("clicked tower");
+        //Debug.Log("clicked tower");
         if (EventSystem.current.IsPointerOverGameObject())
         {
             //Debug.Log("Touched the UI");
