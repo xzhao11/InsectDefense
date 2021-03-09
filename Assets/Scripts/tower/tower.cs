@@ -45,11 +45,9 @@ public class tower : MonoBehaviour
 
     public GameObject placement;
     public Transform player;
+    
 
-    public GameObject partToChangeColor;
-    private Color[] colors = new Color[7];
-    private int curColor;
-    Renderer colorRenderer;
+
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
@@ -64,16 +62,6 @@ public class tower : MonoBehaviour
         repairButton = buttons.GetChild(0);
         upgradeButton = buttons.GetChild(1);
         sellButton = buttons.GetChild(2);
-        colors[0]= new Color(255f / 255f, 255f / 255f, 255f / 255f, 1);
-        colors[1] = new Color(141f / 255f, 238f / 255f, 255f / 255f, 0.5f);
-        colors[2] = new Color(141f / 255f, 255f / 255f, 155f / 255f, 0.5f);
-        colors[3] = new Color(255f / 255f, 238f / 255f, 141f / 255f, 0.5f);
-        colors[4] = new Color(255f / 255f, 153f / 255f, 141f / 255f, 0.5f);
-        colors[5] = new Color(255f / 255f, 141f / 255f, 227f / 255f, 0.5f);
-        colors[6] = new Color(180f / 255f, 241f / 255f, 255f / 255f, 0.5f);
-        colorRenderer = partToChangeColor.GetComponent<Renderer>();
-        curColor = 0;
-        colorRenderer.material.SetColor("_Color", colors[0]);
 
     }
 
@@ -108,7 +96,7 @@ public class tower : MonoBehaviour
         repairButton.GetComponentInChildren<Text>().text = "Repair\n" + repairCost;
         upgradeButton.GetComponentInChildren<Text>().text = "Upgrade\n" + upgradeCost;
         sellButton.GetComponentInChildren<Text>().text = "Sell\n" + sellCost;
-        colorRenderer.material.SetColor("_Color", colors[curColor]);
+
 
     }
 
@@ -248,15 +236,6 @@ public class tower : MonoBehaviour
     {
         Debug.Log("upgrade");
         nest.GetComponent<nestScript>().numLarva -= upgradeCost;
-        if (curColor == colors.Length - 1)
-        {
-            curColor = 0;
-        }
-        else
-        {
-            curColor++;
-        }
-        Debug.Log(colors[curColor]);
     }
 
 

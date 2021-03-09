@@ -156,7 +156,6 @@ MonoBehaviour:
   isTopDown: 0
   placement: {fileID: 0}
   player: {fileID: 0}
-  partToChangeColor: {fileID: 278889956721487719}
 --- !u!64 &3059067857477604541
 MeshCollider:
   m_ObjectHideFlags: 0
