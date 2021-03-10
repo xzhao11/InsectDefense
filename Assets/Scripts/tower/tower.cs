@@ -16,8 +16,8 @@ public class tower : MonoBehaviour
     [SerializeField] ParticleSystem shootEffects;
     public int repairCost = 1;
     public int upgradeCost = 10;
-    public int sellCost = -5;
     public int buildCost = 20;
+    private int towerValue = 0;
     public float damage = 2f;
     int numUpgrades = 0;
     public int towerType = 0;
@@ -61,6 +61,7 @@ public class tower : MonoBehaviour
 
     void Start()
     {
+        towerValue += buildCost;
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
         startHealth = health;
         isBroken = false;
@@ -119,7 +120,7 @@ public class tower : MonoBehaviour
         }
         repairButton.GetComponentInChildren<Text>().text = "Repair\n" + repairCost;
         upgradeButton.GetComponentInChildren<Text>().text = "Upgrade\n" + upgradeCost;
-        sellButton.GetComponentInChildren<Text>().text = "Sell\n" + sellCost;
+        sellButton.GetComponentInChildren<Text>().text = "Sell\n" + (int)(0.5 * towerValue);
         colorRenderer.material.SetColor("_Color", colors[curColor]);
         levelUI.GetComponentInChildren<Text>().text = "Level " + level;
     }
@@ -158,6 +159,7 @@ public class tower : MonoBehaviour
     {
         numUpgrades += 1;
         upgradeCost = (int)(10 * Mathf.Exp(0.25f * numUpgrades));
+        towerValue += upgradeCost;
     }
 
     private void updateDamage()
@@ -287,7 +289,7 @@ public class tower : MonoBehaviour
     {
         Debug.Log("sell");
         Destroy(gameObject);
-        nest.GetComponent<nestScript>().numLarva += sellCost;
+        nest.GetComponent<nestScript>().numLarva += (int)(0.5 * towerValue);
     }
 
     public void upgrade()
