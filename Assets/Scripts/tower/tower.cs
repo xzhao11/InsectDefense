@@ -274,7 +274,14 @@ public class tower : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, range);
     }
 
-    public void repair()
+    public void repair(float repairAmount)
+    {
+        health += repairAmount;
+        if (health > startHealth) health = startHealth;
+        Debug.Log("repair");
+        isBroken = false;
+    }
+    /*public void repair()
     {
         if(nest.GetComponent<nestScript>().numGrain >= repairCost)
         {
@@ -283,7 +290,7 @@ public class tower : MonoBehaviour
             isBroken = false;
             nest.GetComponent<nestScript>().numGrain -= repairCost;
         }
-    }
+    }*/
 
     public void sell()
     {
