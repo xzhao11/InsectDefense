@@ -40,7 +40,7 @@ public class waveComplete : MonoBehaviour
             output.text = "WAVE COMPLETE, GET READY FOR THE NEXT ONE!";
             //Invoke(output.text = "WAVE COMPLETE, GET READY FOR THE NEXT ONE!", 3);
             isTrue = 1;
-            nest.GetComponent<nestScript>().repopulate();
+            nest.GetComponent<nestScript>().repopulate(waves);
         }
         else if(remaining == 0 && isTrue == 0 && num == waves)
         {

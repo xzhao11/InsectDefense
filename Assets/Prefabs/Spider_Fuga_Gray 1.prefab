@@ -1084,6 +1084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 75
   startHealth: 0
+  value: 3
   nest: {fileID: 6758554362590558153, guid: a4c697f34d321f847946d234f9f03385, type: 3}
   player: {fileID: 4364707810039193107, guid: a8665db9d53b2ec42a0bc5f19663e01d, type: 3}
   wave: {fileID: 0}

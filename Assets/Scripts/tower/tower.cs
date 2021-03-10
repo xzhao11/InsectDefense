@@ -274,53 +274,65 @@ public class tower : MonoBehaviour
 
     public void repair()
     {
-        health = startHealth;
-        Debug.Log("repair");
-        isBroken = false;
-        nest.GetComponent<nestScript>().numLarva -= repairCost;
+        if(nest.GetComponent<nestScript>().numGrain >= repairCost)
+        {
+            health = startHealth;
+            Debug.Log("repair");
+            isBroken = false;
+            nest.GetComponent<nestScript>().numGrain -= repairCost;
+        }
     }
 
     public void sell()
     {
         Debug.Log("sell");
         Destroy(gameObject);
-        nest.GetComponent<nestScript>().numLarva -= sellCost;
+        nest.GetComponent<nestScript>().numLarva += sellCost;
     }
 
     public void upgrade()
     {
-        Debug.Log("upgrade");
-        nest.GetComponent<nestScript>().numLarva -= upgradeCost;
-
-        updateUpgradeCost();
-        updateDamage();
-        if (curColor == colors.Length - 1)
+        if(nest.GetComponent<nestScript>().numLarva >= upgradeCost)
         {
-            curColor = 0;
-        }
-        else
-        {
-            curColor++;
-        }
-        Debug.Log(colors[curColor]);
+            Debug.Log("upgrade");
+            nest.GetComponent<nestScript>().numLarva -= upgradeCost;
 
-
-        if (towerType == 0)
-        {
+            updateUpgradeCost();
             updateDamage();
-        }
-        else if(towerType == 1)
-        {
-            updateShootDelay();
-        }
-        level++;
+            if (curColor == colors.Length - 1)
+            {
+                curColor = 0;
+            }
+            else
+            {
+                curColor++;
+            }
+            Debug.Log(colors[curColor]);
 
-        updateTowerHealth();
+
+            if (towerType == 0)
+            {
+                updateDamage();
+            }
+            else if (towerType == 1)
+            {
+                updateShootDelay();
+            }
+            level++;
+
+            updateTowerHealth();
+
+            repairCost++;
+        }
     }
 
 
     public void build()
     {
-        nest.GetComponent<nestScript>().numLarva -= buildCost;
+        if(nest.GetComponent<nestScript>().numLarva >= buildCost)
+        {
+            Debug.Log("build");
+            nest.GetComponent<nestScript>().numLarva -= buildCost;
+        }
     }
 }
