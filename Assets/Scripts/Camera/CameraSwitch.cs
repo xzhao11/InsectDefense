@@ -15,15 +15,15 @@ public class CameraSwitch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        thirdPerson.enabled = true;
-        thirdPersonController.SetActive(true);
+        thirdPerson.enabled = false;
+        thirdPersonController.SetActive(false);
         //GetComponent<PlayerAttack>().enabled = true;
-        topDown.enabled = false;
-        thirdActive = true;
-        GetComponent<PlayerThirdPersonControl>().enabled = true;
-        GetComponent<PlayerControl>().enabled = false;
-        towerMenu1.SetActive(false);
-        towerMenu2.SetActive(false);
+        topDown.enabled = true;
+        thirdActive = false;
+        GetComponent<PlayerThirdPersonControl>().enabled = false;
+        GetComponent<PlayerControl>().enabled = true;
+        towerMenu1.SetActive(true);
+        towerMenu2.SetActive(true);
 
     }
 
