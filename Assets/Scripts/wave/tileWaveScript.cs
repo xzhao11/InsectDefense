@@ -69,11 +69,11 @@ public class tileWaveScript : MonoBehaviour
     {
         if(timeToSpawn <= 0 && toSpawn != 0 && Time.timeScale >0)
         {
-            if (totalEnemies - numEn1 > remaining)
+            if (totalEnemies - numEn1 <= remaining)
             {
                 num = 0;
             }
-            else if (totalEnemies - numEn2 > remaining)
+            else if (totalEnemies - numEn2 <= remaining)
             {
                 num = 1;
             }
@@ -88,8 +88,23 @@ public class tileWaveScript : MonoBehaviour
             curr_enemy.SetActive(true);
             curr_enemy.GetComponent<tileMovement>().path = paths[whichPath];
             curr_enemy.GetComponent<tileMovement>().nest = nest;
-            //curr_enemy.GetComponent<enemy>().nest = nest.transform;
-            curr_enemy.GetComponent<enemy>().health = 20;
+            curr_enemy.GetComponent<enemy>().nest = nest;
+            if(num == 0)
+            {
+                curr_enemy.GetComponent<enemy>().health = 30;
+                curr_enemy.GetComponent<enemy>().value = 1;
+            }
+            else if(num == 1)
+            {
+                curr_enemy.GetComponent<enemy>().health = 75;
+                curr_enemy.GetComponent<enemy>().value = 3;
+            }
+            else
+            {
+                curr_enemy.GetComponent<enemy>().health = 150;
+                curr_enemy.GetComponent<enemy>().value = 5;
+            }
+            
             curr_enemy.GetComponent<enemy>().player = player.transform;
             curr_enemy.GetComponent<enemy>().wave = GameObject.FindGameObjectsWithTag("Wave")[0];
 
