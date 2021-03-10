@@ -23,6 +23,7 @@ public class tileWaveScript : MonoBehaviour
     private int numEn1;
     private int numEn2;
     private int numEn3;
+    private int aliveEnemies = 0;
 
     public Button startWaveButton;
 
@@ -100,6 +101,11 @@ public class tileWaveScript : MonoBehaviour
             toSpawn -= 1;
             num++;
             whichPath++;
+            aliveEnemies += 1;
+        }
+        else if(toSpawn != 0 && timeToSpawn != Mathf.Infinity && aliveEnemies == 0)
+        {
+            timeToSpawn = 0;
         }
         else if(toSpawn != 0)
         {
@@ -126,5 +132,6 @@ public class tileWaveScript : MonoBehaviour
     public void decrementRemaining()
     {
         remaining -= 1;
+        aliveEnemies -= 1;
     }
 }
