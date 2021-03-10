@@ -82,7 +82,13 @@ public class PlayerAttack : MonoBehaviour
             {
                 print("Hit Tower!");
                 tower to= hit.collider.GetComponent<tower>();
-                to.repair();
+                to.repair(myWeapon.repairAmount);
+            }
+            if(hit.collider.tag == "UpgradeWeapon")
+            {
+                print("Hit Upgrade!");
+                upgradeWeapon up = hit.collider.GetComponent<upgradeWeapon>();
+                up.doUpgrade();
             }
         }
         character.SetBool("isAttacking", true);
