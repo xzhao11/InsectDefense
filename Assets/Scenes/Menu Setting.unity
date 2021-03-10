@@ -2115,3 +2115,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: 26438fd8e3b102146af0fb3e10c3033b, type: 2}
+  slider: {fileID: 2137705543}
