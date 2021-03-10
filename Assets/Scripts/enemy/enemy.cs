@@ -14,7 +14,7 @@ public class enemy : MonoBehaviour
     public GameObject wave;
     //[SerializeField] float hitDistance = 30f;
     [SerializeField] Image healthBar;
-
+    [SerializeField] ParticleSystem diedEffect;
     private void Start()
     {
         startHealth = health;
@@ -31,6 +31,7 @@ public class enemy : MonoBehaviour
             Debug.Log(value);
             Debug.Log(nest.GetComponent<nestScript>().numGrain);
             nest.GetComponent<nestScript>().numGrain += value;
+            Instantiate(diedEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
 
         }
