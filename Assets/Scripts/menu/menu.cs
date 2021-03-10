@@ -67,6 +67,16 @@ public class menu : MonoBehaviour
         StartCoroutine(DelaySceneLoad(2));
     }
 
+    public void quit()
+    {
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #else
+                 Application.Quit();
+        #endif
+
+    }
+
     IEnumerator DelaySceneLoad(int sceneNum)
     {
         yield return new WaitForSeconds(0.6f);
