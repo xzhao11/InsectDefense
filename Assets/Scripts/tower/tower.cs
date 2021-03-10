@@ -18,7 +18,7 @@ public class tower : MonoBehaviour
     public int upgradeCost = 10;
     public int sellCost = -5;
     public int buildCost = 20;
-    public int damage = 2;
+    public float damage = 2f;
     int numUpgrades = 0;
     public int towerType = 0;
 
@@ -130,7 +130,8 @@ public class tower : MonoBehaviour
         {
             //Debug.Log("shooting");
             Transform bulletTransform = Instantiate(_bulletPrefab, _shootPoint.position, _shootPoint.rotation);
-            bulletTransform.GetComponent<Bullet>().Setup(direction, damage);
+            
+            bulletTransform.GetComponent<Bullet>().Setup(direction, (float)((damage / 3) * (1 + 2 * health / startHealth)));
             _nextShootTime = Time.time + _shootDelay;
             if (shootEffects)
             {
@@ -156,17 +157,31 @@ public class tower : MonoBehaviour
     private void updateUpgradeCost()
     {
         numUpgrades += 1;
-        upgradeCost = (int)(10 * Mathf.Exp((float)(0.25 * numUpgrades)));
+        upgradeCost = (int)(10 * Mathf.Exp(0.25f * numUpgrades));
     }
 
     private void updateDamage()
     {
-        damage = (int)(2 * Mathf.Exp((float)(0.15 * numUpgrades)));
+        damage = 2f * Mathf.Exp(0.15f * numUpgrades);
     }
 
     private void updateShootDelay()
     {
-        _shootDelay = (float)(0.2 * 1/Mathf.Exp((float)(0.5 * numUpgrades)));
+        _shootDelay = 0.2f * 1/Mathf.Exp(0.5f * numUpgrades);
+    }
+
+    private void updateTowerHealth()
+    {
+        if (towerType == 0)
+        {
+            health = 25f * Mathf.Exp(0.15f * numUpgrades);
+        }
+        else
+        {
+            health = 40f * Mathf.Exp(0.15f * numUpgrades);
+        }
+        
+        startHealth = health;
     }
 
     void UpdateTarget()
@@ -299,6 +314,8 @@ public class tower : MonoBehaviour
             updateShootDelay();
         }
         level++;
+
+        updateTowerHealth();
     }
 
 

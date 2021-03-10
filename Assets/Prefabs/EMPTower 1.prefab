@@ -132,14 +132,14 @@ MonoBehaviour:
   target: {fileID: 0}
   range: 58
   _shootDelay: 0.1
-  health: 10
-  startHealth: 10
+  health: 40
+  startHealth: 40
   shootEffects: {fileID: 456133435955640483}
   repairCost: 1
   upgradeCost: 10
   sellCost: -5
   buildCost: 25
-  damage: 2
+  damage: 1
   towerType: 1
   shootingSound: {fileID: 1292224283057106549}
   nest: {fileID: 0}

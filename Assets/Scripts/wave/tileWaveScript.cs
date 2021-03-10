@@ -7,7 +7,8 @@ public class tileWaveScript : MonoBehaviour
 {
     public GameObject[] enemies;
     public GameObject[] paths;
-    public int totalEnemies = 100;
+    public GameObject waveData;
+    public int totalEnemies;
     public int remaining;
     public int toSpawn;
     public float downTime = 1200f;
@@ -17,14 +18,19 @@ public class tileWaveScript : MonoBehaviour
     public GameObject player;
     private int num = 0;
     private int whichPath = 0;
-    public int numWaves = 1;
+    private int numWaves;
     public int finishedWaves = 0;
+    private int numEn1;
+    private int numEn2;
+    private int numEn3;
+    private int aliveEnemies = 0;
 
     public Button startWaveButton;
 
     // Start is called before the first frame update
     void Start()
     {
+        numWaves = waveData.GetComponent<waveData>().getNumWaves();
         spawns = new Vector3[paths.Length];
 
         for (int i = 0; i < enemies.Length; i++)
@@ -40,6 +46,10 @@ public class tileWaveScript : MonoBehaviour
         remaining = totalEnemies;
         toSpawn = totalEnemies;
         timeToSpawn = Mathf.Infinity;
+
+        numEn1 = (int)(totalEnemies*waveData.GetComponent<waveData>().getIntensity1(finishedWaves));
+        numEn2 = (int)(numEn1 + totalEnemies * waveData.GetComponent<waveData>().getIntensity2(finishedWaves));
+        numEn3 = (int)(numEn2 + totalEnemies * waveData.GetComponent<waveData>().getIntensity3(finishedWaves));
     }
 
     public void newWave()
@@ -51,6 +61,10 @@ public class tileWaveScript : MonoBehaviour
             toSpawn = totalEnemies;
             num = 0;
             whichPath = 0;
+
+            numEn1 = (int)(totalEnemies * waveData.GetComponent<waveData>().getIntensity1(finishedWaves));
+            numEn2 = (int)(numEn1 + totalEnemies * waveData.GetComponent<waveData>().getIntensity2(finishedWaves));
+            numEn3 = (int)(numEn2 + totalEnemies * waveData.GetComponent<waveData>().getIntensity3(finishedWaves));
         }
     }
 
@@ -59,7 +73,19 @@ public class tileWaveScript : MonoBehaviour
     {
         if(timeToSpawn <= 0 && toSpawn != 0 && Time.timeScale >0)
         {
-            num = num % enemies.Length;
+            if (totalEnemies - numEn1 > remaining)
+            {
+                num = 0;
+            }
+            else if (totalEnemies - numEn2 > remaining)
+            {
+                num = 1;
+            }
+            else
+            {
+                num = 2;
+            }
+
             whichPath = whichPath % paths.Length;
 
             var curr_enemy = (GameObject)Instantiate(enemies[num], spawns[whichPath], Quaternion.identity);
@@ -75,11 +101,26 @@ public class tileWaveScript : MonoBehaviour
             toSpawn -= 1;
             num++;
             whichPath++;
+            aliveEnemies += 1;
+        }
+        else if(toSpawn != 0 && timeToSpawn != Mathf.Infinity && aliveEnemies == 0)
+        {
+            timeToSpawn = 0;
         }
         else if(toSpawn != 0)
         {
             timeToSpawn -= 1;
         }
+    }
+
+    public int getTotalEnemies()
+    {
+        return totalEnemies;
+    }
+
+    public int getNumWaves()
+    {
+        return numWaves;
     }
 
     public void startWave()
@@ -91,5 +132,6 @@ public class tileWaveScript : MonoBehaviour
     public void decrementRemaining()
     {
         remaining -= 1;
+        aliveEnemies -= 1;
     }
 }

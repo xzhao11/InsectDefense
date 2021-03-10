@@ -10,14 +10,14 @@ public class Bullet : MonoBehaviour
     float bulletLifeInSeconds = 4f;
     Vector3 _shootDir;
     Rigidbody _rgbd;
-    int bullet_damage;
+    float bullet_damage;
 
     void Awake()
     {
         _rgbd = GetComponent<Rigidbody>();
     }
 
-    public void Setup(Vector3 shootDir, int damage)
+    public void Setup(Vector3 shootDir, float damage)
     {
         _shootDir = shootDir;
         _rgbd.velocity = _shootDir * _bulletSpeed;
