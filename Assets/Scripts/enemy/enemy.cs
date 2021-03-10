@@ -31,7 +31,7 @@ public class enemy : MonoBehaviour
             Debug.Log(value);
             Debug.Log(nest.GetComponent<nestScript>().numGrain);
             nest.GetComponent<nestScript>().numGrain += value;
-            Instantiate(diedEffect, transform.position, Quaternion.identity);
+            Instantiate(diedEffect, transform.position+new Vector3(0, 1, 0), Quaternion.identity);
             Destroy(gameObject);
 
         }
