@@ -9,8 +9,8 @@ public class BuildManager : MonoBehaviour
     private SinglePlacement selectedPlacement;
     public GameObject standardTowerPrefab;
     public GameObject EMPTowerPrefab;
-    public GameObject menu1;
-    public GameObject menu2;
+    //public GameObject menu1;
+    //public GameObject menu2;
     public EventSystem eventSystem;
     public GameObject GetTowerToBuild()
     {

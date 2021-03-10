@@ -8,6 +8,7 @@ public class TextTyping : MonoBehaviour
     string fullText;
 	private string current = "";
 	public bool isFinished;
+	public float delay = 0.05f;
 	void Awake()
 	{
 		fullText = this.GetComponent<Text>().text;
@@ -26,7 +27,7 @@ public class TextTyping : MonoBehaviour
             {
 				isFinished = true;
             }
-			yield return new WaitForSeconds(0.05f);
+			yield return new WaitForSeconds(delay);
 		}
 	}
 }
