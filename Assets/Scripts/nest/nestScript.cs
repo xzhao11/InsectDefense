@@ -14,13 +14,16 @@ public class nestScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        numAnts = 0;
+        numGrain = 0;
+        twinChance = 0.25f;
+        tripletChance = 0.25f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        num_msg.text = "number of larva is "+ numLarva;
+        num_msg.text = "Larva: " + numLarva + "\nGrain: " + numGrain;
     }
 
     void decreaseLarva()
