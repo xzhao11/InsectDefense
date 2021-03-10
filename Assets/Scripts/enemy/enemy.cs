@@ -13,6 +13,7 @@ public class enemy : MonoBehaviour
     public GameObject wave;
     //[SerializeField] float hitDistance = 30f;
     [SerializeField] Image healthBar;
+    [SerializeField] ParticleSystem diedEffect;
 
     private void Start()
     {
@@ -26,6 +27,7 @@ public class enemy : MonoBehaviour
             //Debug.Log("enemy down");
             //health_msg.text = "Enemy Down";
             wave.GetComponent<tileWaveScript>().decrementRemaining();
+            Instantiate(diedEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
 
         }

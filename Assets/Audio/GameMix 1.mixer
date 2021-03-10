@@ -6,7 +6,7 @@ AudioMixerController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GameMix
+  m_Name: GameMix 1
   m_OutputGroup: {fileID: 0}
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
@@ -92,6 +92,7 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 54c1b707592ab4e62926bfbda50bf4f5
   m_FloatValues:
+    353dd430b931b46da9a592f1cbc1439b: -10.345207
     a2a0a6510251f44a39cb8e3f7c01de98: -30
     add06742feb304c64954734f5609aed0: 0
     550d01e2d8391447697d6d32f31d146c: 0
@@ -104,7 +105,7 @@ AudioMixerSnapshotController:
     03f56669075184e9598d0680fbbcde46: 2.5
     2d915ef9536064f0a87da1f726849bfb: -12
     c272ff0b6351f40b99d24a0ab82eaff9: -2.2
-    29dfb60c5bc2b4d099ac8b526c1bd4d9: 0
+    29dfb60c5bc2b4d099ac8b526c1bd4d9: -31.948442
     dcf2423c0d9984d109cad94472d50588: -9.9
     92ff08be0371343f7910174dc4df029e: -5
   m_TransitionOverrides: {}

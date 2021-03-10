@@ -813,6 +813,8 @@ MonoBehaviour:
   player: {fileID: 4364707810039193107, guid: a8665db9d53b2ec42a0bc5f19663e01d, type: 3}
   wave: {fileID: 0}
   healthBar: {fileID: 2661647511224765805}
+  diedEffect: {fileID: 198059975614214484, guid: fee3841bc5a23a54ea51c41eec4ba6d6,
+    type: 3}
 --- !u!1 &7122654101855521597
 GameObject:
   m_ObjectHideFlags: 0
