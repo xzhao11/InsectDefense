@@ -124,3 +124,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletSpeed: 5
+  hitEffect: {fileID: 198278080792148898, guid: 9d92416604960214a919d1d943883c21,
+    type: 3}

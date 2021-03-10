@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
     Vector3 _shootDir;
     Rigidbody _rgbd;
     float bullet_damage;
-
+    [SerializeField] ParticleSystem hitEffect;
     void Awake()
     {
         _rgbd = GetComponent<Rigidbody>();
@@ -45,6 +45,7 @@ public class Bullet : MonoBehaviour
 
             enemy enemy = other.GetComponent<enemy>();
             enemy.health -= bullet_damage;
+            Instantiate(hitEffect, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
             Destroy(gameObject);
         }
     }
