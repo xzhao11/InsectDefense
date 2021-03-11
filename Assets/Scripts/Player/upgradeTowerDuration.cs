@@ -5,25 +5,40 @@ using UnityEngine;
 public class upgradeTowerDuration : MonoBehaviour
 {
     public List<GameObject> displays;
-    public GameObject nest;
-    public int numOfType;
+    public GameObject description;
+    public GameObject cost;
+    public nestScript nest;
     public int index = 0;
+
+    public int price = 10;
+    public int priceDiff = 0;
 
     public float durationChange = 0.25f;
 
+    void Start()
+    {
+        cost.GetComponent<TMPro.TextMeshPro>().text = "-" + price.ToString() + " Larva";
+    }
+
     public void doUpgrade()
     {
-        if(index < numOfType)
+        if(nest.numLarva > (price + priceDiff * index) && index < displays.Count)
         {
             for (int i = 0; i < displays.Count; i++)
             {
                 displays[i].SetActive(false);
             }
-            nest.GetComponent<nestScript>().healthLossRate -= durationChange;
+            description.SetActive(false);
+            cost.SetActive(false);
+            nest.healthLossRate -= durationChange;
+            nest.numLarva -= (price + priceDiff * index);
             index++;
-            if (index < numOfType)
+            if (index < displays.Count)
             {
                 displays[index].SetActive(true);
+                description.SetActive(true);
+                cost.SetActive(true);
+                cost.GetComponent<TMPro.TextMeshPro>().text = "-" + (price).ToString() + " Larva";
             }
         }
     }
