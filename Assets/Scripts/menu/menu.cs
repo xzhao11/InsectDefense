@@ -17,7 +17,7 @@ public class menu : MonoBehaviour
         level = PlayerPrefs.GetInt("Level");
         if (level == 0)
         {
-            level = 3;
+            level = 5;
         }
         StartCoroutine(DelaySceneLoad(level));
         
@@ -26,6 +26,15 @@ public class menu : MonoBehaviour
     {
         //SceneManager.LoadScene(0);
         StartCoroutine(DelaySceneLoad(0));
+    }
+
+    public void PlayTutorial()
+    {
+        //SceneManager.LoadScene(3);
+        PlayerPrefs.SetInt("Level", 5);
+        level = PlayerPrefs.GetInt("Level");
+        StartCoroutine(DelaySceneLoad(5));
+
     }
     public void PlayLevel1()
     {

@@ -13,7 +13,8 @@ public class waveComplete : MonoBehaviour
     public float betweenWaves = 1200f;
     private float downTime;
     public GameObject wave;
-
+    public Canvas finishedScreen;
+    public Canvas otherUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +47,8 @@ public class waveComplete : MonoBehaviour
         else if(remaining == 0 && isTrue == 0 && num == waves)
         {
             output.text = "YOU BEAT ALL OF THE WAVES! CONGRATS!";
+            finishedScreen.gameObject.SetActive(true);
+            otherUI.gameObject.SetActive(false);
             isTrue = 1;
         }
 
