@@ -180,7 +180,7 @@ public class tower : MonoBehaviour
         }
         else
         {
-            health = 40f * Mathf.Exp(0.15f * numUpgrades);
+            health = 40f * Mathf.Exp(0.35f * numUpgrades);
         }
         
         startHealth = health;

@@ -8,7 +8,6 @@ public class enemy : MonoBehaviour
 
     public float health = 30f;
     public float startHealth;
-    public int value = 1;
     public Transform nest;
     public Transform player;
     public GameObject wave;
@@ -27,10 +26,6 @@ public class enemy : MonoBehaviour
             //Debug.Log("enemy down");
             //health_msg.text = "Enemy Down";
             wave.GetComponent<tileWaveScript>().decrementRemaining();
-            Debug.Log(nest);
-            Debug.Log(value);
-            Debug.Log(nest.GetComponent<nestScript>().numGrain);
-            nest.GetComponent<nestScript>().numGrain += value;
             Instantiate(diedEffect, transform.position+new Vector3(0, 1, 0), Quaternion.identity);
             Destroy(gameObject);
 
