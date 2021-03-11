@@ -30,6 +30,7 @@ public class TextTyping : MonoBehaviour
 			if (current.Length == fullText.Length-1)
             {
 				isDoneTyping = true;
+				this.GetComponent<AudioSource>().Stop();
 				var okButton = transform.GetChild(0);
 				okButton.gameObject.SetActive(true);
             }
@@ -41,5 +42,6 @@ public class TextTyping : MonoBehaviour
 	public void OnClose()
     {
 		isFinished = true;
+		
     }
 }
