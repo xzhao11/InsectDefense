@@ -23,10 +23,10 @@ public class nestScript : MonoBehaviour
         twinChance = 0.25f;
         tripletChance = 0.25f;
         
-        if (SceneManager.GetActiveScene().buildIndex != 5)
-        {
-            numLarva = PlayerPrefs.GetInt("Larva");
-        }
+        //if (SceneManager.GetActiveScene().buildIndex != 5)
+        //{
+        //    numLarva = PlayerPrefs.GetInt("Larva");
+        //}
     }
 
     // Update is called once per frame
