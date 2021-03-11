@@ -9569,7 +9569,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LEVEL 1
+  m_Text: Tutorial
 --- !u!222 &803633717
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17856,7 +17856,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1574826281}
-  m_LocalRotation: {x: -0.041342016, y: -0.000000034650917, z: -0.0000000014337646,
+  m_LocalRotation: {x: -0.041342016, y: 0.000000034650917, z: 0.0000000014337646,
     w: 0.9991451}
   m_LocalPosition: {x: 45.4, y: 2.3899999, z: -113.689995}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -19676,7 +19676,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1710566313}
-  m_LocalRotation: {x: -0.04134201, y: -0.000000017325457, z: -7.1688216e-10, w: 0.9991451}
+  m_LocalRotation: {x: -0.04134201, y: 0.000000017325457, z: 7.1688216e-10, w: 0.9991451}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
