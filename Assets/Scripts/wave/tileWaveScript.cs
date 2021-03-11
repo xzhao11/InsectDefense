@@ -89,6 +89,7 @@ public class tileWaveScript : MonoBehaviour
             curr_enemy.GetComponent<tileMovement>().path = paths[whichPath];
             curr_enemy.GetComponent<tileMovement>().nest = nest;
             curr_enemy.GetComponent<enemy>().nest = nest;
+            curr_enemy.GetComponent<tileMovement>().wave = this.gameObject;
             if(num == 0)
             {
                 curr_enemy.GetComponent<enemy>().health = 30;
