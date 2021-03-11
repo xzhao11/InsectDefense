@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 public class nestScript : MonoBehaviour
 {
     public int numLarva;
@@ -11,7 +12,8 @@ public class nestScript : MonoBehaviour
     public float twinChance = 0.25f;
     public float tripletChance = 0.25f;
     [SerializeField] TMP_Text num_msg;
-
+    public Canvas loseScreen;
+    public Canvas otherUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,15 @@ public class nestScript : MonoBehaviour
     void Update()
     {
         num_msg.text = "Larva: " + numLarva; //+ "\nGrain: " + numGrain;
+        if (numLarva < 0)
+        {
+            loseScreen.gameObject.SetActive(true);
+            Time.timeScale = 0;
+            otherUI.gameObject.SetActive(false);
+            //num_msg.text = "";
+        }
+
+        
     }
 
     void decreaseLarva()
