@@ -12,7 +12,7 @@ public class tower : MonoBehaviour
     [SerializeField] float _shootDelay = 0.2f;
     public float health = 60.0f;
     public float startHealth = 60.0f;
-    private bool isBroken;
+    public bool isBroken;
     [SerializeField] ParticleSystem shootEffects;
     public int repairCost = 1;
     public int upgradeCost = 10;
@@ -96,7 +96,7 @@ public class tower : MonoBehaviour
         {
             Vector3 direction = target.position - _shootPoint.position;
             Gunfiring(direction);
-            health -= Time.deltaTime;
+            health -= nest.GetComponent<nestScript>().healthLossRate * Time.deltaTime;
             healthBar3D.fillAmount = health / startHealth;
             healthBar2D.fillAmount = health / startHealth;
         }

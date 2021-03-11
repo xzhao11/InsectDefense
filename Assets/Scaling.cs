@@ -22,7 +22,11 @@ public class Scaling : MonoBehaviour
     public void OnClose()
     {
         isFinished = true;
-        LeanTween.cancel(tweenId);
-        transform.localScale = new Vector3(scalex, scaley, scalez);
+        if (tweenId != 0)
+        {
+            LeanTween.cancel(tweenId);
+            transform.localScale = new Vector3(scalex, scaley, scalez);
+        }
+        
     }
 }

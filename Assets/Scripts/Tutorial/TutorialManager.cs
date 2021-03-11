@@ -10,12 +10,17 @@ public class TutorialManager : MonoBehaviour
     public Canvas tutorialCanvas;
     public Text startStory;
     public Text placeTower1;
+    public Text shift;
     public GameObject shopCanvas;
+    public Image arrowTower;
+
+    public Button startWaveButton;
+
+    private int timerWhole = 0;
     void Start()
     {
         timerIsRunning = true;
         timer = 0;
-        
 
     }
 
@@ -35,29 +40,98 @@ public class TutorialManager : MonoBehaviour
             }
         }
 
+
         if (timer >= 2)
         {
             timerIsRunning = false;
-            tutorialCanvas.gameObject.SetActive(true);
-            placeTower1.gameObject.SetActive(true);
-            if (placeTower1.GetComponent<TextTyping>().isFinished)
+            
+            if (shopCanvas.GetComponent<Scaling>().isFinished)
             {
-                tutorialCanvas.gameObject.SetActive(false);
-                placeTower1.gameObject.SetActive(false);
+                timerIsRunning = true;
+            }
+            else
+            {
                 shopCanvas.GetComponent<Scaling>().enabled = true;
-                if (shopCanvas.GetComponent<Scaling>().isFinished)
-                {
-                    timerIsRunning = true;
-                }
             }
         }
 
+
+
+        //if (timer >= 2)
+        //{
+        //    timerIsRunning = false;
+        //    tutorialCanvas.gameObject.SetActive(true);
+        //    placeTower1.gameObject.SetActive(true);
+        //    if (placeTower1.GetComponent<TextTyping>().isFinished)
+        //    {
+        //        //timerIsRunning = true;
+        //        tutorialCanvas.gameObject.SetActive(false);
+        //        placeTower1.gameObject.SetActive(false);
+        //        shopCanvas.GetComponent<Scaling>().enabled = true;
+        //        if (shopCanvas.GetComponent<Scaling>().isFinished)
+        //        {
+        //            timerIsRunning = true;
+        //        }
+
+        //    }
+        //}
+        var towers = GameObject.FindGameObjectsWithTag("Tower");
+        if (timer >= 4)
+        {
+            timerIsRunning = false;
+            
+            if (towers.Length == 0)
+            {
+                arrowTower.gameObject.SetActive(true);
+            }
+            else
+            {
+                arrowTower.gameObject.SetActive(false);
+                timerIsRunning = true;
+                arrowTower.GetComponent<Scaling>().OnClose();
+            }
+        }
+
+
+        if (timer >= 5)
+        {
+            timerIsRunning = false;
+            tutorialCanvas.gameObject.SetActive(true);
+            shift.gameObject.SetActive(true);
+            if (shift.GetComponent<TextTyping>().isFinished)
+            {
+                timerIsRunning = true;
+                tutorialCanvas.gameObject.SetActive(false);
+                shift.gameObject.SetActive(false);
+            }
+        }
+
+
+        if (timer >= 7)
+        {
+            if (startWaveButton.gameObject.activeSelf)
+            {
+                startWaveButton.GetComponent<Scaling>().enabled = true;
+            }
+            else 
+            {
+                startWaveButton.GetComponent<Scaling>().OnClose();
+                timerIsRunning = true;
+            }
+        }
 
         if (timerIsRunning)
         {
             timer += Time.deltaTime;
         }
 
+        
+        if (timerWhole!= (int)timer)
+        {
+            timerWhole = (int)timer;
+            Debug.Log(timerWhole);
+        }
+        
     }
 
 }

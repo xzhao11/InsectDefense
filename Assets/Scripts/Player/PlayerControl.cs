@@ -5,7 +5,7 @@ using Cinemachine;
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] CharacterController controller;
-    [SerializeField] float speed; 
+    public float speed; 
     private float gravity;
     [SerializeField] float groundY = 3;
 
