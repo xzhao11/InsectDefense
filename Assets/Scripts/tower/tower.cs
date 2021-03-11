@@ -343,5 +343,9 @@ public class tower : MonoBehaviour
             Debug.Log("build");
             nest.GetComponent<nestScript>().numLarva -= buildCost;
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }
