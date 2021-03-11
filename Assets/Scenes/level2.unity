@@ -10504,7 +10504,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522551697}
-  m_LocalRotation: {x: 0.0006195322, y: -1.9099883e-10, z: 1.1832996e-13, w: 0.9999998}
+  m_LocalRotation: {x: 0.0006195326, y: 5.8207657e-11, z: -3.6061547e-14, w: 0.9999998}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -13007,7 +13007,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705824464}
-  m_LocalRotation: {x: 0.03694407, y: -0.0000000021493296, z: 7.945922e-11, w: 0.99931735}
+  m_LocalRotation: {x: 0.03694407, y: 0.0000000021493296, z: -7.945922e-11, w: 0.99931735}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -25073,6 +25073,7 @@ MonoBehaviour:
   output: {fileID: 2029423341}
   nest: {fileID: 1829462306}
   betweenWaves: 1200
+  wave: {fileID: 601024791}
 --- !u!114 &1487159880
 MonoBehaviour:
   m_ObjectHideFlags: 0
