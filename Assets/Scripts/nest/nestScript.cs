@@ -6,7 +6,7 @@ public class nestScript : MonoBehaviour
 {
     public int numLarva;
     private int numAnts = 0;
-    public int numGrain = 0;
+    //public int numGrain = 0;
     public float twinChance = 0.25f;
     public float tripletChance = 0.25f;
     [SerializeField] TMP_Text num_msg;
@@ -15,7 +15,7 @@ public class nestScript : MonoBehaviour
     void Start()
     {
         numAnts = 0;
-        numGrain = 0;
+        //numGrain = 0;
         twinChance = 0.25f;
         tripletChance = 0.25f;
     }
@@ -23,7 +23,7 @@ public class nestScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        num_msg.text = "Larva: " + numLarva + "\nGrain: " + numGrain;
+        num_msg.text = "Larva: " + numLarva; //+ "\nGrain: " + numGrain;
     }
 
     void decreaseLarva()
