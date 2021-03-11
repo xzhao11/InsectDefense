@@ -15092,7 +15092,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169709579}
-  m_LocalRotation: {x: 0.0006195329, y: 2.1240239e-10, z: -1.315903e-13, w: 0.9999998}
+  m_LocalRotation: {x: 0.00061953283, y: -1.8092526e-10, z: 1.1208916e-13, w: 0.9999998}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -17025,7 +17025,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1363292361
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17043,8 +17043,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2634.4492, y: 686.6692}
+  m_AnchoredPosition: {x: -0.00004863739, y: -0.0000076293945}
+  m_SizeDelta: {x: 2580.024, y: 1162.4224}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1363292362
 MonoBehaviour:
@@ -17093,8 +17093,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Notice there is a tower you can\nbuild to attack the enemies, try to \nplace
-    one on one of the placements"
+  m_Text: "Notice there is a tower you can\nbuild to attack the enemies, but\nthat
+    will consume some of your \nlarvae. Try to place one on one of \nthe placements"
 --- !u!222 &1363292364
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19676,7 +19676,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1574826281}
-  m_LocalRotation: {x: 0.018760877, y: 0.00000003440671, z: -6.4561356e-10, w: 0.999824}
+  m_LocalRotation: {x: 0.018760877, y: -0.00000003440671, z: 6.4561356e-10, w: 0.999824}
   m_LocalPosition: {x: 45.4, y: 3.0900002, z: -126.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -21527,7 +21527,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1710566313}
-  m_LocalRotation: {x: 0.018760884, y: 0.000000017203353, z: -3.2280698e-10, w: 0.999824}
+  m_LocalRotation: {x: 0.018760884, y: -0.000000017203353, z: 3.2280698e-10, w: 0.999824}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
