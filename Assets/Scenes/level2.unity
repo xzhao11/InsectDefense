@@ -10504,7 +10504,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522551697}
-  m_LocalRotation: {x: 0.0006195322, y: -1.9099883e-10, z: 1.1832996e-13, w: 0.9999998}
+  m_LocalRotation: {x: 0.00061953365, y: 9.500521e-10, z: -5.885894e-13, w: 0.9999998}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -11514,7 +11514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78da16194b7f1a94eb9d4c9c43d726ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numWaves: 1
+  numWaves: 40
 --- !u!4 &601024793
 Transform:
   m_ObjectHideFlags: 0
@@ -25136,7 +25136,7 @@ MonoBehaviour:
   - {fileID: 820947657}
   - {fileID: 1964261424}
   waveData: {fileID: 601024791}
-  totalEnemies: 10
+  totalEnemies: 50
   remaining: 0
   toSpawn: 0
   downTime: 600
