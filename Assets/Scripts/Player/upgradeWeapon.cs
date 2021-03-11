@@ -7,6 +7,10 @@ public class upgradeWeapon : MonoBehaviour
     // Start is called before the first frame update
     public List<GameObject> weapons;
     public List<GameObject> displays;
+    public GameObject descriptionGood;
+    public GameObject descriptionBad;
+    public GameObject cost;
+
     public nestScript nest;
     public upgradeWeapon other;
     public PlayerAttack pa;
@@ -16,7 +20,12 @@ public class upgradeWeapon : MonoBehaviour
 
     public int price = 10;
     public int priceDiff = 0;
-    
+
+    void Start()
+    {
+        cost.GetComponent<TMPro.TextMeshPro>().text = "-" + price.ToString() + " Larva";
+    }
+
     public void doUpgrade()
     {
         if (nest.numLarva > (price + priceDiff * index))
@@ -25,6 +34,9 @@ public class upgradeWeapon : MonoBehaviour
             {
                 displays[i].SetActive(false);
             }
+            descriptionGood.SetActive(false);
+            descriptionBad.SetActive(false);
+            cost.SetActive(false);
             if (index == 0)
             {
                 for (int i = 0; i < other.displays.Count; i++)
@@ -32,6 +44,7 @@ public class upgradeWeapon : MonoBehaviour
                     other.displays[i].SetActive(false);
                 }
                 other.displays[0].SetActive(true);
+                other.descriptionBad.SetActive(true);
                 other.index = 0;
             }
             if (index < numOfType)
@@ -47,6 +60,9 @@ public class upgradeWeapon : MonoBehaviour
                 if (index < numOfType)
                 {
                     displays[index].SetActive(true);
+                    descriptionGood.SetActive(true);
+                    cost.SetActive(true);
+                    cost.GetComponent<TMPro.TextMeshPro>().text = "-" + (price).ToString() + " Larva";
                 }
             }
         }
