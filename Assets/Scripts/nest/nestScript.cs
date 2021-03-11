@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class nestScript : MonoBehaviour
 {
     public int numLarva;
@@ -21,6 +22,11 @@ public class nestScript : MonoBehaviour
         //numGrain = 0;
         twinChance = 0.25f;
         tripletChance = 0.25f;
+        
+        if (SceneManager.GetActiveScene().buildIndex != 5)
+        {
+            numLarva = PlayerPrefs.GetInt("Larva");
+        }
     }
 
     // Update is called once per frame
@@ -51,5 +57,12 @@ public class nestScript : MonoBehaviour
 
         numAnts += singleHatches + doubleHatches + tripleHatches;
         numLarva = numAnts;
+    }
+
+    public void repopulateEnd()
+    {
+        numLarva += 30;
+        var towers = GameObject.FindGameObjectsWithTag("Tower");
+        numLarva += towers.Length * 10;
     }
 }

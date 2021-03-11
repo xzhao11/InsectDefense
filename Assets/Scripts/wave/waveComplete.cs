@@ -50,8 +50,9 @@ public class waveComplete : MonoBehaviour
             finishedScreen.gameObject.SetActive(true);
             otherUI.gameObject.SetActive(false);
             isTrue = 1;
-            nest.GetComponent<nestScript>().repopulate(waves);
+            nest.GetComponent<nestScript>().repopulateEnd();
             Time.timeScale = 0;
+            PlayerPrefs.SetInt("Larva", nest.GetComponent<nestScript>().numLarva);
         }
 
         if(isTrue == 1 && Time.timeScale > 0)

@@ -71,9 +71,9 @@ public class tower : MonoBehaviour
         UI2D.SetActive(false);
 
         Transform buttons = menu2D.transform.GetChild(0);
-        repairButton = buttons.GetChild(0);
-        upgradeButton = buttons.GetChild(1);
-        sellButton = buttons.GetChild(2);
+        //repairButton = buttons.GetChild(0);
+        upgradeButton = buttons.GetChild(0);
+        sellButton = buttons.GetChild(1);
         levelUI = menu2D.transform.GetChild(1).gameObject;
         level = 1;
         
@@ -118,7 +118,7 @@ public class tower : MonoBehaviour
         {
             switchThirdPerson();
         }
-        repairButton.GetComponentInChildren<Text>().text = "Repair\n" + repairCost;
+        
         upgradeButton.GetComponentInChildren<Text>().text = "Upgrade\n" + upgradeCost;
         sellButton.GetComponentInChildren<Text>().text = "Sell\n" + (int)(0.5 * towerValue);
         colorRenderer.material.SetColor("_Color", colors[curColor]);
