@@ -44,10 +44,14 @@ public class TutorialManager : MonoBehaviour
             {
                 tutorialCanvas.gameObject.SetActive(false);
                 placeTower1.gameObject.SetActive(false);
-                LeanTween.moveY(shopCanvas, shopCanvas.transform.position.y + 1f, shopCanvas.transform.position.y).setLoopPingPong();
+                shopCanvas.GetComponent<Scaling>().enabled = true;
+                if (shopCanvas.GetComponent<Scaling>().isFinished)
+                {
+                    timerIsRunning = true;
+                }
             }
-
         }
+
 
         if (timerIsRunning)
         {
