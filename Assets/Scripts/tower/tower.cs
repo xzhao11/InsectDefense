@@ -96,7 +96,7 @@ public class tower : MonoBehaviour
         {
             Vector3 direction = target.position - _shootPoint.position;
             Gunfiring(direction);
-            health -= Time.deltaTime;
+            health -= nest.GetComponent<nestScript>().healthLossRate * Time.deltaTime;
             healthBar3D.fillAmount = health / startHealth;
             healthBar2D.fillAmount = health / startHealth;
         }

@@ -86,10 +86,23 @@ public class PlayerAttack : MonoBehaviour
             }
             if(hit.collider.tag == "UpgradeWeapon")
             {
-                print("Hit Upgrade!");
+                print("Hit Weapon Upgrade!");
                 upgradeWeapon up = hit.collider.GetComponent<upgradeWeapon>();
                 up.doUpgrade();
             }
+            if (hit.collider.tag == "UpgradeTowerDuration")
+            {
+                print("Hit Tower Regen Upgrade!");
+                upgradeTowerDuration up = hit.collider.GetComponent<upgradeTowerDuration>();
+                up.doUpgrade();
+            }
+            if (hit.collider.tag == "UpgradePlayerSpeed")
+            {
+                print("Hit Player Speed Upgrade!");
+                upgradePlayerSpeed up = hit.collider.GetComponent<upgradePlayerSpeed>();
+                up.doUpgrade();
+            }
+
         }
         character.SetBool("isAttacking", true);
         return ray;

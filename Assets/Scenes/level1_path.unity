@@ -599,9 +599,10 @@ GameObject:
   - component: {fileID: 50004729}
   - component: {fileID: 50004728}
   - component: {fileID: 50004727}
+  - component: {fileID: 50004730}
   m_Layer: 0
   m_Name: Platform3
-  m_TagString: UpgradeStats
+  m_TagString: UpgradeTowerDuration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -682,6 +683,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50004725}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &50004730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50004725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a695ace5fbd525c46ad92c4c3711a4d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displays: []
+  nest: {fileID: 722020246}
+  numOfType: 3
+  index: 0
+  durationChange: 0.25
 --- !u!1001 &53897770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3603,7 +3621,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 092eb62cf7271dc488c6c2b96b37aff5,
         type: 3}
       propertyPath: m_Name
-      value: 2-Gears-Gold
+      value: gearsDisplay3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 092eb62cf7271dc488c6c2b96b37aff5,
         type: 3}
@@ -6616,8 +6634,8 @@ MonoBehaviour:
     type: 3}
   EMPTowerPrefab: {fileID: 277063854274422675, guid: a9b8181bdd2fddb43944961a746f5758,
     type: 3}
-  menu1: {fileID: 1004307089}
-  menu2: {fileID: 1342049799}
+  menu1: {fileID: 0}
+  menu2: {fileID: 0}
   eventSystem: {fileID: 26323238}
 --- !u!4 &420124984
 Transform:
@@ -10665,6 +10683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numLarva: 100
+  healthLossRate: 1
   numGrain: 0
   twinChance: 0.25
   tripletChance: 0.1
@@ -14883,12 +14902,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1002499953}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1004307089 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5339376120522125895, guid: 39bd2efb133b99a458b65ddb09b5766f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1618562973}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1007834036 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 490852, guid: 464cc23de24213d40a8315294edd1c3d,
@@ -16871,7 +16884,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169709579}
-  m_LocalRotation: {x: 0.013556034, y: -0.000000017347412, z: 2.3518373e-10, w: 0.99990815}
+  m_LocalRotation: {x: 0.013556036, y: 0.000000017146288, z: -2.3245707e-10, w: 0.99990815}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -17277,7 +17290,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 092eb62cf7271dc488c6c2b96b37aff5,
         type: 3}
       propertyPath: m_Name
-      value: 2-Gears-Bronze
+      value: gearsDisplay1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 092eb62cf7271dc488c6c2b96b37aff5,
         type: 3}
@@ -18248,7 +18261,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291746785}
-  m_LocalRotation: {x: 0.049868707, y: 0.0000000065195036, z: -3.2552422e-10, w: 0.9987558}
+  m_LocalRotation: {x: 0.0498687, y: -9.869751e-10, z: 4.9280455e-11, w: 0.9987558}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -19231,12 +19244,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1342049799 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5339376120522125895, guid: 39bd2efb133b99a458b65ddb09b5766f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1263537389}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1355527517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22434,7 +22441,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1574826281}
-  m_LocalRotation: {x: -0.04134197, y: 0.000000034518166, z: 0.00000000142827, w: 0.9991451}
+  m_LocalRotation: {x: -0.04134198, y: -0.0000000343169, z: -0.0000000014199425, w: 0.9991451}
   m_LocalPosition: {x: 45.4, y: 2.3899999, z: -113.689995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -22670,9 +22677,10 @@ GameObject:
   - component: {fileID: 1595277629}
   - component: {fileID: 1595277628}
   - component: {fileID: 1595277627}
+  - component: {fileID: 1595277630}
   m_Layer: 0
   m_Name: Platform4
-  m_TagString: UpgradeStats
+  m_TagString: UpgradePlayerSpeed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22753,6 +22761,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595277625}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1595277630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595277625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc6df8d6bcb9da047b03f11dbb77252c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displays: []
+  player: {fileID: 933091476}
+  numOfType: 3
+  index: 0
+  speedUp: 10
 --- !u!1001 &1603276577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24524,7 +24549,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1710566313}
-  m_LocalRotation: {x: -0.04134198, y: 0.00000001745976, z: 7.2243866e-10, w: 0.9991451}
+  m_LocalRotation: {x: -0.041341987, y: -0.000000017058403, z: -7.058318e-10, w: 0.9991451}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -24975,7 +25000,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 092eb62cf7271dc488c6c2b96b37aff5,
         type: 3}
       propertyPath: m_Name
-      value: 2-Gears-Silver
+      value: gearsDisplay2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 092eb62cf7271dc488c6c2b96b37aff5,
         type: 3}

@@ -9,7 +9,8 @@ TagManager:
   - Tower
   - Wave
   - UpgradeWeapon
-  - UpgradeStats
+  - UpgradeTowerDuration
+  - UpgradePlayerSpeed
   layers:
   - Default
   - TransparentFX

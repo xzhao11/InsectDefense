@@ -6,6 +6,7 @@ public class nestScript : MonoBehaviour
 {
     public int numLarva;
     private int numAnts = 0;
+    public float healthLossRate = 1.0f;
     public int numGrain = 0;
     public float twinChance = 0.25f;
     public float tripletChance = 0.25f;
