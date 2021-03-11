@@ -2,6 +2,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
+
 public class tower : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -88,6 +90,14 @@ public class tower : MonoBehaviour
         curColor = 0;
         colorRenderer.material.SetColor("_Color", colors[0]);
 
+        if (SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            var oldScalex = UI2D.transform.localScale.x;
+            var oldScaley = UI2D.transform.localScale.y;
+            var oldScalez = UI2D.transform.localScale.z;
+            UI2D.transform.localScale = new Vector3(oldScalex * 2, oldScaley * 2, oldScalez * 2);
+
+        }
     }
 
     void FixedUpdate()
