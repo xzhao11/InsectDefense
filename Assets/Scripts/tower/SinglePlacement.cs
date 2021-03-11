@@ -51,6 +51,11 @@ public class SinglePlacement : MonoBehaviour
             return;
         }
         GameObject towerToBuild = buildManager.GetTowerToBuild();
+        //if (nest.GetComponent<nestScript>().numLarva >= buildCost)
+        //{
+        //    Debug.Log("build");
+        //    nest.GetComponent<nestScript>().numLarva -= buildCost;
+        //}
         if (towerToBuild == buildManager.standardTowerPrefab)
         {
             tower = (GameObject)Instantiate(towerToBuild, transform.position + standardposOffset, transform.rotation);
