@@ -52,7 +52,6 @@ public class tileWaveScript : MonoBehaviour
     {
         if (finishedWaves != numWaves)
         {
-            finishedWaves++;
             remaining = totalEnemies;
             toSpawn = totalEnemies;
             num = 0;
@@ -147,5 +146,10 @@ public class tileWaveScript : MonoBehaviour
     {
         remaining -= 1;
         aliveEnemies -= 1;
+
+        if(remaining == 0)
+        {
+            finishedWaves++;
+        }
     }
 }
