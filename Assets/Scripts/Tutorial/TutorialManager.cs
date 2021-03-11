@@ -16,13 +16,11 @@ public class TutorialManager : MonoBehaviour
 
     public Button startWaveButton;
 
-
     private int timerWhole = 0;
     void Start()
     {
         timerIsRunning = true;
         timer = 0;
-        
 
     }
 
@@ -58,6 +56,7 @@ public class TutorialManager : MonoBehaviour
         }
 
 
+
         //if (timer >= 2)
         //{
         //    timerIsRunning = false;
@@ -76,11 +75,11 @@ public class TutorialManager : MonoBehaviour
 
         //    }
         //}
-
+        var towers = GameObject.FindGameObjectsWithTag("Tower");
         if (timer >= 4)
         {
             timerIsRunning = false;
-            var towers = GameObject.FindGameObjectsWithTag("Tower");
+            
             if (towers.Length == 0)
             {
                 arrowTower.gameObject.SetActive(true);
@@ -121,8 +120,6 @@ public class TutorialManager : MonoBehaviour
             }
         }
 
-
-
         if (timerIsRunning)
         {
             timer += Time.deltaTime;
@@ -132,7 +129,7 @@ public class TutorialManager : MonoBehaviour
         if (timerWhole!= (int)timer)
         {
             timerWhole = (int)timer;
-            //Debug.Log(timerWhole);
+            Debug.Log(timerWhole);
         }
         
     }
