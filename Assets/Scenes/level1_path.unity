@@ -696,9 +696,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displays: []
-  nest: {fileID: 722020246}
+  nest: {fileID: 722020251}
   numOfType: 3
   index: 0
+  price: 10
+  priceDiff: 0
   durationChange: 0.25
 --- !u!1001 &53897770
 PrefabInstance:
@@ -938,11 +940,14 @@ MonoBehaviour:
   - {fileID: 887865539}
   - {fileID: 1520151269}
   - {fileID: 1017207424}
+  nest: {fileID: 722020251}
   other: {fileID: 1374844147}
   pa: {fileID: 933091486}
   offset: 4
   numOfType: 3
   index: 0
+  price: 10
+  priceDiff: 0
 --- !u!23 &55816630
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6634,8 +6639,6 @@ MonoBehaviour:
     type: 3}
   EMPTowerPrefab: {fileID: 277063854274422675, guid: a9b8181bdd2fddb43944961a746f5758,
     type: 3}
-  menu1: {fileID: 0}
-  menu2: {fileID: 0}
   eventSystem: {fileID: 26323238}
 --- !u!4 &420124984
 Transform:
@@ -7542,12 +7545,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9806d1f928dea664c870a5575eb72a44, type: 2}
+      objectReference: {fileID: 2100000, guid: 233556a0d34a56c439bbfaedab68c8e1, type: 2}
     - target: {fileID: 5863242460886126184, guid: bec5bc5a8a685254b9f6dfa6c0eca819,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9806d1f928dea664c870a5575eb72a44, type: 2}
+      objectReference: {fileID: 2100000, guid: 233556a0d34a56c439bbfaedab68c8e1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bec5bc5a8a685254b9f6dfa6c0eca819, type: 3}
 --- !u!1 &501345152
@@ -10684,7 +10687,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numLarva: 100
   healthLossRate: 1
-  numGrain: 0
   twinChance: 0.25
   tripletChance: 0.1
   num_msg: {fileID: 1698804058}
@@ -18261,7 +18263,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291746785}
-  m_LocalRotation: {x: 0.0498687, y: -9.869751e-10, z: 4.9280455e-11, w: 0.9987558}
+  m_LocalRotation: {x: 0.049868707, y: 0.0000000065195036, z: -3.2552422e-10, w: 0.9987558}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -19486,11 +19488,14 @@ MonoBehaviour:
   - {fileID: 1890209262}
   - {fileID: 503330537}
   - {fileID: 1478688362}
+  nest: {fileID: 722020251}
   other: {fileID: 55816629}
   pa: {fileID: 933091486}
   offset: 1
   numOfType: 3
   index: 0
+  price: 10
+  priceDiff: 0
 --- !u!23 &1374844148
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22775,8 +22780,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displays: []
   player: {fileID: 933091476}
+  nest: {fileID: 722020251}
   numOfType: 3
   index: 0
+  price: 10
+  priceDiff: 0
   speedUp: 10
 --- !u!1001 &1603276577
 PrefabInstance:
@@ -22869,12 +22877,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cf8d3eec397f4f7459aac3b44be082ed, type: 2}
+      objectReference: {fileID: 2100000, guid: bef4cf7f5527dfd41a41e95d5165050d, type: 2}
     - target: {fileID: 5863242460886126184, guid: bec5bc5a8a685254b9f6dfa6c0eca819,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cf8d3eec397f4f7459aac3b44be082ed, type: 2}
+      objectReference: {fileID: 2100000, guid: bef4cf7f5527dfd41a41e95d5165050d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bec5bc5a8a685254b9f6dfa6c0eca819, type: 3}
 --- !u!4 &1613377618 stripped
@@ -28741,12 +28749,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 378039a7fb8cf344f9d647cf594369bd, type: 2}
+      objectReference: {fileID: 2100000, guid: a987438b78359d045ae7a96fe85b1484, type: 2}
     - target: {fileID: 5863242460886126184, guid: bec5bc5a8a685254b9f6dfa6c0eca819,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 378039a7fb8cf344f9d647cf594369bd, type: 2}
+      objectReference: {fileID: 2100000, guid: a987438b78359d045ae7a96fe85b1484, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bec5bc5a8a685254b9f6dfa6c0eca819, type: 3}
 --- !u!1001 &1948054220
