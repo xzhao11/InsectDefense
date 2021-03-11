@@ -5095,12 +5095,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 336132434}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &363509302 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5339376120522125895, guid: 39bd2efb133b99a458b65ddb09b5766f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1027859794}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &363509303 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5339376120522125894, guid: 39bd2efb133b99a458b65ddb09b5766f,
@@ -7601,8 +7595,6 @@ MonoBehaviour:
     type: 3}
   EMPTowerPrefab: {fileID: 277063854274422675, guid: a9b8181bdd2fddb43944961a746f5758,
     type: 3}
-  menu1: {fileID: 363509302}
-  menu2: {fileID: 601283012}
   eventSystem: {fileID: 1052179050}
 --- !u!4 &505462902
 Transform:
@@ -7854,7 +7846,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522551697}
-  m_LocalRotation: {x: 0.00061953533, y: 5.8207657e-11, z: -3.6061706e-14, w: 0.9999998}
+  m_LocalRotation: {x: 0.0006195328, y: -1.4362093e-10, z: 8.89779e-14, w: 0.9999998}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8756,12 +8748,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 601086206}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &601283012 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5339376120522125895, guid: 39bd2efb133b99a458b65ddb09b5766f,
-    type: 3}
-  m_PrefabInstance: {fileID: 234864871}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &601283013 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5339376120522125894, guid: 39bd2efb133b99a458b65ddb09b5766f,
@@ -9113,7 +9099,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643801239}
-  m_LocalRotation: {x: 0.018760884, y: -0.000000017203353, z: 3.2280698e-10, w: 0.999824}
+  m_LocalRotation: {x: 0.018760884, y: 0.000000017203353, z: -3.2280698e-10, w: 0.999824}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -18669,6 +18655,7 @@ MonoBehaviour:
   output: {fileID: 2029423341}
   nest: {fileID: 1829462306}
   betweenWaves: 1200
+  wave: {fileID: 601024791}
 --- !u!114 &1487159880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22126,7 +22113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numLarva: 100
-  numGrain: 0
   twinChance: 0.25
   tripletChance: 0.1
   num_msg: {fileID: 1176621424}
@@ -24648,7 +24634,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026739140}
-  m_LocalRotation: {x: 0.018760877, y: -0.00000003440671, z: 6.4561356e-10, w: 0.999824}
+  m_LocalRotation: {x: 0.018760877, y: 0.00000003440671, z: -6.4561356e-10, w: 0.999824}
   m_LocalPosition: {x: 57.07, y: 3.0900002, z: -126.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

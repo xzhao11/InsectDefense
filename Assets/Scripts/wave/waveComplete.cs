@@ -12,6 +12,7 @@ public class waveComplete : MonoBehaviour
     public GameObject nest;
     public float betweenWaves = 1200f;
     private float downTime;
+    public GameObject wave;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,7 @@ public class waveComplete : MonoBehaviour
         
         float remaining = this.GetComponent<tileWaveScript>().remaining;
         float total = this.GetComponent<tileWaveScript>().getTotalEnemies();
-        int num = this.GetComponent<tileWaveScript>().getNumWaves();
+        int num = wave.GetComponent<waveData>().numWaves;
         int waves = this.GetComponent<tileWaveScript>().finishedWaves;
         float prog = (total - remaining) / total;
         // output.text = "WAVE PROGRESS";
