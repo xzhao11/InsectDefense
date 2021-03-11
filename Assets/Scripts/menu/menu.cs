@@ -13,11 +13,11 @@ public class menu : MonoBehaviour
     public void PlayGame()
     {
         //SceneManager.LoadScene(3);
-        
+        Time.timeScale = 1;
         level = PlayerPrefs.GetInt("Level");
         if (level == 0)
         {
-            level = 3;
+            level = 5;
         }
         StartCoroutine(DelaySceneLoad(level));
         
@@ -25,11 +25,23 @@ public class menu : MonoBehaviour
     public void BackToMainMenu()
     {
         //SceneManager.LoadScene(0);
+        Time.timeScale = 1;
         StartCoroutine(DelaySceneLoad(0));
+    }
+
+    public void PlayTutorial()
+    {
+        //SceneManager.LoadScene(3);
+        Time.timeScale = 1;
+        PlayerPrefs.SetInt("Level", 5);
+        level = PlayerPrefs.GetInt("Level");
+        StartCoroutine(DelaySceneLoad(5));
+
     }
     public void PlayLevel1()
     {
         //SceneManager.LoadScene(3);
+        Time.timeScale = 1;
         PlayerPrefs.SetInt("Level", 3);
         level = PlayerPrefs.GetInt("Level");
         StartCoroutine(DelaySceneLoad(3));
@@ -39,6 +51,7 @@ public class menu : MonoBehaviour
     public void PlayLevel2()
     {
         //SceneManager.LoadScene(3);
+        Time.timeScale = 1;
         PlayerPrefs.SetInt("Level", 4);
         level = PlayerPrefs.GetInt("Level");
         StartCoroutine(DelaySceneLoad(4));
@@ -48,6 +61,7 @@ public class menu : MonoBehaviour
     public void PlayLevel3()
     {
         //SceneManager.LoadScene(3);
+        Time.timeScale = 1;
         PlayerPrefs.SetInt("Level", 4);
         level = PlayerPrefs.GetInt("Level");
         StartCoroutine(DelaySceneLoad(4));
