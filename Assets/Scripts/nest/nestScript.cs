@@ -36,8 +36,13 @@ public class nestScript : MonoBehaviour
         if (numLarva < 0)
         {
             loseScreen.gameObject.SetActive(true);
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
             otherUI.gameObject.SetActive(false);
+            var enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach (GameObject theenemy in enemies)
+            {
+                theenemy.GetComponent<tileMovement>().moveSpeed = 0;
+            }
             //num_msg.text = "";
         }
 
