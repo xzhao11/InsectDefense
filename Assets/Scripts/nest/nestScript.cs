@@ -11,7 +11,7 @@ public class nestScript : MonoBehaviour
     public float healthLossRate = 1.0f;
     //public int numGrain = 0;
     public float twinChance = 0.25f;
-    public float tripletChance = 0.25f;
+    public float tripletChance = 0.1f;
     [SerializeField] TMP_Text num_msg;
     public Canvas loseScreen;
     public Canvas otherUI;
@@ -57,8 +57,8 @@ public class nestScript : MonoBehaviour
     public void repopulate(int numWave)
     {
         int singleHatches = numLarva;
-        int doubleHatches = (int)(singleHatches * Mathf.Exp(0.25f * numWave));
-        int tripleHatches = (int)(doubleHatches * Mathf.Exp(0.25f * numWave));
+        int doubleHatches = (int)(singleHatches * twinChance * Mathf.Exp(0.25f * numWave));
+        int tripleHatches = (int)(doubleHatches * tripletChance * Mathf.Exp(0.25f * numWave));
 
         numAnts += singleHatches + doubleHatches + tripleHatches;
         numLarva = numAnts;
