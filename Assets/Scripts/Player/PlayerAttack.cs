@@ -39,11 +39,7 @@ public class PlayerAttack : MonoBehaviour
         }
         if(Input.GetMouseButtonUp(0) && attackTimer >= myWeapon.attackCoolDown)
         {
-            if (EventSystem.current.IsPointerOverGameObject())
-            {
-                //Debug.Log("Touched the UI");
-                return;
-            }
+            character.SetBool("isAttacking", false);
             ray = DoAttack();
             attackTimer = 0f;
         }

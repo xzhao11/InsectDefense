@@ -7,6 +7,7 @@ public class upgradePlayerSpeed : MonoBehaviour
     public List<GameObject> displays;
     public GameObject description;
     public GameObject cost;
+    public ParticleSystem particles;
     public GameObject player;
     public nestScript nest;
     public int index = 0;
@@ -33,6 +34,7 @@ public class upgradePlayerSpeed : MonoBehaviour
             player.GetComponent<PlayerControl>().speed += speedUp;
             nest.numLarva -= (price + priceDiff * index);
             index++;
+            particles.Play();
             if (index < displays.Count)
             {
                 displays[index].SetActive(true);
@@ -40,6 +42,7 @@ public class upgradePlayerSpeed : MonoBehaviour
                 cost.SetActive(true);
                 cost.GetComponent<TMPro.TextMeshPro>().text = "-" + (price).ToString() + " Larva";
             }
+
         }
     }
 }

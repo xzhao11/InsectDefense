@@ -7,6 +7,7 @@ public class upgradeTowerDuration : MonoBehaviour
     public List<GameObject> displays;
     public GameObject description;
     public GameObject cost;
+    public ParticleSystem particles;
     public nestScript nest;
     public int index = 0;
 
@@ -33,6 +34,7 @@ public class upgradeTowerDuration : MonoBehaviour
             nest.healthLossRate -= durationChange;
             nest.numLarva -= (price + priceDiff * index);
             index++;
+            particles.Play();
             if (index < displays.Count)
             {
                 displays[index].SetActive(true);
