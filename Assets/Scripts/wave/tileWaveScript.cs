@@ -57,9 +57,9 @@ public class tileWaveScript : MonoBehaviour
             num = 0;
             whichPath = 0;
 
-            numEn1 = (int)(totalEnemies * waveData.GetComponent<waveData>().getIntensity1(finishedWaves));
-            numEn2 = (int)(numEn1 + totalEnemies * waveData.GetComponent<waveData>().getIntensity2(finishedWaves));
-            numEn3 = (int)(numEn2 + totalEnemies * waveData.GetComponent<waveData>().getIntensity3(finishedWaves));
+            timeToSpawn = Mathf.Infinity;
+
+            startWaveButton.gameObject.SetActive(true);
         }
     }
 

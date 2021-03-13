@@ -10,7 +10,9 @@ public class CameraControl : MonoBehaviour
     public float SmoothTime = 0.3f;
     // This value will change at the runtime depending on target movement. Initialize with zero vector.
     private Vector3 velocity = Vector3.zero;
-
+    public Camera cam;
+    public float ScollSpeed;
+    public float maxSize;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +24,17 @@ public class CameraControl : MonoBehaviour
     {
         Vector3 targetPosition = player.transform.position + offset;
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, SmoothTime);
+
+        if (cam.orthographic)
+        {
+            if (cam.orthographicSize < maxSize)
+            {
+                cam.orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * ScollSpeed;
+            }
+           
+        }
     }
 }
+
+
+//cam.orthographicSize -= .1f;
