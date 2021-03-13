@@ -12,6 +12,7 @@ public class CameraControl : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     public Camera cam;
     public float ScollSpeed;
+    public float maxSize;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,11 @@ public class CameraControl : MonoBehaviour
 
         if (cam.orthographic)
         {
-            cam.orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * ScollSpeed;
+            if (cam.orthographicSize < maxSize)
+            {
+                cam.orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * ScollSpeed;
+            }
+           
         }
     }
 }
