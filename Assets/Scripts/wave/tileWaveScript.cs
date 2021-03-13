@@ -52,15 +52,14 @@ public class tileWaveScript : MonoBehaviour
     {
         if (finishedWaves != numWaves)
         {
-            finishedWaves++;
             remaining = totalEnemies;
             toSpawn = totalEnemies;
             num = 0;
             whichPath = 0;
 
-            numEn1 = (int)(totalEnemies * waveData.GetComponent<waveData>().getIntensity1(finishedWaves));
-            numEn2 = (int)(numEn1 + totalEnemies * waveData.GetComponent<waveData>().getIntensity2(finishedWaves));
-            numEn3 = (int)(numEn2 + totalEnemies * waveData.GetComponent<waveData>().getIntensity3(finishedWaves));
+            timeToSpawn = Mathf.Infinity;
+
+            startWaveButton.gameObject.SetActive(true);
         }
     }
 
@@ -89,6 +88,7 @@ public class tileWaveScript : MonoBehaviour
             curr_enemy.GetComponent<tileMovement>().path = paths[whichPath];
             curr_enemy.GetComponent<tileMovement>().nest = nest;
             curr_enemy.GetComponent<enemy>().nest = nest;
+            curr_enemy.GetComponent<tileMovement>().wave = this.gameObject;
             if(num == 0)
             {
                 curr_enemy.GetComponent<enemy>().health = 30;
@@ -146,5 +146,10 @@ public class tileWaveScript : MonoBehaviour
     {
         remaining -= 1;
         aliveEnemies -= 1;
+
+        if(remaining == 0)
+        {
+            finishedWaves++;
+        }
     }
 }

@@ -25,7 +25,8 @@ public class Scaling : MonoBehaviour
         if (tweenId != 0)
         {
             LeanTween.cancel(tweenId);
+            transform.localScale = new Vector3(scalex, scaley, scalez);
         }
-        //transform.localScale = new Vector3(scalex, scaley, scalez);
+        
     }
 }

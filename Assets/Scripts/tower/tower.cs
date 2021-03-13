@@ -2,6 +2,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
+
 public class tower : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -12,7 +14,7 @@ public class tower : MonoBehaviour
     [SerializeField] float _shootDelay = 0.2f;
     public float health = 60.0f;
     public float startHealth = 60.0f;
-    private bool isBroken;
+    public bool isBroken;
     [SerializeField] ParticleSystem shootEffects;
     public int repairCost = 1;
     public int upgradeCost = 10;
@@ -71,9 +73,9 @@ public class tower : MonoBehaviour
         UI2D.SetActive(false);
 
         Transform buttons = menu2D.transform.GetChild(0);
-        repairButton = buttons.GetChild(0);
-        upgradeButton = buttons.GetChild(1);
-        sellButton = buttons.GetChild(2);
+        //repairButton = buttons.GetChild(0);
+        upgradeButton = buttons.GetChild(0);
+        sellButton = buttons.GetChild(1);
         levelUI = menu2D.transform.GetChild(1).gameObject;
         level = 1;
         
@@ -88,6 +90,14 @@ public class tower : MonoBehaviour
         curColor = 0;
         colorRenderer.material.SetColor("_Color", colors[0]);
 
+        if (SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            var oldScalex = UI2D.transform.localScale.x;
+            var oldScaley = UI2D.transform.localScale.y;
+            var oldScalez = UI2D.transform.localScale.z;
+            UI2D.transform.localScale = new Vector3(oldScalex * 2, oldScaley * 2, oldScalez * 2);
+
+        }
     }
 
     void FixedUpdate()
@@ -97,13 +107,15 @@ public class tower : MonoBehaviour
             Vector3 direction = target.position - _shootPoint.position;
             Gunfiring(direction);
             health -= nest.GetComponent<nestScript>().healthLossRate * Time.deltaTime;
-            healthBar3D.fillAmount = health / startHealth;
-            healthBar2D.fillAmount = health / startHealth;
+           
         }
+
         else
         {
             shootingSound.Stop();
         }
+        healthBar3D.fillAmount = health / startHealth;
+        healthBar2D.fillAmount = health / startHealth;
 
         if (health <= 0)
         {
@@ -118,7 +130,7 @@ public class tower : MonoBehaviour
         {
             switchThirdPerson();
         }
-        repairButton.GetComponentInChildren<Text>().text = "Repair\n" + repairCost;
+        
         upgradeButton.GetComponentInChildren<Text>().text = "Upgrade\n" + upgradeCost;
         sellButton.GetComponentInChildren<Text>().text = "Sell\n" + (int)(0.5 * towerValue);
         colorRenderer.material.SetColor("_Color", colors[curColor]);
@@ -342,6 +354,10 @@ public class tower : MonoBehaviour
         {
             Debug.Log("build");
             nest.GetComponent<nestScript>().numLarva -= buildCost;
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 }
