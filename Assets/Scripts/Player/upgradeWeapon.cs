@@ -10,6 +10,7 @@ public class upgradeWeapon : MonoBehaviour
     public GameObject descriptionGood;
     public GameObject descriptionBad;
     public GameObject cost;
+    public ParticleSystem particles;
 
     public nestScript nest;
     public upgradeWeapon other;
@@ -57,6 +58,7 @@ public class upgradeWeapon : MonoBehaviour
                 weapons[offset + index].SetActive(true);
                 pa.myWeapon = weapons[offset + index].GetComponent<Weapon>();
                 index++;
+                particles.Play();
                 if (index < numOfType)
                 {
                     displays[index].SetActive(true);
