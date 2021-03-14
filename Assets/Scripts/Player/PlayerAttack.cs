@@ -12,6 +12,11 @@ public class PlayerAttack : MonoBehaviour
 
     public Transform head;
 
+    public AudioSource attack;
+    public AudioSource repair;
+    public AudioSource upgrade;
+    public AudioSource whiff;
+
     private float attackTimer = 0.0f;
     private Ray ray;
     
@@ -67,38 +72,51 @@ public class PlayerAttack : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(ray, out hit, myWeapon.attackRange, mask))
         {
-            print("Hit something!");
+            //print("Hit something!");
             if(hit.collider.tag == "Enemy")
             {
                 print("Hit Enemy!");
                 enemy en = hit.collider.GetComponent<enemy>();
                 en.TakeDamage(myWeapon.attackDamage);
+                attack.Play();
             }
-            if (hit.collider.tag == "Tower")
+            else if (hit.collider.tag == "Tower")
             {
                 print("Hit Tower!");
                 tower to= hit.collider.GetComponent<tower>();
                 to.repair(myWeapon.repairAmount);
+                repair.Play();
             }
-            if(hit.collider.tag == "UpgradeWeapon")
+            else if(hit.collider.tag == "UpgradeWeapon")
             {
                 print("Hit Weapon Upgrade!");
                 upgradeWeapon up = hit.collider.GetComponent<upgradeWeapon>();
                 up.doUpgrade();
+                upgrade.Play();
             }
-            if (hit.collider.tag == "UpgradeTowerDuration")
+            else if (hit.collider.tag == "UpgradeTowerDuration")
             {
                 print("Hit Tower Regen Upgrade!");
                 upgradeTowerDuration up = hit.collider.GetComponent<upgradeTowerDuration>();
                 up.doUpgrade();
+                upgrade.Play();
             }
-            if (hit.collider.tag == "UpgradePlayerSpeed")
+            else if (hit.collider.tag == "UpgradePlayerSpeed")
             {
                 print("Hit Player Speed Upgrade!");
                 upgradePlayerSpeed up = hit.collider.GetComponent<upgradePlayerSpeed>();
                 up.doUpgrade();
+                upgrade.Play();
+            }
+            else
+            {
+                whiff.Play();
             }
 
+        }
+        else
+        {
+            whiff.Play();
         }
         character.SetBool("isAttacking", true);
         return ray;
