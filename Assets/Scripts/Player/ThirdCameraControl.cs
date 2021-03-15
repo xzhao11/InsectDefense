@@ -13,7 +13,7 @@ public class ThirdCameraControl : MonoBehaviour
     {
         if (axisName == "Mouse X")
         {
-            if (Input.GetKey(KeyCode.Escape))
+            if (Input.GetKey(KeyCode.Space))
             {
                 return 0 ;
             }

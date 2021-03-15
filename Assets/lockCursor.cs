@@ -7,12 +7,23 @@ public class lockCursor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Confined;
+        //Cursor.lockState = CursorLockMode.Confined;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            Cursor.lockState = CursorLockMode.Confined;
+        }
     }
+
+    //void OnGUI()
+    //{
+
+    //        Cursor.lockState = CursorLockMode.Locked;
+
+            
+    //}
 }
