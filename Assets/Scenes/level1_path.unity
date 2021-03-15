@@ -7185,7 +7185,8 @@ AudioSource:
   m_GameObject: {fileID: 371228242}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243247032315055076, guid: 26438fd8e3b102146af0fb3e10c3033b,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 3b1371a18aed33c42a3d6a7c3b078941, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.4
@@ -12508,6 +12509,7 @@ MonoBehaviour:
   waveManager: {fileID: 688379193}
   topDownCamera: {fileID: 109386912}
   player: {fileID: 933091476}
+  enemySpeed: 0
 --- !u!1 &726765125
 GameObject:
   m_ObjectHideFlags: 0
@@ -23721,9 +23723,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Use mouse scroll to zoom out and find
+  m_Text: 'Use mouse scroll to zoom out and see
 
-    the upgrade station'
+    the map better'
 --- !u!222 &1106039035
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26555,7 +26557,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291746785}
-  m_LocalRotation: {x: 0.0498687, y: -9.869751e-10, z: 4.9280455e-11, w: 0.9987558}
+  m_LocalRotation: {x: 0.049868707, y: 0.0000000065195036, z: -3.2552422e-10, w: 0.9987558}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -38375,7 +38377,8 @@ AudioSource:
   m_GameObject: {fileID: 1438326582}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243247032315055076, guid: 26438fd8e3b102146af0fb3e10c3033b,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 18ebdfc7652f7ae42bddf2edef23743c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.4
@@ -40609,7 +40612,8 @@ AudioSource:
   m_GameObject: {fileID: 1524211890}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243247032315055076, guid: 26438fd8e3b102146af0fb3e10c3033b,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 993b9983a87378b469e4b0f6a4eda99b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.4
@@ -59382,7 +59386,8 @@ AudioSource:
   m_GameObject: {fileID: 2038180336}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243247032315055076, guid: 26438fd8e3b102146af0fb3e10c3033b,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 76b5a60aed6740d4e8a61d2cd1ddedc5, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.4
