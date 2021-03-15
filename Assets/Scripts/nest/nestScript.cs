@@ -33,6 +33,7 @@ public class nestScript : MonoBehaviour
     public float enemySpeed;
 
     private bool enemiesStopped;
+    private bool givenHint;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +47,7 @@ public class nestScript : MonoBehaviour
         towerDurStations = GameObject.FindGameObjectsWithTag("UpgradeTowerDuration");
         playerSpeedStations = GameObject.FindGameObjectsWithTag("UpgradePlayerSpeed");
         enemiesStopped = false;
+        givenHint = false;
         //if (SceneManager.GetActiveScene().buildIndex != 5)
         //{
         //    numLarva = PlayerPrefs.GetInt("Larva");
@@ -69,7 +71,7 @@ public class nestScript : MonoBehaviour
             //num_msg.text = "";
         }
 
-        if (numStolen >= numStolenToGiveHint)
+        if (numStolen >= numStolenToGiveHint && !givenHint)
         {
             tutorialCanvas.gameObject.SetActive(true);
             upgradeWeaponText.gameObject.SetActive(true);
@@ -77,7 +79,7 @@ public class nestScript : MonoBehaviour
             {
                 enemieStop();
             }
-           
+
             if (upgradeWeaponText.GetComponent<TextTyping>().isFinished)
             {
                 tutorialCanvas.gameObject.SetActive(false);
@@ -128,8 +130,8 @@ public class nestScript : MonoBehaviour
                     {
                         enemieStart();
                     }
-                   
-                   
+
+
                     //var enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
                     //numStolen = 0;
@@ -167,7 +169,7 @@ public class nestScript : MonoBehaviour
             enemy.GetComponent<tileMovement>().moveSpeed = enemySpeed;
         }
         waveManager.GetComponent<tileWaveScript>().timeToSpawn = timeToSpawnOriginal;
-
+        givenHint = true;
 
 
     }
