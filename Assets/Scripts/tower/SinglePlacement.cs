@@ -93,14 +93,12 @@ public class SinglePlacement : MonoBehaviour
 
     public void SetPlacement()
     {
-        //Debug.Log("Setting placement" + this);
         if (selectedPlacement == this && tower.GetComponent<tower>().menu2D.activeSelf)
         {
             DeselectPlacement();
             return;
         }
-        selectedPlacement = this;
-        
+        selectedPlacement = this;      
         var towers = GameObject.FindGameObjectsWithTag("Tower");
         foreach (GameObject thetower in towers)
         {
@@ -109,10 +107,8 @@ public class SinglePlacement : MonoBehaviour
         if (tower)
         {
             tower.GetComponent<tower>().showMenu();
-        }
-       
+        }       
     }
-
     public void DeselectPlacement()
     {
         selectedPlacement = null;
