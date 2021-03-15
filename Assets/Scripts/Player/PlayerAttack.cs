@@ -42,11 +42,13 @@ public class PlayerAttack : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject())
         {
             //Debug.Log("Touched the UI");
+            hitUpgrade = false;
             return;
         }
         if (character.GetBool("isAttacking") && attackTimer > 1.0f)
         {
             character.SetBool("isAttacking", false);
+            hitUpgrade = false;
         }
         if(Input.GetMouseButtonUp(0) && attackTimer >= myWeapon.attackCoolDown)
         {
@@ -84,6 +86,7 @@ public class PlayerAttack : MonoBehaviour
                 print("Hit Enemy!");
                 enemy en = hit.collider.GetComponent<enemy>();
                 en.TakeDamage(myWeapon.attackDamage);
+                hitUpgrade = false;
                 attack.Play();
             }
             else if (hit.collider.tag == "Tower")
@@ -91,6 +94,7 @@ public class PlayerAttack : MonoBehaviour
                 print("Hit Tower!");
                 tower to= hit.collider.GetComponent<tower>();
                 to.repair(myWeapon.repairAmount);
+                hitUpgrade = false;
                 repair.Play();
             }
             else if(hit.collider.tag == "UpgradeWeapon")
@@ -120,12 +124,14 @@ public class PlayerAttack : MonoBehaviour
             else
             {
                 whiff.Play();
+                hitUpgrade = false;
             }
 
         }
         else
         {
             whiff.Play();
+            hitUpgrade = false;
         }
         character.SetBool("isAttacking", true);
         return ray;
