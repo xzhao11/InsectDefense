@@ -17,7 +17,7 @@ public class TutorialManager : MonoBehaviour
 
     public Button startWaveButton;
     public GameObject topDownCamera;
-    private int timerWhole = 0;
+    //private int timerWhole = 0;
 
     private bool hadTower;
     void Start()
