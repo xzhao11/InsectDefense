@@ -17536,7 +17536,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522551697}
-  m_LocalRotation: {x: 0.0006195327, y: -1.1691585e-10, z: 7.243321e-14, w: 0.9999998}
+  m_LocalRotation: {x: 0.0006195344, y: 4.9301635e-10, z: -3.0544068e-13, w: 0.9999998}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -61503,7 +61503,7 @@ MonoBehaviour:
   player: {fileID: 791913483}
   SmoothTime: 0.3
   cam: {fileID: 1704361808}
-  ScollSpeed: 30
+  ScrollSpeed: 50
   maxSize: 200
   startSize: 0
   currentMaxSize: 0

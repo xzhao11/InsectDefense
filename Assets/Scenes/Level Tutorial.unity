@@ -1198,7 +1198,7 @@ MonoBehaviour:
   player: {fileID: 933091476}
   SmoothTime: 0.3
   cam: {fileID: 109386913}
-  ScollSpeed: 15
+  ScrollSpeed: 20
   maxSize: 90
   startSize: 0
   currentMaxSize: 0

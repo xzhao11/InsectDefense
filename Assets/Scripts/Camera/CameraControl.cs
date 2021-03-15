@@ -11,7 +11,7 @@ public class CameraControl : MonoBehaviour
     // This value will change at the runtime depending on target movement. Initialize with zero vector.
     private Vector3 velocity = Vector3.zero;
     public Camera cam;
-    public float ScollSpeed;
+    public float ScrollSpeed;
     public float maxSize;
     public float startSize;
     public float currentMaxSize;
@@ -30,18 +30,21 @@ public class CameraControl : MonoBehaviour
 
         if (cam.orthographic)
         {
-            if (cam.orthographicSize <= maxSize && cam.orthographicSize - Input.GetAxis("Mouse ScrollWheel") * ScollSpeed <= maxSize)
+            if (cam.orthographicSize <= maxSize && cam.orthographicSize - Input.GetAxis("Mouse ScrollWheel") * ScrollSpeed <= maxSize)
             {
-                if (cam.orthographicSize >= startSize && cam.orthographicSize - Input.GetAxis("Mouse ScrollWheel") * ScollSpeed >= startSize)
+                if (cam.orthographicSize >= startSize && cam.orthographicSize - Input.GetAxis("Mouse ScrollWheel") * ScrollSpeed >= startSize)
                 {
-                    cam.orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * ScollSpeed;
+                    cam.orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * ScrollSpeed;
                 }
                
             }
            
         }
 
-        //if(cam.orthographicSize)
+        if(cam.orthographicSize >= currentMaxSize)
+        {
+            currentMaxSize = cam.orthographicSize;
+        }
     }
 }
 

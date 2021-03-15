@@ -126,8 +126,8 @@ public class TutorialManager : MonoBehaviour
         {
             CameraControl camCon = topDownCamera.GetComponent<CameraControl>();
             timerIsRunning = false;
-            //if (camCon.cam.orthographicSize <= camCon.startSize + 20)
-            //{
+            if (camCon.currentMaxSize <= camCon.startSize)
+            {
 
                 tutorialCanvas.gameObject.SetActive(true);
                 zoomoutText.gameObject.SetActive(true);
@@ -138,12 +138,12 @@ public class TutorialManager : MonoBehaviour
                     zoomoutText.gameObject.SetActive(false);
                     timerIsRunning = true;
                 }
-            //}
+            }
 
         }
 
 
-        if (timerIsRunning)
+            if (timerIsRunning)
         {
             timer += Time.deltaTime;
         }

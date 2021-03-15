@@ -51,7 +51,6 @@ public class tower : MonoBehaviour
 
     public GameObject placement;
     public Transform player;
-    
 
 
 
@@ -98,6 +97,7 @@ public class tower : MonoBehaviour
             UI2D.transform.localScale = new Vector3(oldScalex * 2, oldScaley * 2, oldScalez * 2);
 
         }
+
     }
 
     void FixedUpdate()
@@ -135,6 +135,7 @@ public class tower : MonoBehaviour
         sellButton.GetComponentInChildren<Text>().text = "Sell\n" + (int)(0.5 * towerValue);
         colorRenderer.material.SetColor("_Color", colors[curColor]);
         levelUI.GetComponentInChildren<Text>().text = "Level " + level;
+        
     }
 
     private void Gunfiring(Vector3 direction)
