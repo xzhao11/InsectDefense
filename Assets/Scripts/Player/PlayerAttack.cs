@@ -19,7 +19,8 @@ public class PlayerAttack : MonoBehaviour
 
     private float attackTimer = 0.0f;
     private Ray ray;
-    
+
+    public bool hitUpgrade = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,11 +42,13 @@ public class PlayerAttack : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject())
         {
             //Debug.Log("Touched the UI");
+            hitUpgrade = false;
             return;
         }
         if (character.GetBool("isAttacking") && attackTimer > 1.0f)
         {
             character.SetBool("isAttacking", false);
+            hitUpgrade = false;
         }
         if(Input.GetMouseButtonUp(0) && attackTimer >= myWeapon.attackCoolDown)
         {
@@ -83,6 +86,7 @@ public class PlayerAttack : MonoBehaviour
                 print("Hit Enemy!");
                 enemy en = hit.collider.GetComponent<enemy>();
                 en.TakeDamage(myWeapon.attackDamage);
+                hitUpgrade = false;
                 attack.Play();
             }
             else if (hit.collider.tag == "Tower")
@@ -90,11 +94,13 @@ public class PlayerAttack : MonoBehaviour
                 print("Hit Tower!");
                 tower to= hit.collider.GetComponent<tower>();
                 to.repair(myWeapon.repairAmount);
+                hitUpgrade = false;
                 repair.Play();
             }
             else if(hit.collider.tag == "UpgradeWeapon")
             {
                 print("Hit Weapon Upgrade!");
+                hitUpgrade = true;
                 upgradeWeapon up = hit.collider.GetComponent<upgradeWeapon>();
                 up.doUpgrade();
                 upgrade.Play();
@@ -102,6 +108,7 @@ public class PlayerAttack : MonoBehaviour
             else if (hit.collider.tag == "UpgradeTowerDuration")
             {
                 print("Hit Tower Regen Upgrade!");
+                hitUpgrade = true;
                 upgradeTowerDuration up = hit.collider.GetComponent<upgradeTowerDuration>();
                 up.doUpgrade();
                 upgrade.Play();
@@ -109,6 +116,7 @@ public class PlayerAttack : MonoBehaviour
             else if (hit.collider.tag == "UpgradePlayerSpeed")
             {
                 print("Hit Player Speed Upgrade!");
+                hitUpgrade = true;
                 upgradePlayerSpeed up = hit.collider.GetComponent<upgradePlayerSpeed>();
                 up.doUpgrade();
                 upgrade.Play();
@@ -116,12 +124,14 @@ public class PlayerAttack : MonoBehaviour
             else
             {
                 whiff.Play();
+                hitUpgrade = false;
             }
 
         }
         else
         {
             whiff.Play();
+            hitUpgrade = false;
         }
         character.SetBool("isAttacking", true);
         return ray;

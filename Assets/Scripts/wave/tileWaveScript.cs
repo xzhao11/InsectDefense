@@ -12,7 +12,7 @@ public class tileWaveScript : MonoBehaviour
     public int remaining;
     public int toSpawn;
     public float downTime = 1200f;
-    private float timeToSpawn = 0f;
+    public float timeToSpawn = 0f;
     private Vector3[] spawns;
     public Transform nest;
     public GameObject player;

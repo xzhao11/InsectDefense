@@ -13,10 +13,12 @@ public class CameraControl : MonoBehaviour
     public Camera cam;
     public float ScollSpeed;
     public float maxSize;
+    public float startSize;
     // Start is called before the first frame update
     void Start()
     {
         offset = transform.position - player.transform.position;
+        startSize = cam.orthographicSize;
     }
 
     // Update is called once per frame
@@ -29,7 +31,11 @@ public class CameraControl : MonoBehaviour
         {
             if (cam.orthographicSize <= maxSize && cam.orthographicSize - Input.GetAxis("Mouse ScrollWheel") * ScollSpeed <= maxSize)
             {
-                cam.orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * ScollSpeed;
+                if (cam.orthographicSize >= startSize && cam.orthographicSize - Input.GetAxis("Mouse ScrollWheel") * ScollSpeed >= startSize)
+                {
+                    cam.orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * ScollSpeed;
+                }
+               
             }
            
         }

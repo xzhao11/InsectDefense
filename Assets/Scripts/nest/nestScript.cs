@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
+
 public class nestScript : MonoBehaviour
 {
     public int numLarva;
@@ -17,11 +19,17 @@ public class nestScript : MonoBehaviour
     public Canvas otherUI;
     public Canvas tutorialCanvas;
     public Text upgradeWeaponText;
+    public Text zoomoutText;
     public int numStolen;
     public int numStolenToGiveHint = 3;
 
     public GameObject waveManager;
-    public int toSpawnOriginal;
+    private float timeToSpawnOriginal;
+    public GameObject topDownCamera;
+    private GameObject[] weaponStations;
+    private GameObject[] towerDurStations;
+    private GameObject[] playerSpeedStations;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +38,9 @@ public class nestScript : MonoBehaviour
         twinChance = 0.25f;
         tripletChance = 0.25f;
         numStolen = 0;
+        weaponStations = GameObject.FindGameObjectsWithTag("UpgradeWeapon");
+        towerDurStations = GameObject.FindGameObjectsWithTag("UpgradeTowerDuration");
+        playerSpeedStations = GameObject.FindGameObjectsWithTag("UpgradePlayerSpeed");
         //if (SceneManager.GetActiveScene().buildIndex != 5)
         //{
         //    numLarva = PlayerPrefs.GetInt("Larva");
@@ -57,15 +68,63 @@ public class nestScript : MonoBehaviour
         {
             tutorialCanvas.gameObject.SetActive(true);
             upgradeWeaponText.gameObject.SetActive(true);
-            toSpawnOriginal = waveManager.GetComponent<tileWaveScript>().toSpawn;
-            waveManager.GetComponent<tileWaveScript>().toSpawn = 0;
+            timeToSpawnOriginal = waveManager.GetComponent<tileWaveScript>().timeToSpawn;
+            waveManager.GetComponent<tileWaveScript>().timeToSpawn =  Mathf.Infinity;
             if (upgradeWeaponText.GetComponent<TextTyping>().isFinished)
             {
                 tutorialCanvas.gameObject.SetActive(false);
                 upgradeWeaponText.gameObject.SetActive(false);
                 numStolen = 0;
                 numStolenToGiveHint += 2;
+                CameraControl camCon = topDownCamera.GetComponent<CameraControl>();
+                if (camCon.cam.orthographicSize <= camCon.startSize + 20 )
+                {
+                    tutorialCanvas.gameObject.SetActive(true);
+                    zoomoutText.gameObject.SetActive(true);
+                    if (zoomoutText.GetComponent<TextTyping>().isFinished)
+                    {
+                        tutorialCanvas.gameObject.SetActive(false);
+                        zoomoutText.gameObject.SetActive(false);
+                    }
+                }
+
+
+                foreach (GameObject station in weaponStations)
+                {
+                    station.GetComponent<Scaling>().enabled = true;
+                }
+
+                foreach (GameObject station in towerDurStations)
+                {
+                    station.GetComponent<Scaling>().enabled = true;
+                }
+
+                foreach (GameObject station in playerSpeedStations)
+                {
+                    station.GetComponent<Scaling>().enabled = true;
+                }
+
+                if (player.GetComponent<PlayerAttack>().hitUpgrade)
+                {
+                    foreach (GameObject station in weaponStations)
+                    {
+                        station.GetComponent<Scaling>().enabled = false;
+                    }
+
+                    foreach (GameObject station in towerDurStations)
+                    {
+                        station.GetComponent<Scaling>().enabled = false;
+                    }
+
+                    foreach (GameObject station in playerSpeedStations)
+                    {
+                        station.GetComponent<Scaling>().enabled = false;
+                    }
+
+                    waveManager.GetComponent<tileWaveScript>().timeToSpawn = timeToSpawnOriginal;
+                }
             }
+
         }
 
         
