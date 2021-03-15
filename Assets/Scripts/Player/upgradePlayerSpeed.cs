@@ -12,6 +12,8 @@ public class upgradePlayerSpeed : MonoBehaviour
     public nestScript nest;
     public int index = 0;
 
+    public GameObject audioS;
+
     public int price = 10;
     public int priceDiff = 0;
 
@@ -31,6 +33,7 @@ public class upgradePlayerSpeed : MonoBehaviour
             }
             description.SetActive(false);
             cost.SetActive(false);
+            audioS.SetActive(true);
             player.GetComponent<PlayerControl>().speed += speedUp;
             nest.numLarva -= (price + priceDiff * index);
             index++;
@@ -43,6 +46,10 @@ public class upgradePlayerSpeed : MonoBehaviour
                 cost.GetComponent<TMPro.TextMeshPro>().text = "-" + (price).ToString() + " Larva";
             }
 
+        }
+        else
+        {
+            audioS.SetActive(false);
         }
     }
 }

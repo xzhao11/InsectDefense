@@ -11,6 +11,8 @@ public class upgradeTowerDuration : MonoBehaviour
     public nestScript nest;
     public int index = 0;
 
+    public GameObject audioS;
+
     public int price = 10;
     public int priceDiff = 0;
 
@@ -31,6 +33,7 @@ public class upgradeTowerDuration : MonoBehaviour
             }
             description.SetActive(false);
             cost.SetActive(false);
+            audioS.SetActive(true);
             nest.healthLossRate -= durationChange;
             nest.numLarva -= (price + priceDiff * index);
             index++;
@@ -42,6 +45,10 @@ public class upgradeTowerDuration : MonoBehaviour
                 cost.SetActive(true);
                 cost.GetComponent<TMPro.TextMeshPro>().text = "-" + (price).ToString() + " Larva";
             }
+        }
+        else
+        {
+            audioS.SetActive(false);
         }
     }
 
