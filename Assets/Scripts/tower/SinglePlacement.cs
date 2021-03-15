@@ -19,6 +19,7 @@ public class SinglePlacement : MonoBehaviour
     public GameObject nest;
 
     public ParticleSystem buildEffect;
+
     private void OnMouseEnter()
     {
         if (buildManager.GetTowerToBuild() == null)
@@ -31,6 +32,16 @@ public class SinglePlacement : MonoBehaviour
     private void OnMouseExit()
     {
         rendr.material.color = startColor;
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            //Debug.Log("Touched the UI");
+            return;
+        }
+        if (tower)
+        {
+            SetPlacement();
+        }
+       
     }
 
     private void OnMouseDown()
@@ -47,7 +58,7 @@ public class SinglePlacement : MonoBehaviour
                 //Debug.Log("Touched the UI");
                 return;
             }
-            SetPlacement();
+            //SetPlacement();
             return;
         }
         GameObject towerToBuild = buildManager.GetTowerToBuild();
@@ -68,10 +79,12 @@ public class SinglePlacement : MonoBehaviour
         {
             //Instantiate(buildEffect, transform.position+new Vector3(0, 3, 0), Quaternion.identity);
             tower.GetComponent<tower>().menu2D.GetComponent<Canvas>().worldCamera = topcam;
+            tower.GetComponent<tower>().UI2D.transform.GetChild(0).GetComponent<Canvas>().worldCamera = topcam;
             tower.GetComponent<tower>().placement = this.gameObject;
             tower.GetComponent<tower>().player = player;
             tower.GetComponent<tower>().nest = nest;
             tower.GetComponent<tower>().build();
+            tower.GetComponent<tower>().topcam = topcam;
         }
 
 
@@ -80,7 +93,7 @@ public class SinglePlacement : MonoBehaviour
 
     public void SetPlacement()
     {
-        //Debug.Log("Setting placement" + this);
+        Debug.Log("Setting placement" + this);
         if (selectedPlacement == this && tower.GetComponent<tower>().menu2D.activeSelf)
         {
             DeselectPlacement();
@@ -93,7 +106,11 @@ public class SinglePlacement : MonoBehaviour
         {
             thetower.GetComponent<tower>().hideMenu();
         }
-        tower.GetComponent<tower>().showMenu();
+        if (tower)
+        {
+            tower.GetComponent<tower>().showMenu();
+        }
+       
     }
 
     public void DeselectPlacement()

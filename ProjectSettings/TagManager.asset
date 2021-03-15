@@ -11,6 +11,7 @@ TagManager:
   - UpgradeWeapon
   - UpgradeTowerDuration
   - UpgradePlayerSpeed
+  - Placement
   layers:
   - Default
   - TransparentFX

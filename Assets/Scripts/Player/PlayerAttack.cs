@@ -40,21 +40,21 @@ public class PlayerAttack : MonoBehaviour
         {
             pivot.transform.Rotate(-360 * Time.deltaTime, 0f, 0f, Space.Self);
         }*/
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            //Debug.Log("Touched the UI");
-            return;
-        }
         if (character.GetBool("isAttacking") && attackTimer > 1.0f)
         {
             character.SetBool("isAttacking", false);
         }
-        if(Input.GetMouseButtonUp(0) && attackTimer >= myWeapon.attackCoolDown)
+        if (!EventSystem.current.IsPointerOverGameObject())
         {
-            character.SetBool("isAttacking", false);
-            ray = DoAttack();
-            attackTimer = 0f;
+
+            if (Input.GetMouseButtonUp(0) && attackTimer >= myWeapon.attackCoolDown)
+            {
+                character.SetBool("isAttacking", false);
+                ray = DoAttack();
+                attackTimer = 0f;
+            }
         }
+
         Debug.DrawRay(ray.origin, ray.direction * myWeapon.attackRange, Color.yellow);
     }
 
