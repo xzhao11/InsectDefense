@@ -55,15 +55,16 @@ public class waveComplete : MonoBehaviour
             nest.GetComponent<nestScript>().repopulate(waves);
             Debug.Log(nest.GetComponent<nestScript>().numAnts);
             score.GetComponent<Text>().text = "Your score is " + nest.GetComponent<nestScript>().numAnts;
-            if (SceneManager.GetActiveScene().buildIndex == 5)
+            var ants = nest.GetComponent<nestScript>().numAnts;
+            if (SceneManager.GetActiveScene().buildIndex == 5 && PlayerPrefs.GetInt("LevelTScore") < ants)
             {
                 PlayerPrefs.SetInt("LevelTScore", nest.GetComponent<nestScript>().numAnts);
             }
-            else if (SceneManager.GetActiveScene().buildIndex == 3)
+            else if (SceneManager.GetActiveScene().buildIndex == 3 && PlayerPrefs.GetInt("Level1Score") < ants)
             {
                 PlayerPrefs.SetInt("Level1Score", nest.GetComponent<nestScript>().numAnts);
             }
-            else if (SceneManager.GetActiveScene().buildIndex == 4)
+            else if (SceneManager.GetActiveScene().buildIndex == 4 && PlayerPrefs.GetInt("Level2Score") < ants)
             {
                 PlayerPrefs.SetInt("Level2Score", nest.GetComponent<nestScript>().numAnts);
             }

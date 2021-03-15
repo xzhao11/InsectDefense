@@ -17,6 +17,7 @@ public class menu : MonoBehaviour
         {
             oldColor = level1.GetComponent<Image>().color;
         }
+
         
     }
 
@@ -36,6 +37,7 @@ public class menu : MonoBehaviour
             {
                 level2.GetComponent<Button>().interactable = false;
                 level1.GetComponent<Button>().interactable = true;
+                PlayerPrefs.SetInt("Level2Score", -1);
                 level2.GetComponent<Image>().color = Color.white;
                 level1.GetComponent<Image>().color = oldColor;
             }
@@ -43,9 +45,12 @@ public class menu : MonoBehaviour
             {
                 level2.GetComponent<Button>().interactable = false;
                 level1.GetComponent<Button>().interactable = false;
+                PlayerPrefs.SetInt("Level1Score", -1);
+                PlayerPrefs.SetInt("Level2Score", -1);
                 level2.GetComponent<Image>().color = Color.white;
                 level1.GetComponent<Image>().color = Color.white;
             }
+
         }
 
     }
@@ -66,6 +71,7 @@ public class menu : MonoBehaviour
         //SceneManager.LoadScene(3);
         Time.timeScale = 1;
         PlayerPrefs.SetInt("LevelFinish", 0);
+        PlayerPrefs.SetInt("LevelTScore", -1);
         PlayTutorial();
 
     }
