@@ -71,7 +71,7 @@ public class nestScript : MonoBehaviour
             //num_msg.text = "";
         }
 
-        if (numStolen >= numStolenToGiveHint && !givenHint)
+        if (numStolen >= numStolenToGiveHint && !givenHint && SceneManager.GetActiveScene().buildIndex == 3)
         {
             tutorialCanvas.gameObject.SetActive(true);
             upgradeWeaponText.gameObject.SetActive(true);

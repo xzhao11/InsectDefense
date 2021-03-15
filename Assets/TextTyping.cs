@@ -23,11 +23,11 @@ public class TextTyping : MonoBehaviour
 	IEnumerator PlayText()
 	{
 		//Debug.Log("length " + fullText.Length);
-		for (int i = 0; i < fullText.Length; i++)
+		for (int i = 0; i <= fullText.Length; i++)
 		{
 			current = fullText.Substring(0, i);
 			this.GetComponent<Text>().text = current;
-			if (current.Length == fullText.Length-1)
+			if (current.Length == fullText.Length)
             {
 				isDoneTyping = true;
 				this.GetComponent<AudioSource>().Stop();

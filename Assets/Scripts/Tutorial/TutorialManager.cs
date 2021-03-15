@@ -53,7 +53,7 @@ public class TutorialManager : MonoBehaviour
             else
             {
                 shopCanvas.GetComponent<Scaling>().enabled = true;
-                shopCanvas.GetComponent<Scaling>().OnPlay();
+                //shopCanvas.GetComponent<Scaling>().OnPlay();
             }
         }
 
@@ -114,7 +114,7 @@ public class TutorialManager : MonoBehaviour
             if (startWaveButton.gameObject.activeSelf)
             {
                 startWaveButton.GetComponent<Scaling>().enabled = true;
-                startWaveButton.GetComponent<Scaling>().OnPlay();
+                //startWaveButton.GetComponent<Scaling>().OnPlay();
             }
             else 
             {
@@ -126,8 +126,8 @@ public class TutorialManager : MonoBehaviour
         {
             CameraControl camCon = topDownCamera.GetComponent<CameraControl>();
             timerIsRunning = false;
-            if (camCon.cam.orthographicSize <= camCon.startSize + 20)
-            {
+            //if (camCon.cam.orthographicSize <= camCon.startSize + 20)
+            //{
 
                 tutorialCanvas.gameObject.SetActive(true);
                 zoomoutText.gameObject.SetActive(true);
@@ -138,7 +138,7 @@ public class TutorialManager : MonoBehaviour
                     zoomoutText.gameObject.SetActive(false);
                     timerIsRunning = true;
                 }
-            }
+            //}
 
         }
 
