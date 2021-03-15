@@ -1912,7 +1912,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1485953615}
-        m_MethodName: PlayTutorial
+        m_MethodName: PlayNewGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

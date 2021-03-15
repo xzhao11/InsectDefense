@@ -61,6 +61,14 @@ public class menu : MonoBehaviour
         StartCoroutine(DelaySceneLoad(level));
         
     }
+    public void PlayNewGame()
+    {
+        //SceneManager.LoadScene(3);
+        Time.timeScale = 1;
+        PlayerPrefs.SetInt("LevelFinish", 0);
+        PlayTutorial();
+
+    }
     public void BackToMainMenu()
     {
         //SceneManager.LoadScene(0);
