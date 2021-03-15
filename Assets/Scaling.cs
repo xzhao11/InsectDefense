@@ -29,4 +29,10 @@ public class Scaling : MonoBehaviour
         }
         
     }
+
+
+    public  void OnPlay()
+    {
+        tweenId = LeanTween.scale(gameObject, new Vector3(scalex + scaleSize, scaley + scaleSize, scalez + scaleSize), 1f).setEase(LeanTweenType.easeInOutCirc).setLoopPingPong().id;
+    }
 }

@@ -11,11 +11,12 @@ public class TutorialManager : MonoBehaviour
     public Text startStory;
     public Text placeTower1;
     public Text shift;
+    public Text zoomoutText;
     public GameObject shopCanvas;
     public Image arrowTower;
 
     public Button startWaveButton;
-
+    public GameObject topDownCamera;
     private int timerWhole = 0;
     void Start()
     {
@@ -52,6 +53,7 @@ public class TutorialManager : MonoBehaviour
             else
             {
                 shopCanvas.GetComponent<Scaling>().enabled = true;
+                shopCanvas.GetComponent<Scaling>().OnPlay();
             }
         }
 
@@ -112,6 +114,7 @@ public class TutorialManager : MonoBehaviour
             if (startWaveButton.gameObject.activeSelf)
             {
                 startWaveButton.GetComponent<Scaling>().enabled = true;
+                startWaveButton.GetComponent<Scaling>().OnPlay();
             }
             else 
             {
@@ -119,6 +122,26 @@ public class TutorialManager : MonoBehaviour
                 timerIsRunning = true;
             }
         }
+        if (timer >= 10)
+        {
+            CameraControl camCon = topDownCamera.GetComponent<CameraControl>();
+            timerIsRunning = false;
+            if (camCon.cam.orthographicSize <= camCon.startSize + 20)
+            {
+
+                tutorialCanvas.gameObject.SetActive(true);
+                zoomoutText.gameObject.SetActive(true);
+                if (zoomoutText.GetComponent<TextTyping>().isFinished)
+                {
+                    //Debug.Log("finished");
+                    tutorialCanvas.gameObject.SetActive(false);
+                    zoomoutText.gameObject.SetActive(false);
+                    timerIsRunning = true;
+                }
+            }
+
+        }
+
 
         if (timerIsRunning)
         {

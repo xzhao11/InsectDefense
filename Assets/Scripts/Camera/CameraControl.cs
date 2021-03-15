@@ -14,6 +14,7 @@ public class CameraControl : MonoBehaviour
     public float ScollSpeed;
     public float maxSize;
     public float startSize;
+    public float currentMaxSize;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +40,8 @@ public class CameraControl : MonoBehaviour
             }
            
         }
+
+        //if(cam.orthographicSize)
     }
 }
 

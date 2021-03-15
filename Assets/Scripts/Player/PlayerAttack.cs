@@ -20,11 +20,12 @@ public class PlayerAttack : MonoBehaviour
     private float attackTimer = 0.0f;
     private Ray ray;
 
-    public bool hitUpgrade = false;
+    public bool hitUpgrade;
     // Start is called before the first frame update
     void Start()
     {
         //ray = DoAttack();
+        hitUpgrade = false;
     }
 
     // Update is called once per frame
