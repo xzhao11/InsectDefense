@@ -30,6 +30,7 @@ public class nestScript : MonoBehaviour
     private GameObject[] towerDurStations;
     private GameObject[] playerSpeedStations;
     public GameObject player;
+    public float enemySpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,65 +70,96 @@ public class nestScript : MonoBehaviour
             tutorialCanvas.gameObject.SetActive(true);
             upgradeWeaponText.gameObject.SetActive(true);
             timeToSpawnOriginal = waveManager.GetComponent<tileWaveScript>().timeToSpawn;
-            waveManager.GetComponent<tileWaveScript>().timeToSpawn =  Mathf.Infinity;
-            if (upgradeWeaponText.GetComponent<TextTyping>().isFinished)
+            waveManager.GetComponent<tileWaveScript>().timeToSpawn = Mathf.Infinity;
+            var enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach (GameObject enemy in enemies)
             {
-                tutorialCanvas.gameObject.SetActive(false);
-                upgradeWeaponText.gameObject.SetActive(false);
-                numStolen = 0;
-                numStolenToGiveHint += 2;
-                CameraControl camCon = topDownCamera.GetComponent<CameraControl>();
-                if (camCon.cam.orthographicSize <= camCon.startSize + 20 )
-                {
-                    tutorialCanvas.gameObject.SetActive(true);
-                    zoomoutText.gameObject.SetActive(true);
-                    if (zoomoutText.GetComponent<TextTyping>().isFinished)
-                    {
-                        tutorialCanvas.gameObject.SetActive(false);
-                        zoomoutText.gameObject.SetActive(false);
-                    }
-                }
+                enemySpeed = enemy.GetComponent<tileMovement>().moveSpeed;
+                enemy.GetComponent<tileMovement>().moveSpeed = 0;
+            }
+            numStolen = 0;
+        }
+        if (upgradeWeaponText.GetComponent<TextTyping>().isFinished)
+        {
+            tutorialCanvas.gameObject.SetActive(false);
+            upgradeWeaponText.gameObject.SetActive(false);
+
+            numStolenToGiveHint += 2;
+            //CameraControl camCon = topDownCamera.GetComponent<CameraControl>();
+            //if (camCon.cam.orthographicSize <= camCon.startSize + 20)
+            //{
+            //    zoomoutText.gameObject.SetActive(true);
+            //    tutorialCanvas.gameObject.SetActive(true);
+            //}
 
 
+
+            foreach (GameObject station in weaponStations)
+            {
+                station.GetComponent<Scaling>().enabled = true;
+            }
+
+            foreach (GameObject station in towerDurStations)
+            {
+                station.GetComponent<Scaling>().enabled = true;
+            }
+
+            foreach (GameObject station in playerSpeedStations)
+            {
+                station.GetComponent<Scaling>().enabled = true;
+            }
+
+            if (player.GetComponent<PlayerAttack>().hitUpgrade)
+            {
+                //Debug.Log("hitupgrade");
                 foreach (GameObject station in weaponStations)
                 {
-                    station.GetComponent<Scaling>().enabled = true;
+                    station.GetComponent<Scaling>().OnClose();
                 }
 
                 foreach (GameObject station in towerDurStations)
                 {
-                    station.GetComponent<Scaling>().enabled = true;
+                    station.GetComponent<Scaling>().OnClose();
                 }
 
                 foreach (GameObject station in playerSpeedStations)
                 {
-                    station.GetComponent<Scaling>().enabled = true;
+                    station.GetComponent<Scaling>().OnClose();
                 }
 
-                if (player.GetComponent<PlayerAttack>().hitUpgrade)
+                waveManager.GetComponent<tileWaveScript>().timeToSpawn = timeToSpawnOriginal;
+                var enemies = GameObject.FindGameObjectsWithTag("Enemy");
+                foreach (GameObject enemy in enemies)
                 {
-                    foreach (GameObject station in weaponStations)
-                    {
-                        station.GetComponent<Scaling>().enabled = false;
-                    }
-
-                    foreach (GameObject station in towerDurStations)
-                    {
-                        station.GetComponent<Scaling>().enabled = false;
-                    }
-
-                    foreach (GameObject station in playerSpeedStations)
-                    {
-                        station.GetComponent<Scaling>().enabled = false;
-                    }
-
-                    waveManager.GetComponent<tileWaveScript>().timeToSpawn = timeToSpawnOriginal;
+                    //enemySpeed = enemy.GetComponent<tileMovement>().moveSpeed;
+                    enemy.GetComponent<tileMovement>().moveSpeed = enemySpeed;
                 }
             }
 
+            if (zoomoutText.GetComponent<TextTyping>().isFinished)
+            {
+                Debug.Log("finished");
+                tutorialCanvas.gameObject.SetActive(false);
+                zoomoutText.gameObject.SetActive(false);
+            }
         }
 
-        
+
+
+    }
+
+    private void tutorialOnUpgrade()
+    {
+        tutorialCanvas.gameObject.SetActive(true);
+        upgradeWeaponText.gameObject.SetActive(true);
+        timeToSpawnOriginal = waveManager.GetComponent<tileWaveScript>().timeToSpawn;
+        waveManager.GetComponent<tileWaveScript>().timeToSpawn = Mathf.Infinity;
+        var enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in enemies)
+        {
+            enemySpeed = enemy.GetComponent<tileMovement>().moveSpeed;
+            enemy.GetComponent<tileMovement>().moveSpeed = 0;
+        }
     }
 
     void decreaseLarva()
