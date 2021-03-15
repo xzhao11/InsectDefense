@@ -31,6 +31,8 @@ public class nestScript : MonoBehaviour
     private GameObject[] playerSpeedStations;
     public GameObject player;
     public float enemySpeed;
+
+    private float timer;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +44,7 @@ public class nestScript : MonoBehaviour
         weaponStations = GameObject.FindGameObjectsWithTag("UpgradeWeapon");
         towerDurStations = GameObject.FindGameObjectsWithTag("UpgradeTowerDuration");
         playerSpeedStations = GameObject.FindGameObjectsWithTag("UpgradePlayerSpeed");
+        timer = 0;
         //if (SceneManager.GetActiveScene().buildIndex != 5)
         //{
         //    numLarva = PlayerPrefs.GetInt("Larva");
@@ -85,12 +88,7 @@ public class nestScript : MonoBehaviour
             upgradeWeaponText.gameObject.SetActive(false);
 
             numStolenToGiveHint += 2;
-            //CameraControl camCon = topDownCamera.GetComponent<CameraControl>();
-            //if (camCon.cam.orthographicSize <= camCon.startSize + 20)
-            //{
-            //    zoomoutText.gameObject.SetActive(true);
-            //    tutorialCanvas.gameObject.SetActive(true);
-            //}
+
 
 
 
@@ -136,13 +134,27 @@ public class nestScript : MonoBehaviour
                 }
             }
 
-            if (zoomoutText.GetComponent<TextTyping>().isFinished)
-            {
-                Debug.Log("finished");
-                tutorialCanvas.gameObject.SetActive(false);
-                zoomoutText.gameObject.SetActive(false);
-            }
+
         }
+
+        if (timer >= 10)
+        {
+            CameraControl camCon = topDownCamera.GetComponent<CameraControl>();
+            if (camCon.cam.orthographicSize <= camCon.startSize + 20)
+            {
+                zoomoutText.gameObject.SetActive(true);
+                tutorialCanvas.gameObject.SetActive(true);
+                if (zoomoutText.GetComponent<TextTyping>().isFinished)
+                {
+                    Debug.Log("finished");
+                    tutorialCanvas.gameObject.SetActive(false);
+                    zoomoutText.gameObject.SetActive(false);
+                }
+            }
+            
+        }
+
+        timer += Time.deltaTime;
 
 
 
