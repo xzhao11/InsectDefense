@@ -15,6 +15,10 @@ public class nestScript : MonoBehaviour
     [SerializeField] TMP_Text num_msg;
     public Canvas loseScreen;
     public Canvas otherUI;
+    public Canvas tutorialCanvas;
+    public Text upgradeWeaponText;
+    public int numStolen;
+    public int numStolenToGiveHint = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +26,7 @@ public class nestScript : MonoBehaviour
         //numGrain = 0;
         twinChance = 0.25f;
         tripletChance = 0.25f;
-        
+        numStolen = 0;
         //if (SceneManager.GetActiveScene().buildIndex != 5)
         //{
         //    numLarva = PlayerPrefs.GetInt("Larva");
@@ -44,6 +48,12 @@ public class nestScript : MonoBehaviour
                 theenemy.GetComponent<tileMovement>().moveSpeed = 0;
             }
             //num_msg.text = "";
+        }
+
+        if (numStolen >= numStolenToGiveHint)
+        {
+            tutorialCanvas.gameObject.SetActive(true);
+            upgradeWeaponText.gameObject.SetActive(true);
         }
 
         

@@ -38,7 +38,12 @@ public class PlayerAttack : MonoBehaviour
         {
             pivot.transform.Rotate(-360 * Time.deltaTime, 0f, 0f, Space.Self);
         }*/
-        if(character.GetBool("isAttacking") && attackTimer > 1.0f)
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            //Debug.Log("Touched the UI");
+            return;
+        }
+        if (character.GetBool("isAttacking") && attackTimer > 1.0f)
         {
             character.SetBool("isAttacking", false);
         }

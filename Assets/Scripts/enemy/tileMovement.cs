@@ -90,7 +90,7 @@ public class tileMovement : MonoBehaviour
                     wave.GetComponent<tileWaveScript>().decrementRemaining();
                     Destroy(gameObject);
                     nest.GetComponent<nestScript>().numLarva -= 1;
-                    
+                    nest.GetComponent<nestScript>().numStolen += 1;
                 }
                 else
                 {
