@@ -83,6 +83,7 @@ public class TutorialManager : MonoBehaviour
         if (towers.Length > 0)
         {
             hadTower = true;
+            arrowTower.gameObject.SetActive(false);
         }
         if (timer >= 4 && !hadTower)
         {
@@ -139,13 +140,15 @@ public class TutorialManager : MonoBehaviour
 
                 tutorialCanvas.gameObject.SetActive(true);
                 zoomoutText.gameObject.SetActive(true);
-                if (zoomoutText.GetComponent<TextTyping>().isFinished)
-                {
-                    //Debug.Log("finished");
-                    tutorialCanvas.gameObject.SetActive(false);
-                    zoomoutText.gameObject.SetActive(false);
-                    timerIsRunning = true;
-                }
+
+            }
+
+            if (zoomoutText.GetComponent<TextTyping>().isFinished)
+            {
+                //Debug.Log("finished");
+                tutorialCanvas.gameObject.SetActive(false);
+                zoomoutText.gameObject.SetActive(false);
+                timerIsRunning = true;
             }
 
         }

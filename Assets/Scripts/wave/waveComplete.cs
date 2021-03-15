@@ -16,6 +16,7 @@ public class waveComplete : MonoBehaviour
     public GameObject wave;
     public Canvas finishedScreen;
     public Canvas otherUI;
+    public Text score;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,7 +52,22 @@ public class waveComplete : MonoBehaviour
             finishedScreen.gameObject.SetActive(true);
             otherUI.gameObject.SetActive(false);
             isTrue = 1;
-            nest.GetComponent<nestScript>().repopulateEnd();
+            nest.GetComponent<nestScript>().repopulate(waves);
+            Debug.Log(nest.GetComponent<nestScript>().numAnts);
+            score.GetComponent<Text>().text = "Your score is " + nest.GetComponent<nestScript>().numAnts;
+            if (SceneManager.GetActiveScene().buildIndex == 5)
+            {
+                PlayerPrefs.SetInt("LevelTScore", nest.GetComponent<nestScript>().numAnts);
+            }
+            else if (SceneManager.GetActiveScene().buildIndex == 3)
+            {
+                PlayerPrefs.SetInt("Level1Score", nest.GetComponent<nestScript>().numAnts);
+            }
+            else if (SceneManager.GetActiveScene().buildIndex == 4)
+            {
+                PlayerPrefs.SetInt("Level2Score", nest.GetComponent<nestScript>().numAnts);
+            }
+
             Time.timeScale = 0;
             //PlayerPrefs.SetInt("Larva", nest.GetComponent<nestScript>().numLarva);
             PlayerPrefs.SetInt("LevelFinish", SceneManager.GetActiveScene().buildIndex);
