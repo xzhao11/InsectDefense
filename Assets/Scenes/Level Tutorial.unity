@@ -3886,6 +3886,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 958450141}
+        m_MethodName: OnClose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &343200425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5116,6 +5127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00158e8366fe20c43b88ec441f35d6b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level1: {fileID: 0}
+  level2: {fileID: 0}
 --- !u!114 &472706679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8275,13 +8288,15 @@ MonoBehaviour:
   num_msg: {fileID: 1698804058}
   loseScreen: {fileID: 442969041}
   otherUI: {fileID: 855737443}
-  tutorialCanvas: {fileID: 0}
+  tutorialCanvas: {fileID: 856234424}
   upgradeWeaponText: {fileID: 0}
   numStolen: 0
   numStolenToGiveHint: 3
-  waveManager: {fileID: 0}
-  player: {fileID: 0}
+  waveManager: {fileID: 688379193}
+  player: {fileID: 933091476}
   enemySpeed: 0
+  speedButton: {fileID: 958450137}
+  startWaveButton: {fileID: 792838037}
 --- !u!1001 &737733358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10878,6 +10893,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00158e8366fe20c43b88ec441f35d6b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level1: {fileID: 0}
+  level2: {fileID: 0}
 --- !u!114 &932560101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11453,6 +11470,7 @@ GameObject:
   - component: {fileID: 958450138}
   - component: {fileID: 958450140}
   - component: {fileID: 958450139}
+  - component: {fileID: 958450141}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -11516,6 +11534,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 958450137}
   m_CullTransparentMesh: 0
+--- !u!114 &958450141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958450137}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3493ef6e0257b94eaccd9ef90be9453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleSize: 2
+  isFinished: 0
 --- !u!4 &979533287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010523346236, guid: 8d60ce487f563c24982c53e88f1dd5b4,
@@ -14669,7 +14701,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291746785}
-  m_LocalRotation: {x: 0.049868707, y: 0.0000000065195036, z: -3.2552422e-10, w: 0.9987558}
+  m_LocalRotation: {x: 0.0498687, y: -9.869751e-10, z: 4.9280455e-11, w: 0.9987558}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -18270,6 +18302,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00158e8366fe20c43b88ec441f35d6b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level1: {fileID: 0}
+  level2: {fileID: 0}
 --- !u!114 &1575060472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21681,6 +21715,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00158e8366fe20c43b88ec441f35d6b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level1: {fileID: 0}
+  level2: {fileID: 0}
 --- !u!114 &1838236368
 MonoBehaviour:
   m_ObjectHideFlags: 0

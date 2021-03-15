@@ -18,11 +18,13 @@ public class TutorialManager : MonoBehaviour
     public Button startWaveButton;
     public GameObject topDownCamera;
     private int timerWhole = 0;
+
+    private bool hadTower;
     void Start()
     {
         timerIsRunning = true;
         timer = 0;
-
+        hadTower = false;
     }
 
     // Update is called once per frame
@@ -78,7 +80,11 @@ public class TutorialManager : MonoBehaviour
         //    }
         //}
         var towers = GameObject.FindGameObjectsWithTag("Tower");
-        if (timer >= 4)
+        if (towers.Length > 0)
+        {
+            hadTower = true;
+        }
+        if (timer >= 4 && !hadTower)
         {
             timerIsRunning = false;
             
@@ -111,8 +117,10 @@ public class TutorialManager : MonoBehaviour
 
         if (timer >= 7)
         {
+            
             if (startWaveButton.gameObject.activeSelf)
             {
+                timerIsRunning = false;
                 startWaveButton.GetComponent<Scaling>().enabled = true;
                 //startWaveButton.GetComponent<Scaling>().OnPlay();
             }
@@ -149,11 +157,11 @@ public class TutorialManager : MonoBehaviour
         }
 
         
-        if (timerWhole!= (int)timer)
-        {
-            timerWhole = (int)timer;
-            Debug.Log(timerWhole);
-        }
+        //if (timerWhole!= (int)timer)
+        //{
+        //    timerWhole = (int)timer;
+        //    Debug.Log(timerWhole);
+        //}
         
     }
 

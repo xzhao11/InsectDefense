@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class waveComplete : MonoBehaviour
 {
@@ -52,7 +53,8 @@ public class waveComplete : MonoBehaviour
             isTrue = 1;
             nest.GetComponent<nestScript>().repopulateEnd();
             Time.timeScale = 0;
-            PlayerPrefs.SetInt("Larva", nest.GetComponent<nestScript>().numLarva);
+            //PlayerPrefs.SetInt("Larva", nest.GetComponent<nestScript>().numLarva);
+            PlayerPrefs.SetInt("LevelFinish", SceneManager.GetActiveScene().buildIndex);
         }
 
         if(isTrue == 1 && Time.timeScale > 0)
