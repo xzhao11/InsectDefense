@@ -9,7 +9,7 @@ public class PlayerThirdPersonControl : MonoBehaviour
     //Animator animator;
     
 
-    [SerializeField] float speed = 5f;
+    public float speed = 5f;
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
     private float gravity;

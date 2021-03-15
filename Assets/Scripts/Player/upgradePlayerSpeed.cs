@@ -35,6 +35,7 @@ public class upgradePlayerSpeed : MonoBehaviour
             cost.SetActive(false);
             audioS.SetActive(true);
             player.GetComponent<PlayerControl>().speed += speedUp;
+            player.GetComponent<PlayerThirdPersonControl>().speed += speedUp;
             nest.numLarva -= (price + priceDiff * index);
             index++;
             particles.Play();
