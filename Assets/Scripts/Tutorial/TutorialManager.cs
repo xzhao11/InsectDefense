@@ -13,7 +13,7 @@ public class TutorialManager : MonoBehaviour
     public Text shift;
     public Text zoomoutText;
     public GameObject shopCanvas;
-    public Image arrowTower;
+    public Canvas arrowTower;
 
     public Button startWaveButton;
     public GameObject topDownCamera;

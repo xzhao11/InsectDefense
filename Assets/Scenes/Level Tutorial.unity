@@ -4785,7 +4785,7 @@ MonoBehaviour:
   shift: {fileID: 1936313682}
   zoomoutText: {fileID: 1755601937}
   shopCanvas: {fileID: 1522351407}
-  arrowTower: {fileID: 1167912408}
+  arrowTower: {fileID: 1759099810}
   startWaveButton: {fileID: 792838037}
   topDownCamera: {fileID: 109386912}
 --- !u!1 &437926101
@@ -13692,7 +13692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1167912407
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20820,7 +20820,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1759099808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21377,10 +21377,10 @@ RectTransform:
   m_Father: {fileID: 855737444}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -698, y: -195}
-  m_SizeDelta: {x: 700, y: 300}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -82.4, y: -84.271}
+  m_SizeDelta: {x: 603.91907, y: 117.1021}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1820103504
 MonoBehaviour:
@@ -21435,8 +21435,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -21464,7 +21464,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -154.70091, y: 0, z: 90.17465, w: 0}
+  m_margin: {x: -0.952359, y: 0, z: -2.074472, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
