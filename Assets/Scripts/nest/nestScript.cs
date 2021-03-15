@@ -35,6 +35,9 @@ public class nestScript : MonoBehaviour
     private bool enemiesStopped;
     private bool givenHint;
 
+    private float timer;
+    public GameObject speedButton;
+    public Button startWaveButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +60,15 @@ public class nestScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeScale == 1 && !startWaveButton.gameObject.activeSelf)
+        {
+            timer += Time.deltaTime;
+        }
+
+        if (timer >= 20 && !startWaveButton.gameObject.activeSelf)
+        {
+            speedButton.GetComponent<Scaling>().enabled = true;
+        }
         num_msg.text = "Larva: " + numLarva; //+ "\nGrain: " + numGrain;
         if (numLarva < 0)
         {
