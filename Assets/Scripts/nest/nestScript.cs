@@ -19,6 +19,9 @@ public class nestScript : MonoBehaviour
     public Text upgradeWeaponText;
     public int numStolen;
     public int numStolenToGiveHint = 3;
+
+    public GameObject waveManager;
+    public int toSpawnOriginal;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +57,15 @@ public class nestScript : MonoBehaviour
         {
             tutorialCanvas.gameObject.SetActive(true);
             upgradeWeaponText.gameObject.SetActive(true);
+            toSpawnOriginal = waveManager.GetComponent<tileWaveScript>().toSpawn;
+            waveManager.GetComponent<tileWaveScript>().toSpawn = 0;
+            if (upgradeWeaponText.GetComponent<TextTyping>().isFinished)
+            {
+                tutorialCanvas.gameObject.SetActive(false);
+                upgradeWeaponText.gameObject.SetActive(false);
+                numStolen = 0;
+                numStolenToGiveHint += 2;
+            }
         }
 
         

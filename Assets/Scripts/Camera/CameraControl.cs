@@ -27,7 +27,7 @@ public class CameraControl : MonoBehaviour
 
         if (cam.orthographic)
         {
-            if (cam.orthographicSize < maxSize)
+            if (cam.orthographicSize <= maxSize && cam.orthographicSize - Input.GetAxis("Mouse ScrollWheel") * ScollSpeed <= maxSize)
             {
                 cam.orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * ScollSpeed;
             }
