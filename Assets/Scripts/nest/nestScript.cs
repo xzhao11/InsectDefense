@@ -71,7 +71,7 @@ public class nestScript : MonoBehaviour
         {
             hadSpeedUp = true;
         }
-        if (timer >= 10 && !startWaveButton.gameObject.activeSelf && !hadSpeedUp)
+        if (timer >= 40 && !startWaveButton.gameObject.activeSelf && !hadSpeedUp)
         {
             speedButton.GetComponent<Scaling>().enabled = true;
         }
