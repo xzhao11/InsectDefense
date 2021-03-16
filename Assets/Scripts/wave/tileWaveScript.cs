@@ -117,7 +117,7 @@ public class tileWaveScript : MonoBehaviour
         }
         else if(toSpawn != 0)
         {
-            timeToSpawn -= 1;
+            timeToSpawn -= 1*Time.timeScale;
         }
     }
 

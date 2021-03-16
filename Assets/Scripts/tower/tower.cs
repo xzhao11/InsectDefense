@@ -318,7 +318,6 @@ public class tower : MonoBehaviour
     {
         if(nest.GetComponent<nestScript>().numLarva >= upgradeCost)
         {
-            Debug.Log("upgrade");
             nest.GetComponent<nestScript>().numLarva -= upgradeCost;
 
             updateUpgradeCost();
@@ -331,7 +330,6 @@ public class tower : MonoBehaviour
             {
                 curColor++;
             }
-            //Debug.Log(colors[curColor]);
 
 
             if (towerType == 0)

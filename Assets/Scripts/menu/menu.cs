@@ -128,6 +128,12 @@ public class menu : MonoBehaviour
         StartCoroutine(DelaySceneLoad(1));
     }
 
+    public void GoToControl()
+    {
+        //SceneManager.LoadScene(1);
+        StartCoroutine(DelaySceneLoad(6));
+    }
+
     public void SelectLevels()
     {
         //SceneManager.LoadScene(2);

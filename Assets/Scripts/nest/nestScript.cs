@@ -38,6 +38,8 @@ public class nestScript : MonoBehaviour
     private float timer;
     public GameObject speedButton;
     public Button startWaveButton;
+
+    private bool hadSpeedUp;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +53,7 @@ public class nestScript : MonoBehaviour
         playerSpeedStations = GameObject.FindGameObjectsWithTag("UpgradePlayerSpeed");
         enemiesStopped = false;
         givenHint = false;
+        hadSpeedUp = false;
         //if (SceneManager.GetActiveScene().buildIndex != 5)
         //{
         //    numLarva = PlayerPrefs.GetInt("Larva");
@@ -64,8 +67,11 @@ public class nestScript : MonoBehaviour
         {
             timer += Time.deltaTime;
         }
-
-        if (timer >= 20 && !startWaveButton.gameObject.activeSelf)
+        if (Time.timeScale != 1)
+        {
+            hadSpeedUp = true;
+        }
+        if (timer >= 10 && !startWaveButton.gameObject.activeSelf && !hadSpeedUp)
         {
             speedButton.GetComponent<Scaling>().enabled = true;
         }
